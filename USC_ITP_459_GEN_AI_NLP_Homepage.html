@@ -51,7 +51,21 @@
           border: 3px solid #aaa; /* Lighter gray border */
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
           border-radius: 20px; /* Optional: Rounds the corners */
-}
+        }
+
+        /* CSS for desktops */
+          .responsive-table 
+        {
+    width: 45%; /* Default to 50% of the screen width */
+    margin: 0 auto; /* Center the table */
+      }
+
+        /* CSS for devices with a screen width of 600px or less (like mobile devices) */
+  @media (max-width: 600px) {
+    .responsive-table {
+      width: 80%; /* Increase to 90% of the screen width on small screens */
+    }
+  }
         
     </style>
 </head>
@@ -70,7 +84,7 @@
 <br><br>
        <strong>Office Hours:</strong> Tuesdays 6 PM-8 PM by appointment only.</p>
     <h2>Course Assistants</h2>
-    <table>
+    <table class="responsive-table">
         <tr>
             <th>Course Assistant</th>
             <th>Mode</th>
@@ -101,7 +115,7 @@
 You will explore the fundamentals of NLP and discover which technologies and products have been developed using NLP and Generative AI for text. The course covers how to utilize pre-trained Large Language Models (LLMs) and their APIs, fine-tune LLMs, and retrain LLMs.<br></p>
 
     <h2>Course Schedule: A Weekly Breakdown</h2>
-    <table>
+    <table class="responsive-table">
         <tr>
             <th>WeeklyTopics and Details</th>
             <th>WeeklyTopics and Details</th>
