@@ -1,2 +1,2 @@
-# USC-GenAI_NLP_ITP459_SP24
+# USC-AI_GenerativeAI_NLP
 The course page for Generative AI and NLP Class at USC 
