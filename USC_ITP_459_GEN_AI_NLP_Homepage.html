@@ -8,6 +8,14 @@
     <style>
         body {
             font-family: 'SF Hello', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            font-family: Arial, sans-serif;
         }
         table {
             width: 35%;
@@ -21,18 +29,31 @@
         th {
             background-color: #f2f2f2;
         }
+
+        
+        .content-wrapper {
+          width: 80%; /* or any other percentage or fixed width */
+          background-color: #ccc; /* Light gray background */
+          margin: 20px;
+          padding: 20px;
+          border: 2px solid #aaa; /* Lighter gray border */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
+          border-radius: 10px; /* Optional: Rounds the corners */
+}
+        
     </style>
 </head>
 <body>
+    <div class="content-wrapper">
     <br><br>
     <h1>ITP-459 Generative AI and Applied Machine Learning for Natural Language Processing (NLP)</h1>
     <h2>University of Southern California (USC), Viterbi School of Engineering </h2>
-    <p><strong>Units:</strong>4, <strong>Term:</strong> Spring 2024, <strong>Prerequisite(s):</strong> ITP 359<br>
+    <p style="line-height: 1.5;"><strong>Units:</strong>4, <strong>Term:</strong> Spring 2024, <strong>Prerequisite(s):</strong> ITP 359<br>
        <strong>Time:</strong> Mondays 6-9:20 PM, <strong>Location:</strong> KAP 144</p>
     <h2>Instructor Infromation</h2>
     <h3><strong>Instructor:</strong> <a href="https://www.linkedin.com/in/allenbolourchi/">Allen Bolourchi</a></h3>
-        <strong>Adjunct Professor of Generative AI and NLP at USC</strong><br>
-        <strong>Founder of <a href="https://www.crystalytic.ai/">Crystalytic.AI</a> </strong><br><br><br>
+       <p style="line-height: 1.5;"> <strong>Adjunct Professor of Generative AI and NLP at USC</strong><br>
+        <strong>Founder of <a href="https://www.crystalytic.ai/">Crystalytic.AI</a> </strong></p><br><br><br>
 <img src="https://static.wixstatic.com/media/1ea898_97bf6eb77cfc4cf183cb64ff74cc81c8~mv2.jpg/v1/fill/w_439,h_498,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/1ea898_97bf6eb77cfc4cf183cb64ff74cc81c8~mv2.jpg" alt="Instructor Image" style="width:50%;max-width:280px;height:auto;">
 <br><br>
        <strong>Office Hours:</strong> Tuesdays 6 PM-8 PM by appointment only. Select your desired time 12 hours in advance.</p>
@@ -72,7 +93,7 @@
         </tr>
     </table>
     <h2>Course Description</h2>
-    <p>Learn the state-of-the-art technology in Artificial Intelligence including the latest AI tools and algorithms in Natural Language Processing, Generative AI, GPT/BERT models, and Hugging Face. You will learn the fundamentals of how computers understand human languages and what technologies and products have been built based on NLP and Generative AI for text.</p>
+    <p style="line-height: 1.5;">Learn the state-of-the-art technology in Artificial Intelligence including the latest AI tools and algorithms in Natural Language Processing, Generative AI, GPT/BERT models, and Hugging Face. You will learn the fundamentals of how computers understand human languages and what technologies and products have been built based on NLP and Generative AI for text.</p>
 
     <h2>Course Schedule: A Weekly Breakdown</h2>
     <table>
@@ -102,5 +123,6 @@
         <h2>Technological Proficiency</h2>
     <p>Familiarity with Google Colab and Python is necessary. If you haven’t used them, familiarize yourself with Google Colab and set it up. We will teach you the rest of the python packages in the classroom.<br>
        <a href="https://colab.research.google.com/">Google Colab</a></p>
+</div>
 </body>
 </html>
