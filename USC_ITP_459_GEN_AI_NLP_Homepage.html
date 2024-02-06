@@ -71,12 +71,26 @@
     width: 55%; /* Default to 50% of the screen width */
     font-size: 16px; /* Or any other size you prefer */
       }
+.name-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.name:first-child::after {
+    content: "";
+    display: inline-block;
+    width: 20em; /* Default space for larger screens */
+}
+        
         /* CSS for devices with a screen width of 600px or less (like mobile devices) */
   @media (max-width: 600px) {
     .responsive-table {
       width: 100%; /* Increase to 90% of the screen width on small screens */
         font-size: 11px; /* Or any other size you prefer */
+    }
+      .name:first-child::after {
+        width: 5em; /* Adjust the width for smaller screens */
     }
   }
         
@@ -101,8 +115,10 @@
 <br><br>
        <strong>Office Hours:</strong> Tuesdays 6 PM-8 PM by appointment only.</p>
     <h2>Course Assistants</h2>
-<p style="line-height: 1.5;"> <a href="https://www.linkedin.com/in/rajeevsinghusc/">Rajeev Singh</a> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-    <a href="https://www.linkedin.com/in/gauravreddy08/">Gaurav Tadkapally</a> Gaurav Tadkapally <br></p>
+<p class="name-container" style="line-height: 1.5;">
+    <a href="https://www.linkedin.com/in/rajeevsinghusc/" class="name">Rajeev Singh</a>
+    <a href="https://www.linkedin.com/in/gauravreddy08/" class="name">Gaurav Tadkapally</a>
+</p> <br>
     <img src="https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/Rajeev_Dharmendra_Singh.jpg" alt="Course Assistant" style="width:50%;max-width:280px;height:auto;">
     <img src="https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/Rajeev_Dharmendra_Singh.jpg" alt="Course Assistant" style="width:50%;max-width:280px;height:auto;">
 <br><br>    
