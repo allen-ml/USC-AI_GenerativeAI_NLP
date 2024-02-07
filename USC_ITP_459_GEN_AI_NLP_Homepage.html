@@ -1,201 +1,475 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITP-459 Generative AI and Applied Machine Learning for Natural Language Processing (NLP)</title>
-    <style>
-        body {
-            font-family: 'SF Hello', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #4d4d4d; /* #333 Dark gray background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Full viewport height */
-        }
-        table {
-            width: 75%;
-            border-collapse: collapse;
-        }
-        th, td {
-            vertical-align: top;
-            border: 2px solid black;
-            padding: 2px;
-            text-align: left;
-             margin: 0px;
-         /*   font-size: 16px;  Or any other size you prefer */
-        }
-        th {
-            background-color: #f2f2f2;
-        }
 
-        ul {
-            list-style-position: inside; /* Keeps the bullet points inside the list item area */
-            padding-left: 2px; /* Adds a bit of padding inside the list, to the left */
-            margin-left: 0px; /* Adds a bit of margin outside the list, to the left */
-            margin: 0px;
-          }
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
 
-        li {
-            padding: 2px 0; /* Adds a bit of padding to the top and bottom of each list item */
-            margin: 1px 0; /* Adds a bit of margin to the top and bottom of each list item */
-            /* Additional styles for your list items */
-          }
+  <title>ITP 459</title>
 
-        .image-repeat-top {
-          width: 100%; /* Full width */
-          height: 200px; /* Height of the repeating area */
-          background-image: url('https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/GenAI_Image_small.png'); /* Path to your image */
-          background-repeat: repeat-x; /* Repeat horizontally */
-          background-position: top center; /* Align the background image to the top center */
-     /*     background-size: 10% auto; /* Resize the background image to be 10% of its width */
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
 
-        }
-        
-        .content-wrapper {
-          width: 85%; /* or any other percentage or fixed width */
-          background-color: #f0f0f0; /* #ccc Light gray background */
-          margin: 10px;
-          padding: 10px;
-          border: 3px solid #aaa; /* Lighter gray border */
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
-          border-radius: 20px; /* Optional: Rounds the corners */
-        }
+  <!-- Google fonts -->
+  <link href="styles/css" rel="stylesheet" type="text/css">
 
-        /* CSS for desktops */
-          .responsive-table 
-        {
-    width: 55%; /* Default to 50% of the screen width */
-    font-size: 16px; /* Or any other size you prefer */
-      }
-.name-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.name:first-child::after {
-    content: "";
-    display: inline-block;
-    width: 1em; /* Default space for larger screens */
-}
-        
-        /* CSS for devices with a screen width of 600px or less (like mobile devices) */
-  @media (max-width: 600px) {
-    .responsive-table {
-      width: 100%; /* Increase to 90% of the screen width on small screens */
-        font-size: 11px; /* Or any other size you prefer */
-    }
-      .name:first-child::after {
-        width: 4em; /* Adjust the width for smaller screens */
-    }
-
-      
-    img {
-      width: 80%; /* Images will be 80% of their original size on mobile devices */
-    }
-
-  }
-        
-    </style>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" href="styles/font-awesome.min.css">
 </head>
-<body>
-    <div class="content-wrapper">
-        <div class="image-repeat-top">
 
-            
-        </div> <!-- This div could be used to repeat the image -->
+<body data-new-gr-c-s-check-loaded="14.1153.0" data-gr-ext-installed="" class="vsc-initialized">
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand brand" href="">ITP 459</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
-    <h1>ITP-459 Generative AI and Applied Machine Learning for Natural Language Processing (NLP)</h1>
-    <h2>University of Southern California (USC), Viterbi School of Engineering </h2>
-    <p style="line-height: 1.5;"><strong>Units:</strong>4, <strong>Term:</strong> Spring 2024, <strong>Prerequisite(s):</strong> ITP 359<br>
-       <strong>Time:</strong> Mon 6-9:20PM, <strong>Location:</strong> KAP 144</p>
-    <h2>Instructor Infromation</h2>
-    <h3><strong>Instructor:</strong> <a href="https://www.linkedin.com/in/allenbolourchi/">Allen Bolourchi</a></h3>
-       <p style="line-height: 1.5;"> <strong>Adjunct Professor of Generative AI and NLP at USC</strong><br>
-        <strong>Founder of <a href="https://www.crystalytic.ai/">Crystalytic.AI</a> </strong></p>
-<img src="https://static.wixstatic.com/media/1ea898_97bf6eb77cfc4cf183cb64ff74cc81c8~mv2.jpg/v1/fill/w_439,h_498,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/1ea898_97bf6eb77cfc4cf183cb64ff74cc81c8~mv2.jpg" alt="Instructor Image" style="width:50%;max-width:280px;height:auto;">
-<br><br>
-       <strong>Office Hours:</strong> Tuesdays 6 PM-8 PM by appointment only.</p>
-    <h2>Course Assistants</h2>
-    <a href="https://www.linkedin.com/in/rajeevsinghusc/" class="name">Rajeev Singh</a>
-            <br>
-    <img src="https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/Rajeev_Dharmendra_Singh.jpg" alt="Course Assistant" style="width:50%;max-width:280px;height:auto;">
-    <br>
-    <br>
-            <br>
-    <a href="https://www.linkedin.com/in/gauravreddy08/" class="name">Gaurav Tadkapally</a>
-            <br>
-    <img src="https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/Gaurav_Tadkapally.jpeg" alt="Course Assistant" style="width:50%;max-width:280px;height:auto;">
-<br><br>  
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://_/index.html#coursework">Coursework</a></li>
+        <li><a href="https://_/office_hours.html">Office Hours</a></li>
+        <li><a href="https://_/index.html#schedule">Schedule</a></li>
+        <li><a href="https://_/index.html#schedule">Syllabus</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<!-- <table>
-  <tr>
-    <td><img src="https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/Rajeev_Dharmendra_Singh.jpg" alt="Course Assistant"></td>
-    <td><img src="https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/Gaurav_Tadkapally.jpeg" alt="Course Assistant"></td>
+<!-- Header -->
+<div id="header" style="text-align:center">
+
+  <h1>ITP 459 : Generative AI and Applied Machine Learning
+  </h1><h1>
+    for Natural Language Processing (NLP)</h1>
+  <h3>University of Southern California / Spring 2024</h3>
+  <div style="clear:both;"></div>
+</div>
+
+<!-- Intro -->
+<div class="container sec" id="intro">
+
+  <p>
+    This course provides an in-depth exploration of Artificial Intelligence technologies, with a particular focus on advancements in Natural Language Processing (NLP) and Generative AI. Delve into renowned AI models like GPT, BERT, and their applications, gaining hands-on experience with powerful tools like TensorFlow, Keras, and Hugging Face.
+  </p>
+  <p>
+    Throughout the course, you'll gain a solid understanding of NLP fundamentals and learn about the diverse range of technologies and products developed using NLP and Generative AI. This includes a comprehensive study of how these technologies are revolutionizing text processing and generation.
+
+    Key highlights of the course include practical sessions on utilizing pre-trained Large Language Models (LLMs), where you'll learn how to use their APIs for various applications. You'll also acquire skills in fine-tuning LLMs for specialized tasks, and gain insights into the methodologies for retraining these models to suit specific requirements.
+  </p>
+</div>
+
+<div class="container sec" id="intro">
+  <h2>Course Members</h2>
+  <br>
+  <div class="course-assistants">
+    <div class="profile">
+        <img src="https://media.licdn.com/dms/image/C5603AQGxuO9IIbpSVg/profile-displayphoto-shrink_800_800/0/1602790899592?e=2147483647&v=beta&t=8XBc4pWSncr6I4-beGMSz6HrpHoaxyYt8CJh5RFiR_A" alt="Name1" width="100%">
+        <div><b><font color="#990000"><a style="color:#990000";" href="https://www.linkedin.com/in/allenbolourchi/">Allen Bolourchi</a></font></b></div>
+        Adjunct Professor of Generative AI and NLP at USC <br>
+Founder of <a href="https://www.crystalytic.ai/">Crystalytic.AI</a>
+    </div>
+    <div class="profile">
+        <img src="assets/rajeev.jpg" alt="Name2" width="100%">
+        <div><b><font color="#990000">Rajeev Singh</font></b></div>
+        <a href="https://www.linkedin.com/in/rajeevsinghusc/">LinkedIn</a>
+    </div>
+    <div class="profile">
+        <img src="assets/gaurav.jpeg" alt="Name3" width="100%">
+        <div><b><font color="#990000">Gaurav Tadkapally</font></b></div>
+        <a href="https://www.linkedin.com/in/gauravreddy08">LinkedIn</a>
+
+    </div>
+   
+</div>
+
+ <br>
+  <br>
+
+<!-- Staff Info -->
+<div class="sechighlight">
+  <div class="container sec" id="people">
+    <div class="container sec" id="logistics">
+      <h2>Logistics</h2>
+      <ul>
+        <li><b>Lectures:</b> are on Monday 6:30 PM - 9:20 PM Pacific Time at KAP 144</a>. The lectures will also be recorded and be avaialble on <a href="https://">____</a></li>
+        <li><b>Office hours</b>: Hybrid format with remote (over Google Meet) or in person options.</li>
+        <li><b>Contact</b>: Students should ask <i>all</i> course-related questions in the Piazza forum, where you will also find announcements. For external enquiries, emergencies, or personal matters that you don't wish to put in a private Piazza post, you can email at <i>bolourch@usc.edu</i>.</li>
+        <li><b>Course Notes:</b> Lecture slides, assignments, readings, announcements, and other class information will be posted on Blackboard.</li>
+      </ul>
+    </div>
+
+    <div class="container sec" id="content">
+      <h2>Course Notes</h2>
+      <ul>
+        <li><b>Co-Requisite(s):</b> None</li>
+        <li><b>Concurrent Enrollment:</b> None</li>
+        <li><b>Recommended Preparation:</b> Google Colab</li>
+        <li><b>Technological Proficiency:</b> Familiarity with Google Colab and Python is necessary. If you haven’t used them, familiarize yourself
+          with Google Colab and set it up. We will teach you the rest of the python packages in the classroom.
+          <ul>
+            <li><b>Google Colab: </b><a href="https://colab.research.google.com/">https://colab.research.google.com/</a></li>
+            <li><b>Python packages: </b>Keras, PyTorch, TensorFlow, scikit-learn - <a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a></li>
+          </ul>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Coursework -->
+<!-- Note the margin-top:-20px and the <br> serve to make the #coursework hyperlink display correctly (with the h2 header visible) -->
+<div class="sechighlight">
+<div class="container sec" id="coursework" style="margin-top:-20px">
+<h2>Coursework</h2>
+  <h4>Assignments (26%)</h4>
+  <p>
+    There are weekly assignments, which will improve both your theoretical understanding and your practical skills. All assignments contain both written questions and programming parts. Only top 13 assignments will be considered.
+  </p>
+
+  <h4>Final Presentation: GenAI (10%)</h4>
+
+  <h4>Final Project (25% + 4%)</h4>
+
+  <h4>Mid term Exam (15%)</h4>
+
+  <h4>Final Exam (25%)</h4>
+  <!-- <h3>Late Days</h3>
+  <ul>
+    <li>Each student has 6 late days to use. A late day extends the deadline 24 hours. You can use up to 3 late days per assignment (including all five assignments, project proposal, project milestone and project final report).</li>
+    <li>Final project teams can <b>share</b> late days between members. For example, a group of three people must have at least six late days between them to extend the deadline by two days. <em>If any late days are being shared, this must be clearly marked at the beginning of the report, and we will release a form on Ed that teams should fill out.</em>.</li>
+    <li>Once you have used all 6 late days, the penalty is 1% off the final course grade for each additional late day.</li>
+  </ul> -->
+
+  <!-- <h3>Regrade Requests</h3>
+  <p>
+    If you feel you deserved a better grade on an assignment, you may submit a regrade request on Gradescope within 3 days after the grades are released.
+    Your request should briefly summarize why you feel the original grade was unfair.
+    Your TA will reevaluate your assignment as soon as possible, and then issue a decision.
+    If you are still not happy, you can ask for your assignment to be regraded by an instructor.
+  </p> -->
+
+  <hr>
+  <h4>All students welcome</h4>
+  <p>
+    We are committed to doing what we can to work for equity and to create an inclusive learning environment that actively values the diversity of backgrounds, identities, and experiences of everyone in ITP 459. We also know that we will sometimes make missteps. If you notice some way that we could do better, we hope that you will let someone in the course staff know about it.
+  </p>
+
+
+
+  <h4>AI Tools Policy</h4>
+  <p>
+    Students are required to independently submit their solutions for ITP 459 homework assignments. Collaboration with generative AI tools such as Co-Pilot and ChatGPT is allowed, treating them as collaborators in the problem-solving process. However, the direct solicitation of answers or copying solutions, whether from peers or external sources, is strictly prohibited.
+  </p>
+
+
+
+</div>
+</div>
+
+
+<!-- Schedule -->
+<!-- Note the margin-top:-20px and the <br> serve to make the #schedule hyperlink display correctly (with the h2 header visible) -->
+<div class="container sec" id="schedule" style="margin-top:-20px">
+<br>
+
+<h2>Office Hours</h2>
+<table class="table">
+  <colgroup>
+    <col style="width:18%">
+    <col style="width:13%">
+    <col style="width:10%">
+    <col style="width:5%">
+    <col style="width:5%">
+    <col style="width:20%">
+    <col style="width:30%">
+  </colgroup>
+  <thead>
+
+  <tr class="active">
+    <th>Course Assistant</th>
+    <th>Email</th>
+    <th>Mode</th>
+    <th>Location</th>
+    <th>Day</th>
+    <th>Time Slot</th>
+    <th>Meeting Link</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
-    <td><span <a href="https://www.linkedin.com/in/rajeevsinghusc/" class="name">Rajeev Singh </a></span></td>
-    <td><span <a href="https://www.linkedin.com/in/gauravreddy08/" class="name">Gaurav Tadkapally</a></span></td>
+    <td><b>Gaurav Tadkapally</b></td>
+    <td><a href="mailto:tadkapal@usc.edu">tadkapal@usc.edu</a></td>
+    <td>In Person + Online</td>
+    <td>TBD</td>
+    <td>Monday</td>
+    <td>11:00am - 12:00pm	</td>
+    <td><a href="https://meet.google.com/fid-azra-hsg">meet.google.com/fid-azra-hsg</a></td>
   </tr>
-    <br>
-    <br>
--->
+
+  <tr>
+    <td><b>Rajeev Singh</b></td>
+    <td><a href="mailto:rajeevdh@usc.edu">rajeevdh@usc.edu</a></td>
+    <td>Online</td>
+    <td>Google Meet</td>
+    <td>Thursday</td>
+    <td>02:00pm - 03:00pm</td>
+    <td><a href="https://meet.google.com/oqy-wueg-twt">meet.google.com/oqy-wueg-twt</a></td>
+  </tr>
+
+  <tr>
+    <td><b>Rajeev Singh</b></td>
+    <td><a href="mailto:rajeevdh@usc.edu">rajeevdh@usc.edu</a></td>
+    <td>In Person + Online</td>
+    <td>OHE Patio</td>
+    <td>Monday</td>
+    <td>12:30pm - 01:30pm</td>
+    <td><a href="https://meet.google.com/oqy-wueg-twt">meet.google.com/oqy-wueg-twt</a></td>
+  </tr>
+
     
+
+    
+
+  </tbody>
 </table>
 
-        
-    <table class="responsive-table">
-        <tr>
-            <th>Course Assistant</th>
-            <th>Mode</th>
-            <th>Day and Time</th>
-            <th>LinkedIn</th>
-        </tr>
-        <tr>
-            <td>Gaurav Tadkapally</td>
-            <td>In Person + Online</td>
-            <td>Monday 11:00am - 12:00pm</td>
-             <td>...</td>
-        </tr>
-        <tr>
-            <td>Rajeev Singh</td>
-            <td>Online</td>
-            <td>Thursday 02:00pm - 03:00pm</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <td>Rajeev Singh</td>
-            <td>In Person + Online</td>
-            <td>Friday 12:30pm - 01:30pm</td>
-            <td>...</td>
-        </tr>
-    </table>
-    <h2>Course Description</h2>
-    <p style="line-height: 1.5;">Learn the state-of-the-art technology in Artificial Intelligence, including the latest AI tools and algorithms in Natural Language Processing (NLP), Generative AI, and models such as GPT/BERT, along with Tensorflow, Keras and Hugging Face. <br><br>
-You will explore the fundamentals of NLP and discover which technologies and products have been developed using NLP and Generative AI for text. The course covers how to utilize pre-trained Large Language Models (LLMs) and their APIs, fine-tune LLMs, and retrain LLMs.<br></p>
+<h2>Schedule</h2>
+<p>
+  Updated lecture <b>slides</b> will be posted on <i>Blackboard</i> before each lecture. 
+</p>
+<table class="table">
+  <colgroup>
+    <col style="width:10%">
+    <col style="width:70%">
+    <col style="width:20%">
+  </colgroup>
+  <thead>
 
-    <h2>Course Schedule: A Weekly Breakdown</h2>
-    <table class="responsive-table">
-        <tr>
-            <th>WeeklyTopics and Details</th>
-            <th>WeeklyTopics and Details</th>
-        </tr>
-<tr><td><strong>Week 1: Introduction to NLP and AI</strong><ul><li>Course Overview</li><li>Historical Evolution of AI and NLP</li><li>Key Concepts in Machine Learning and NLP</li><li>Overview of NLP Applications in Various Domains</li><li>Basic Text Processing and Language Understanding</li><li>Challenges and Limitations in NLP</li></ul></td><td><strong>Week 9: Advanced Topics in Machine Learning and NLP</strong><ul><li>Deep Transfer Learning in NLP</li><li>Strategies for Addressing Data Imbalance</li><li>Model Interpretability and Explainability in NLP</li><li>Advanced Optimization Techniques in NLP</li><li>Utilizing Pre-Trained NLP Models</li><li>Case Studies of Advanced ML in NLP</li><li>Retrieval-Augmented Generation</li></ul></td></tr>
-<tr><td><strong>Week 2: Text Cleaning and Preprocessing</strong><ul><li>Techniques for Noise Reduction</li><li>Text Normalization and Tokenization</li><li>Lemmatization and Stemming</li><li>Co-occurrence Matrix in Text Analysis</li><li>Feature Extraction from Text</li><li>Regular Expressions in Text Processing</li><li>Basic Overview of Word Embeddings</li><li>Overview of python libraries such as NLTK, Spacy, regex etc. </li></ul></td><td><strong>Week 10: Named Entity Recognition, Information Retrieval and Search</strong><ul><li>Advanced Techniques in NER</li><li>Contextual NER and Its Applications</li><li>Fundamentals of Information Retrieval</li><li>Deep Dive into TF-IDF and Co-occurrence Matrix</li><li>Search Engines and Indexing Techniques</li><li>Evaluation Metrics in Information Retrieval</li><li>Case Studies and Real-World Applications</li></ul></td></tr>
-<tr><td><strong>Week 3: Fundamentals of Machine Learning for NLP</strong><ul><li>Supervised Learning and Unsupervised Learning - Key Algorithms for NLP</li><li>Evaluation Metrics for NLP Models</li><li>Training, Validation, and Test Sets in Model Development</li><li>Overfitting and Underfitting in NLP</li><li>Cross-Validation Techniques</li><li>Introduction to Python ML Libraries</li></ul></td><td><strong>Week 11: Advanced Machine Translation and Summarization</strong><ul><li>Advanced Techniques in Machine Translation</li><li>Handling Low-Resource Languages in (Machine Tranlsation) MT</li><li>Text Summarization</li><li>Extractive vs. Abstractive Summarization</li><li>Challenges in Summarization</li><li>Evaluation of Summarization Techniques</li><li>Current Trends in MT and Summarization</li></ul></td></tr>
-<tr><td><strong>Week 4: Neural Networks and Deep Learning in NLP</strong><ul><li>Activation Functions and Network Topologies</li><li>Backpropagation and Gradient Descent</li><li>CNNs and RNNs for NLP</li><li>Advanced RNNs: LSTM and GRU</li><li>Sequence Modeling in NLP</li><li>Challenges in Deep Learning for NLP</li><li>Case Studies in Deep Learning for NLP</li></ul></td><td><strong>Week 12: Speech Processing and Conversational AI</strong><ul><li>Basics of Speech Recognition</li><li>Challenges in Automatic Speech Recognition (ASR)</li><li>Design and Development of Conversational Agents</li><li>Evaluating Dialogue Systems in Conversational AI</li><li>Multimodal Interaction in Conversational AI</li><li>Natural Language Understanding in Conversational AI</li><li>Case Studies in Speech Processing and Conversational AI</li></ul></td></tr>
-<tr><td><strong>Week 5: Transformer Models and Attention Mechanisms</strong><ul><li>Understanding the Transformer Architecture</li><li>Concepts of Self-Attention and Positional Encoding</li><li>Overview of BERT, GPT, and Transformer Variants</li><li>Applications of Transformer Models in NLP</li><li>Training Transformer Models for NLP Tasks</li><li>Challenges and Solutions with Transformer Models</li></ul></td><td><strong>Week 13: Generative AI, Prodcuts, Techniques, APIs and Ethical Considerations</strong><ul><li>Introduction to Generative Models in NLP</li><li>Applications and Challenges of Generative AI</li><li>Ethical Considerations, Data Privacy and Governance in AI</li><li>NLP APIs and Their Practical Uses</li><li>Prompt Engineering for LLMs</li><li>Busineess Intelligence, Marketing, Analytics and Brand Analysis use cases</li><li>Introduction to Product Management and Business Considerations</li></ul></td></tr>
-<tr><td><strong>Week 6: Syntax, Parsing, Word Embeddings, and POS Tagging</strong><ul><li>Syntax in Natural Language Processing</li><li>Dependency and Constituency Parsing</li><li>Deep Dive into Word Embeddings</li><li>Word2Vec, GloVe, and FastText Embeddings</li><li>Using Embeddings in NLP Tasks</li><li>Part-of-Speech (POS) Tagging: Importance, Methods, and Tools</li><li>Practical Parsing, Embedding, and POS Tagging Techniques</li><li>Vector Database</li></ul></td><td><strong>Week 14: Fine-Tuning LLMs, Hugging Face, LangChain and RAG</strong><ul><li>Introduction to Fine-Tuning Large Language Models (ChatGPT, Llama etc)</li><li>Overview and Practical Use of Hugging Face in NLP Projects</li><li>Utilizing LangChain and Llama for Customized Language Models</li><li>Best Practices in Fine-Tuning LLMs</li><li>Challenges and Solutions in Fine-Tuning Language Models</li><li>Case Studies and Applications of Fine-Tuned LLMs</li><li>Architecture of Fine-Tuned Models</li></ul></td></tr>
-<tr><td><strong>Week 7: Semantic Analysis, Language Models, and Question Answering</strong><ul><li>Semantic Role Labeling (SRL)</li><li>Knowledge Graphs in Semantic Analysis</li><li>Advances in Contextual Embeddings</li><li>Overview of Language Models in NLP </li><li>Introduction to Question Answering System and Utilizing Language Models</li><li>Challenges in QA and Semantic Analysis</li><li>Word Sense Disambiguation Techniques</li></ul></td><td><strong>Week 15: Course Review, Future Trends, and Project Presentations + Final Exam</strong><ul><li>Recap of Key NLP and Generative AI Concepts</li><li>Discussion on the Future Trends in NLP and Generative AI</li><li>Student Project Presentations</li><li>Feedback and Review of Projects</li><li>Resources for Advanced Learning</li><li>Closing Remarks and Course Evaluation</li><ul></td></tr>
-<tr><td><strong>Week 8: Text Classification and Machine Translation + Midterm Exam</strong><ul><li>Fundamentals of Text Classification</li><li>Techniques and Algorithms for Classification</li><li>Introduction to Machine Translation</li><li>Neural Machine Translation (NMT) models</li><li>Challenges and Evaluation Metrics for MT</li><li>Practical Implementation of MT Systems</li></ul></td></tr>
-    </table>
-        <h2>Technological Proficiency</h2>
-    <p>Familiarity with Google Colab and Python is necessary. If you haven’t used them, familiarize yourself with Google Colab and set it up. We will teach you the rest of the python packages in the classroom.<br>
-       <a href="https://colab.research.google.com/">Google Colab</a></p>
+  <tr class="active">
+    <th>Date</th>
+    <th>Description</th>
+    <th>Assignments</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><b><font color="#990000">Week 1</font></b><br>Mon Jan 8</td>
+    <td>Class Introduction
+      Intro to NLP and AI
+      <br>
+    </td>
+    <td>
+    </td>
+  </tr>
+
+    
+  <tr class="warning">
+    <td><b><font color="#990000">Week 2</font></b><br>Mon Jan 15</td>
+    <td>Holiday
+      <br>
+    </td>
+    <td>
+      Assignment 1
+      <br> <font color="#990000">Deadline: 1/16</font>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td><b><font color="#990000">Week 3</font></b><br>Mon Jan 22</td>
+    <td>Fundamentals of Machine Learning for NLP
+      <br>
+    </td>
+    <td>
+      Assignment 2
+      <br> <font color="#990000">Deadline: (Extended
+        to 1/29)</font>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td><b><font color="#990000">Week 4</font></b><br>Mon Jan 29</td>
+    <td>Neural Networks and Deep
+      Learning in NLP
+      <br>
+    </td>
+    <td>
+      Assignment 3
+      <br> <font color="#990000">Deadline: 1/29</font>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#990000">Week 5</font></b><br>Mon Feb 5</td>
+    <td>Transformer Models and
+      Attention Mechanisms
+      <br>
+    </td>
+    <td>
+      Assignment 4
+      <br> <font color="#990000">Deadline: 2/05</font>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#990000">Week 6</font></b><br>Mon Feb 12</td>
+    <td>Syntax, Parsing, Word
+      Embeddings, and POS Tagging
+      <br>
+    </td>
+    <td>
+      Assignment 5
+      <br> <font color="#990000">Deadline: 2/12</font>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td><b><font color="#990000">Week 7</font></b><br>Mon Feb 19</td>
+    <td>Holiday
+      <br>
+    </td>
+    <td>
+      Assignment 6
+      <br> <font color="#990000">Deadline: 2/20</font>
+    </td>
+  </tr>
+
+    
+
+  <tr class="warning">
+    <td><b><font color="#990000">Week 8</font></b><br>Mon Feb 26</td>
+    <td>Text Classification & Machine
+Translation + <b><font color="#990000">Midterm Exam</font></b>
+      <br>
+    </td>
+    <td>
+      Assignment 7
+      <br> <font color="#990000">Deadline: 2/27</font>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#990000">Week 9</font></b><br><br>Mon Mar 4</td>
+    <td>Advanced Topics in Machine
+      Learning and NLP
+      <br>
+    </td>
+    <td>
+      Assignment 8
+      <br> <font color="#990000">Deadline: 2/26</font>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td>Mon Mar 11</td>
+    <td><b><font color="#990000">Spring Break</font></b></td>
+      <br>
+    </td>
+    <td>
+      
+    </td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#990000">Week 10</font></b><br>Mon Mar 18</td>
+    <td>Named Entity Recognition,
+      Information Retrieval and Search
+      <br>
+    </td>
+    <td>
+      Assignment 9
+      <br> <font color="#990000">Deadline: 3/18</font>
+    </td>
+  </tr>
+
+  
+  <tr>
+    <td><b><font color="#990000">Week 11</font></b><br>Mon Mar 25</td>
+    <td>Advanced Machine Translation
+      and Summarization
+      <br>
+    </td>
+    <td>
+      Assignment 10
+      <br> <font color="#990000">Deadline: 3/25</font>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#990000">Week 12</font></b><br>Mon Apr 01</td>
+    <td>Speech Processing and
+      Conversational AI
+      <br>
+    </td>
+    <td>
+      Assignment 11
+      <br> <font color="#990000">Deadline: 4/01</font>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#990000">Week 13</font></b><br>Mon Apr 08</td>
+    <td>Generative AI, Ethical
+      Considerations, and NLP APIs
+      <br>
+    </td>
+    <td>
+      Assignment 12
+      <br> <font color="#990000">Deadline: 4/08</font>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#990000">Week 14</font></b><br>Mon Apr 15</td>
+    <td>Fine-Tuning LLMs, Hugging Face,
+      LangChain
+      <br>
+    </td>
+    <td>
+      Assignment 13
+      <br> <font color="#990000">Deadline: 4/15</font>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#990000">Week 15</font></b><br>Mon Apr 22</td>
+    <td>Course Review, Future Trends + <b><font color="#990000">Final Exam</font>
+      <br>
+    </td>
+    <td>
+      Assignment 14
+      <br> <font color="#990000">Deadline: 4/23</font>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td>Mon Apr 29</td>
+    <td><b><font color="#990000">Study Day</font></b></td>
+      <br>
+    </td>
+    <td>
+    </td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#990000">Week 16</font></b><br>Mon May 06</td>
+    <td>Final Project Presentations
+      <br>
+    </td>
+    <td>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
 </div>
+
 </body>
-</html>
