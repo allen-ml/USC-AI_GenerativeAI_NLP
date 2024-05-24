@@ -67,11 +67,15 @@
         }
 
         /* CSS for desktops */
-          .responsive-table 
-        {
-    width: 75%; /* Default to 50% of the screen width */
+/* Default styling for desktop */
+.responsive-table {
+    width: 75%; /* Adjust width as needed */
     font-size: 16px; /* Or any other size you prefer */
-      }
+}
+.responsive-table th, .responsive-table td {
+    width: 50%; /* Two columns, each taking 50% width */
+}
+        
 .name-container {
     display: flex;
     flex-wrap: wrap;
@@ -85,20 +89,18 @@
 }
         
         /* CSS for devices with a screen width of 600px or less (like mobile devices) */
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     .responsive-table {
-        width: 100%; /* Increase to 90% of the screen width on small screens */
-        font-size: 10px; /* Or any other size you prefer */
+        width: 100%; /* Full width on small screens */
+        font-size: 11px; /* Or any other size you prefer */
     }
     .responsive-table th, .responsive-table td {
-        width: 25%; /* Equal width for all columns, assuming 4 columns */
+        width: 100%; /* One column, each taking 100% width */
+        display: block; /* Block display for stacking */
     }
-    .name:first-child::after {
-        width: 4em; /* Adjust the width for smaller screens */
-    }
-    
-    img {
-        width: 80%; /* Images will be 80% of their original size on mobile devices */
+    .responsive-table tr {
+        display: block; /* Block display for rows */
+        margin-bottom: 10px; /* Optional: spacing between rows */
     }
 }
         
