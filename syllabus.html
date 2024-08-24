@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .schedule-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .table th {
+            background-color: #E0ECF8;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .module-header {
+            background-color: #D3E7FD;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .week-row {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .week-row td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        .week-row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .resources a {
+            margin-right: 10px;
+        }
+
+        .logistics {
+            text-align: right;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .logistics a {
+            color: #007bff;
+        }
+
+        .no-class {
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg pt-3 pb-3 mb-4"  style="border-bottom: 0.3px solid grey;">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <div class="navbar-collapse collapse d-flex justify-content-between align-items-center w-100" id="navbarSupportedContent">
+                <a class="navbar-brand mx-auto" href="/" style="color:black; white-space: nowrap;">ITP 459 - Generative AI and Applied Machine Learning for Natural Language Processing (NLP)</a>
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/syllabus.html">Syllabus</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Lectures</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Past Courses
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Spring 2024</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h2 class="schedule-title text-center">Schedule</h2>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Lecture</th>
+                    <th>Homework / Readings</th>
+                    <th>Logistics</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="module-header">
+                    <td colspan="4">Module 1: Introduction to NLP and AI</td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 1</td>
+                    <td>
+                        <b>Lecture 1:</b><br>
+                        Course Overview<br>
+                        Historical Evolution of AI and NLP<br>
+                        Key Concepts in Machine Learning and NLP<br>
+                        Overview of NLP Applications in Various Domains<br>
+                        Basic Text Processing and Language Understanding<br>
+                        Challenges and Limitations in NLP
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 2</td>
+                    <td>
+                        <b>Lecture 2:</b><br>
+                        Text Cleaning and Preprocessing<br>
+                        Techniques for Noise Reduction<br>
+                        Text Normalization and Tokenization<br>
+                        Lemmatization and Stemming<br>
+                        Co-occurrence Matrix in Text Analysis<br>
+                        Feature Extraction from Text<br>
+                        Regular Expressions in Text Processing<br>
+                        Basic Overview of Word Embeddings<br>
+                        Overview of python libraries such as NLTK, Spacy, regex etc.
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="module-header">
+                    <td colspan="4">Module 2: Fundamentals of Machine Learning for NLP</td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 3</td>
+                    <td>
+                        <b>Lecture 3:</b><br>
+                        Supervised Learning and Unsupervised Learning - Key Algorithms for NLP<br>
+                        Evaluation Metrics for NLP Models<br>
+                        Training, Validation, and Test Sets in Model Development<br>
+                        Overfitting and Underfitting in NLP<br>
+                        Cross-Validation Techniques<br>
+                        Introduction to Python ML Libraries
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 4</td>
+                    <td>
+                        <b>Lecture 4:</b><br>
+                        Neural Networks and Deep Learning in NLP<br>
+                        Activation Functions and Network Topologies<br>
+                        Backpropagation and Gradient Descent<br>
+                        CNNs and RNNs for NLP<br>
+                        Advanced RNNs: LSTM and GRU<br>
+                        Sequence Modeling in NLP<br>
+                        Challenges in Deep Learning for NLP<br>
+                        Case Studies in Deep Learning for NLP
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 5</td>
+                    <td>
+                        <b>Lecture 5:</b><br>
+                        Transformer Models and Attention Mechanisms<br>
+                        Understanding the Transformer Architecture<br>
+                        Concepts of Self-Attention and Positional Encoding<br>
+                        Overview of BERT, GPT, and Transformer Variants<br>
+                        Applications of Transformer Models in NLP<br>
+                        Training Transformer Models for NLP Tasks<br>
+                        Challenges and Solutions with Transformer Models
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="module-header">
+                    <td colspan="4">Module 3: Advanced NLP Topics and Applications</td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 6</td>
+                    <td>
+                        <b>Lecture 6:</b><br>
+                        Syntax, Parsing, Word Embeddings, and POS Tagging<br>
+                        Syntax in Natural Language Processing<br>
+                        Dependency and Constituency Parsing<br>
+                        Deep Dive into Word Embeddings<br>
+                        Word2Vec, GloVe, and FastText Embeddings<br>
+                        Using Embeddings in NLP Tasks<br>
+                        Part-of-Speech (POS) Tagging: Importance, Methods, and Tools<br>
+                        Practical Parsing, Embedding, and POS Tagging Techniques<br>
+                        Vector Database
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 7</td>
+                    <td>
+                        <b>Lecture 7:</b><br>
+                        Semantic Analysis, Language Models, and Question Answering<br>
+                        Semantic Role Labeling (SRL)<br>
+                        Knowledge Graphs in Semantic Analysis<br>
+                        Advances in Contextual Embeddings<br>
+                        Overview of Language Models in NLP<br>
+                        Introduction to Question Answering System and Utilizing Language Models<br>
+                        Challenges in QA and Semantic Analysis<br>
+                        Word Sense Disambiguation Techniques
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 8</td>
+                    <td>
+                        <b>Lecture 8:</b><br>
+                        Text Classification and Machine Translation<br>
+                        Fundamentals of Text Classification<br>
+                        Techniques and Algorithms for Classification<br>
+                        Introduction to Machine Translation<br>
+                        Neural Machine Translation (NMT) models<br>
+                        Challenges and Evaluation Metrics for MT<br>
+                        Practical Implementation of MT Systems
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="module-header">
+                    <td colspan="4">Module 4: Specialized Topics and Advanced Techniques</td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 9</td>
+                    <td>
+                        <b>Lecture 9:</b><br>
+                        Advanced Topics in Machine Learning and NLP<br>
+                        Deep Transfer Learning in NLP<br>
+                        Strategies for Addressing Data Imbalance<br>
+                        Model Interpretability and Explainability in NLP<br>
+                        Advanced Optimization Techniques in NLP<br>
+                        Utilizing Pre-Trained NLP Models<br>
+                        Case Studies of Advanced ML in NLP
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 10</td>
+                    <td>
+                        <b>Lecture 10:</b><br>
+                        Named Entity Recognition, Information Retrieval and Search<br>
+                        Advanced Techniques in NER<br>
+                        Contextual NER and Its Applications<br>
+                        Fundamentals of Information Retrieval<br>
+                        Deep Dive into TF-IDF and Co-occurrence Matrix<br>
+                        Search Engines and Indexing Techniques<br>
+                        Evaluation Metrics in Information Retrieval<br>
+                        Case Studies and Real-World Applications
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 11</td>
+                    <td>
+                        <b>Lecture 11:</b><br>
+                        Advanced Machine Translation and Summarization<br>
+                        Advanced Techniques in Machine Translation<br>
+                        Handling Low-Resource Languages in MT<br>
+                        Text Summarization<br>
+                        Extractive vs. Abstractive Summarization<br>
+                        Challenges in Summarization<br>
+                        Evaluation of Summarization Techniques<br>
+                        Current Trends in MT and Summarization
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 12</td>
+                    <td>
+                        <b>Lecture 12:</b><br>
+                        Speech Processing and Conversational AI<br>
+                        Basics of Speech Recognition<br>
+                        Challenges in Automatic Speech Recognition (ASR)<br>
+                        Design and Development of Conversational Agents<br>
+                        Evaluating Dialogue Systems in Conversational AI<br>
+                        Multimodal Interaction in Conversational AI<br>
+                        Natural Language Understanding in Conversational AI<br>
+                        Case Studies in Speech Processing and Conversational AI
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 13</td>
+                    <td>
+                        <b>Lecture 13:</b><br>
+                        Generative AI, Products, Techniques, APIs, and Ethical Considerations<br>
+                        Generative Models in NLP (ChatGPT, BARD, Gemini, Llama)<br>
+                        Advanced Prompt Engineering: Few-shot, Chain-of-thought, and Self-Consistency<br>
+                        Expanding LLM Capabilities: Knowledge Generation Prompting and Program-aided (PAL)<br>
+                        Developing an API with MongoDB and ngrok, and interfacing via Postman<br>
+                        LLM Safety: Prompt Injection, Prompt Leaking, Jailbreaking<br>
+                        Responsible AI, Data Privacy, Ethical Considerations, and Governance in AI<br>
+                        Business Intelligence, Marketing, Analytics, and Brand Analysis Use Cases<br>
+                        Introduction to Product Management and Business Considerations
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 14</td>
+                    <td>
+                        <b>Lecture 14:</b><br>
+                        Training and Fine-Tuning LLMs, Hugging Face, LangChain, and RAG<br>
+                        RAG: Retrieval Augmented Generation<br>
+                        Training of Chat GPT with Reinforcement Learning, HITL, and Proximal Policy Optimization<br>
+                        Evaluation of LLMs: MMLU, HellaSwag Benchmark, ARC, WinoGrade, GSM-8k, Truthful QA, PIQA<br>
+                        LoRA and QLoRA for Efficient Model Adaptation<br>
+                        Fine Tuning LLMs, Best Practices and Challenges<br>
+                        Fine-Tuned LLMs Application<br>
+                        Overview and Practical Use of Hugging Face in NLP Based Products<br>
+                        Utilizing LangChain and Llama for Customized Language Models
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 15</td>
+                    <td>
+                        <b>Lecture 15:</b><br>
+                        Course Review, Future Trends, and Project Presentations + Final Exam<br>
+                        Recap of Key NLP and Generative AI Concepts<br>
+                        Discussion on the Future Trends in NLP and Generative AI<br>
+                        Student Project Presentations<br>
+                        Feedback and Review of Projects<br>
+                        Resources for Advanced Learning<br>
+                        Closing Remarks and Course Evaluation
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
