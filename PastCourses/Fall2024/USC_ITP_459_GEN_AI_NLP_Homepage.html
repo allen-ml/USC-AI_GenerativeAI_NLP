@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITP 459 - Generative AI and Applied Machine Learning for Natural Language Processing (NLP)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .banner {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        .banner img {
+            max-width: 100px; /* Adjust this to control the size of the logo */
+            margin-right: 20px;
+        }
+
+        .right-section p {
+            margin: 0;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .header h2 {
+            font-size: 18px;
+            color: gray;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 16px;
+            margin-top: 10px;
+            padding: 0 15px;
+            text-align: justify;
+        }
+
+        .details {
+            margin-bottom: 40px;
+            list-style-type: none;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .details li {
+            margin-bottom: 10px;
+        }
+
+        .contact-note {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .instructor,
+        .ta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .instructor img,
+        .ta img {
+            border-radius: 50%;
+            margin-right: 15px;
+            width: 100px;
+            height: auto;
+        }
+
+        .ta h5 {
+            margin: 0;
+        }
+
+        .ta p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .office-hours {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .announcements h1{
+            margin-top: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .schedule-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .table th {
+            background-color: #E0ECF8;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .module-header {
+            background-color: #D3E7FD;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .week-row {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .week-row td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        .week-row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .resources a {
+            margin-right: 10px;
+        }
+
+        .logistics {
+            text-align: right;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .logistics a {
+            color: #007bff;
+        }
+
+        .no-class {
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg pt-3 pb-3" style="border-bottom: 0.3px solid grey;">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="color:#990000; white-space: nowrap; margin-left:25px">
+            University of Southern California <br>
+            ITP-459 Course Website Fall 2024
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="syllabus.html">Syllabus</a>
+                </li>
+            </ul>
+        </div> -->
+    </div>
+</nav>
+
+    
+
+
+
+    <div class="container mt-3">
+        <div class="banner" style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+            <img src="assets/usc-logo.png" alt="USC Logo" style="max-width: 100px; margin-right: 20px;">
+            <div class="right-section">
+                <p><b>ITP-459: Generative AI and Natural Language Processing (NLP)</b></p>
+            </div>
+        </div>
+        
+        <div class="header" style="border-bottom: 0.3px solid grey;">
+            <p>
+                Welcome to ITP 459 - Generative AI and Natural Language Processing (NLP) at the University of 
+                Southern California. This course is designed to immerse students in the rapidly evolving fields of Generative AI and NLP, providing
+                hands-on experience with cutting-edge Machine Learning Techniques & LLMs. Throughout the semester, you'll explore how generative models
+                are transforming industries, from text generation to conversational agents. By the end of the course, you'll have developed a 
+                solid understanding of the theoretical foundations and practical applications of Generative AI & AI in NLP, equipping you with the skills to 
+                tackle real-world challenges in this exciting domain.
+            </p>
+        </div>
+        <ul class="details" style="border-bottom: 0.3px solid grey;">
+            <li><strong>Time:</strong> Mondays, 5:00pm-8:20pm PST</li>
+            <li><strong>Location:</strong> SOS B4 </li>
+            <li><strong>Discussion:</strong> Piazza</li>
+            <li>
+                <strong>Contact:</strong> Students should use Piazza for any course-related questions. For external inquiries,
+                personal matters, or emergencies, you can email the Course Assistants with Professor in CC. Please do not forget to keep Professor in loop.
+            </li>
+        </ul>
+
+        <div class="row" style="border-bottom: 0.3px solid grey;">
+            <div class="col">
+                <h4>Instructor</h4>
+                <div class="instructor">
+                    <img src="assets/allen.jpg" alt="Instructor Photo">
+                    <div>
+                        <h5><a href="https://www.linkedin.com/in/allenbolourchi/" style="text-decoration: none;">Prof. Allen Bolourchi</a><p class="office-hours">Email: bolourch@usc.edu<br><a href="https://www.linkedin.com/in/allenbolourchi/" style="text-decoration: none;">LinkedIn</a></p></h5>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Lead Course Assistant</h4>
+                <div class="ta">
+                    <img src="assets/Rajeev_Dharmendra_Singh.jpg" alt="TA Photo">
+                    <div>
+                        <h5><a href="https://www.linkedin.com/in/rajeevsinghusc/" style="text-decoration: none;">Rajeev Singh</a></h5>
+                        <p class="office-hours">Email: rajeevdh@usc.edu<br><a href="https://www.linkedin.com/in/rajeevsinghusc/" style="text-decoration: none;">LinkedIn</a></p>
+                        <!-- <p class="office-hours"> OH: Mondays 10am - 11am, Thursdays 11.30am - 12:30pm (Offline - OHE Patio), Friday 10am - 11am  Meeting Link: <a href="meet.google.com/rmc-qqom-vsb" style="text-decoration: none;">meet.google.com/rmc-qqom-vsb</a></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Course Assistant</h4>
+                <div class="ta">
+                    <img src="assets/nitin.jpeg" alt="TA Photo">
+                    <div>
+                        <h5><a href="https://www.linkedin.com/in/nitin-sai-bommi/" style="text-decoration: none;">Nitin Sai Bommi</a></h5>
+                        <p class="office-hours">Email: nbommi@usc.edu<br><a href="https://www.linkedin.com/in/nitin-sai-bommi/" style="text-decoration: none;">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 30px;">
+        <h2 class="schedule-title text-center">Office hours</h2>
+        <table class="table table-bordered" style="margin-bottom: 25px !important">
+            <thead>
+                <tr>
+                    <th>Instructor/Course Assistant</th>
+                    <th>Mode</th>
+                    <th>Day</th>
+                    <th>Time Slot</th>
+                    <th>Location</th>
+                    <th>Meeting Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="week-row">
+                    <td>Rajeev Singh</td>
+                    <td>Online</td>
+                    <td>Monday</td>
+                    <td>10am - 11am</td>
+                    <td>Google Meet</td>
+                    <td><a href="meet.google.com/rmc-qqom-vsb" style="text-decoration: none;">meet.google.com/rmc-qqom-vsb</a></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Rajeev Singh</td>
+                    <td>In Person + Online</td>
+                    <td>Thursday</td>
+                    <td>11:30am - 12:30pm</td>
+                    <td>OHE Patio</td>
+                    <td><a href="meet.google.com/rmc-qqom-vsb" style="text-decoration: none;">meet.google.com/rmc-qqom-vsb</a></td>
+                </tr>
+                <tr class="week-row">
+                    <td>Rajeev Singh</td>
+                    <td>Online</td>
+                    <td>Friday</td>
+                    <td>10am - 11am</td>
+                    <td>Google Meet</td>
+                    <td><a href="meet.google.com/rmc-qqom-vsb" style="text-decoration: none;">meet.google.com/rmc-qqom-vsb</a></td>
+                </tr>
+               
+            </tbody>
+        </table>
+
+        <h2 class="schedule-title text-center" style="border-top: 0.3px solid grey; padding-top: 30px;">Weekly Course Topics</h2>
+        <p class="office-hours">Please visit the course syllabus on Brightspace for the latest changes to the syllabus. </p>
+    
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Lecture</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="module-header">
+                    <td colspan="4">Module 1: Introduction to Text Processing, NLP and AI</td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 1</td>
+                    <td>
+                        <b>Lecture 1: Introduction to NLP and AI</b><br>
+                        <ul>
+                            <li>Course Overview</li>
+                            <li>Historical Evolution of AI and NLP</li>
+                            <li>Key Concepts in Machine Learning and NLP</li>
+                            <li>Overview of NLP Applications in Various Domains</li>
+                            <li>Basic Text Processing and Language Understanding</li>
+                            <li>Challenges and Limitations in NLP</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 2</td>
+                    <td>
+                        <b>Lecture 2: Text Cleaning and Preprocessing</b><br>
+                        <ul>
+                            <li>Text Cleaning and Preprocessing</li>
+                            <li>Techniques for Noise Reduction</li>
+                            <li>Text Normalization and Tokenization</li>
+                            <li>Lemmatization and Stemming</li>
+                            <li>Co-occurrence Matrix in Text Analysis</li>
+                            <li>Feature Extraction from Text</li>
+                            <li>Regular Expressions in Text Processing</li>
+                            <li>Basic Overview of Word Embeddings</li>
+                            <li>Overview of python libraries such as NLTK, Spacy, regex etc.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="module-header">
+                    <td colspan="4">Module 2: Fundamentals of Machine Learning for NLP</td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 3</td>
+                    <td>
+                        <b>Lecture 3: Fundamentals of Machine Learning for NLP</b><br>
+                        <ul>
+                            <li>Supervised Learning and Unsupervised Learning - Key Algorithms for NLP</li>
+                            <li>Evaluation Metrics for NLP Models</li>
+                            <li>Training, Validation, and Test Sets in Model Development</li>
+                            <li>Overfitting and Underfitting in NLP</li>
+                            <li>Cross-Validation Techniques</li>
+                            <li>Introduction to Python ML Libraries</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 4</td>
+                    <td>
+                        <b>Lecture 4: Neural Networks and Deep Learning in NLP</b><br>
+                        <ul>
+                            <li>Neural Networks and Deep Learning in NLP</li>
+                            <li>Activation Functions and Network Topologies</li>
+                            <li>Backpropagation and Gradient Descent</li>
+                            <li>CNNs and RNNs for NLP</li>
+                            <li>Advanced RNNs: LSTM and GRU</li>
+                            <li>Sequence Modeling in NLP</li>
+                            <li>Challenges in Deep Learning for NLP</li>
+                            <li>Case Studies in Deep Learning for NLP</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 5</td>
+                    <td>
+                        <b>Lecture 5: Transformer Models and Attention Mechanisms</b><br>
+                        <ul>
+                            <li>Transformer Models and Attention Mechanisms</li>
+                            <li>Understanding the Transformer Architecture</li>
+                            <li>Concepts of Self-Attention and Positional Encoding</li>
+                            <li>Overview of BERT, GPT, and Transformer Variants</li>
+                            <li>Applications of Transformer Models in NLP</li>
+                            <li>Training Transformer Models for NLP Tasks</li>
+                            <li>Challenges and Solutions with Transformer Models</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="module-header">
+                    <td colspan="4">Module 3: NLP Techniques and Applications</td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 6</td>
+                    <td>
+                        <b>Lecture 6: Syntax, Parsing, Word Embeddings, and POS Tagging</b><br>
+                        <ul>
+                            <li>Syntax, Parsing, Word Embeddings, and POS Tagging</li>
+                            <li>Syntax in Natural Language Processing</li>
+                            <li>Dependency and Constituency Parsing</li>
+                            <li>Deep Dive into Word Embeddings</li>
+                            <li>Word2Vec, GloVe, and FastText Embeddings</li>
+                            <li>Using Embeddings in NLP Tasks</li>
+                            <li>Part-of-Speech (POS) Tagging: Importance, Methods, and Tools</li>
+                            <li>Practical Parsing, Embedding, and POS Tagging Techniques</li>
+                            <li>Vector Database</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 7</td>
+                    <td>
+                        <b>Lecture 7: Semantic Analysis, Language Models, and Question Answering</b><br>
+                        <ul>
+                            <li>Semantic Analysis, Language Models, and Question Answering</li>
+                            <li>Semantic Role Labeling (SRL)</li>
+                            <li>Knowledge Graphs in Semantic Analysis</li>
+                            <li>Advances in Contextual Embeddings</li>
+                            <li>Overview of Language Models in NLP</li>
+                            <li>Introduction to Question Answering System and Utilizing Language Models</li>
+                            <li>Challenges in QA and Semantic Analysis</li>
+                            <li>Word Sense Disambiguation Techniques</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 8</td>
+                    <td>
+                        <b>Lecture 8: Text Classification and Machine Translation + Midterm Exam</b><br>
+                        <ul>
+                            <li>MidTerm Exams!!</li>
+                            <li>Text Classification and Machine Translation</li>
+                            <li>Fundamentals of Text Classification</li>
+                            <li>Techniques and Algorithms for Classification</li>
+                            <li>Introduction to Machine Translation</li>
+                            <li>Neural Machine Translation (NMT) models</li>
+                            <li>Challenges and Evaluation Metrics for MT</li>
+                            <li>Practical Implementation of MT Systems</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="module-header">
+                    <td colspan="4">Module 4: Specialized Topics and Advanced Techniques in NLP</td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 9</td>
+                    <td>
+                        <b>Lecture 9: Advanced Topics in Machine Learning and NLP</b><br>
+                        <ul>
+                            <li>Advanced Topics in Machine Learning and NLP</li>
+                            <li>Deep Transfer Learning in NLP</li>
+                            <li>Strategies for Addressing Data Imbalance</li>
+                            <li>Model Interpretability and Explainability in NLP</li>
+                            <li>Advanced Optimization Techniques in NLP</li>
+                            <li>Utilizing Pre-Trained NLP Models</li>
+                            <li>Case Studies of Advanced ML in NLP</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 10</td>
+                    <td>
+                        <b>Lecture 10: Named Entity Recognition, Information Retrieval and Search</b><br>
+                        <ul>
+                            <li>Named Entity Recognition, Information Retrieval and Search</li>
+                            <li>Advanced Techniques in NER</li>
+                            <li>Contextual NER and Its Applications</li>
+                            <li>Fundamentals of Information Retrieval</li>
+                            <li>Deep Dive into TF-IDF and Co-occurrence Matrix</li>
+                            <li>Search Engines and Indexing Techniques</li>
+                            <li>Evaluation Metrics in Information Retrieval</li>
+                            <li>Case Studies and Real-World Applications</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 11</td>
+                    <td>
+                        <b>Lecture 11: Advanced Machine Translation and Summarization</b><br>
+                        <ul>
+                            <li>Advanced Machine Translation and Summarization</li>
+                            <li>Advanced Techniques in Machine Translation</li>
+                            <li>Handling Low-Resource Languages in MT</li>
+                            <li>Text Summarization</li>
+                            <li>Extractive vs. Abstractive Summarization</li>
+                            <li>Challenges in Summarization</li>
+                            <li>Evaluation of Summarization Techniques</li>
+                            <li>Current Trends in MT and Summarization</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 12</td>
+                    <td>
+                        <b>Lecture 12: Speech Processing and Conversational AI</b><br>
+                        <ul>
+                            <li>Speech Processing and Conversational AI</li>
+                            <li>Basics of Speech Recognition</li>
+                            <li>Challenges in Automatic Speech Recognition (ASR)</li>
+                            <li>Design and Development of Conversational Agents</li>
+                            <li>Evaluating Dialogue Systems in Conversational AI</li>
+                            <li>Multimodal Interaction in Conversational AI</li>
+                            <li>Natural Language Understanding in Conversational AI</li>
+                            <li>Case Studies in Speech Processing and Conversational AI</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="module-header">
+                    <td colspan="4">Module 5: Generative AI</td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 13</td>
+                    <td>
+                        <b>Lecture 13: Generative AI, Products, Techniques, APIs, and Ethical Considerations</b><br>
+                        <ul>
+                            <li>Generative AI, Products, Techniques, APIs, and Ethical Considerations</li>
+                            <li>Generative Models in NLP (ChatGPT, BARD, Gemini, Llama)</li>
+                            <li>Advanced Prompt Engineering: Few-shot, Chain-of-thought, and Self-Consistency</li>
+                            <li>Expanding LLM Capabilities: Knowledge Generation Prompting and Program-aided (PAL)</li>
+                            <li>Developing an API with MongoDB and ngrok, and interfacing via Postman</li>
+                            <li>LLM Safety: Prompt Injection, Prompt Leaking, Jailbreaking</li>
+                            <li>Responsible AI, Data Privacy, Ethical Considerations, and Governance in AI</li>
+                            <li>Business Intelligence, Marketing, Analytics, and Brand Analysis Use Cases</li>
+                            <li>Introduction to Product Management and Business Considerations</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 14</td>
+                    <td>
+                        <b>Lecture 14: Training and Fine-Tuning LLMs, Hugging Face, LangChain, and RAG</b><br>
+                        <ul>
+                            <li>Training and Fine-Tuning LLMs, Hugging Face, LangChain, and RAG</li>
+                            <li>RAG: Retrieval Augmented Generation</li>
+                            <li>Training of Chat GPT with Reinforcement Learning, HITL, and Proximal Policy Optimization</li>
+                            <li>Evaluation of LLMs: MMLU, HellaSwag Benchmark, ARC, WinoGrade, GSM-8k, Truthful QA, PIQA</li>
+                            <li>LoRA and QLoRA for Efficient Model Adaptation</li>
+                            <li>Fine Tuning LLMs, Best Practices and Challenges</li>
+                            <li>Fine-Tuned LLMs Application</li>
+                            <li>Overview and Practical Use of Hugging Face in NLP Based Products</li>
+                            <li>Utilizing LangChain and Llama for Customized Language Models</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="week-row">
+                    <td>Week 15</td>
+                    <td>
+                        <b>Lecture 15: Course Review, Future Trends, and Project Presentations + Final Exam</b><br>
+                        <ul>
+                            <li>Course Review, Future Trends, and Project Presentations + Final Exam</li>
+                            <li>Recap of Key NLP and Generative AI Concepts</li>
+                            <li>Discussion on the Future Trends in NLP and Generative AI</li>
+                            <li>Student Project Presentations</li>
+                            <li>Feedback and Review of Projects</li>
+                            <li>Resources for Advanced Learning</li>
+                            <li>Closing Remarks and Course Evaluation</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
