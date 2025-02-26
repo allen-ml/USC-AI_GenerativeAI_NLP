@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITP-459: Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .header {
+            background: #a50000; /* USC red color */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .header .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem; 
+        }
+
+        .header-content .logo {
+            max-width: 60px;
+            margin-top: 10px;
+            height: auto;
+        }
+
+        .header h1 {
+            font-size: 1.5rem; 
+            margin: 0;
+            text-align: center;
+        }
+
+        .header p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* Navigation Bar */
+        .navbars {
+            background: #333;
+            color: #fff;
+            padding: 0.5rem 0;
+        }
+
+        .navbars ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbars ul li {
+            display: inline-block;
+            position: relative; 
+            margin: 0 15px;
+        }
+
+        .navbars ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+
+        .navbars ul li a:hover {
+            background-color: #444; 
+            border-radius: 5px;
+        }
+
+        /* Project Card Styling */
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #a50000;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            text-align: left;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .project-card p strong {
+            color: #000;
+        }
+
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        .container h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            white-space: nowrap;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            flex-direction: column;
+            padding: 0.5rem;
+            gap: 10px; 
+        }
+
+        .dropdown.open .dropdown-content {
+            display: flex; 
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color: #444; 
+        }
+        .project {
+            position: relative;
+        }
+
+        .project-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            white-space: nowrap;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            flex-direction: column;
+            padding: 0.5rem;
+            gap: 10px; 
+        }
+
+        .project.open .project-content {
+            display: flex; 
+            width: 100%;
+        }
+
+        .project-content a {
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+
+        .project-content a:hover {
+            background-color: #444; 
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="assets/Shield_RegUse_Wh_RGB.png" alt="USC Logo" class="logo">
+                <h1>ITP-459: Generative AI and Natural Language Processing</h1>
+            </div>
+            <p>Fall 2024 | Mondays 5:00 PM - 8:20 PM</p>
+        </div>
+    </header>
+
+    <nav class="navbars">
+        <ul>
+            <li><a href="../../USC_ITP_459_GEN_AI_NLP_Homepage.html#overview">Overview</a></li>
+            <li><a href="../../USC_ITP_459_GEN_AI_NLP_Homepage.html#schedule">Schedule</a></li>
+            <li><a href="../../USC_ITP_459_GEN_AI_NLP_Homepage.html#contacts">Instructors</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Past Semester</a>
+                <div class="dropdown-content">
+                    <a href="USC_ITP_459_GEN_AI_NLP_Homepage.html">Fall 2024</a>
+                    <a href="../Spring2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Spring 2024</a>
+                </div>
+            </li>
+            <li class="project">
+                <a href="javascript:void(0)" class="projectbtn">Past Semester Final Project</a>
+                <div class="project-content">
+                    <a href="#">Fall 2024</a>
+                    <a href="../Spring2024/project.html">Spring 2024</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="text-center">Fall 2024 Final Projects</h2>
+        <div class="row" id="projectContainer">
+            
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="project-card">
+                    <h3>AI-Based Career Advisor</h3>
+                    <img src="assets/team 1.png" alt="Project Presentation" class="project-image">
+                    <p><strong>Description:</strong> This AI-powered career advisor provides personalized job recommendations based on skill analysis and real-time job market insights. It integrates with Bing and LinkedIn APIs for real-time job search.</p>
+                    <p><strong>Execution Plan:</strong> The system uses GPT-4o for skill matching, cosine similarity, and real-time job updates, ensuring accurate and up-to-date recommendations.</p>
+                    <p><strong>Team Members:</strong> David Wang, Dracky Wei, Keyu He, Julian Jiang, Qiang Zeng</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="project-card">
+                    <h3>AI Video Content Summarizer and Chatbot</h3>
+                    <img src="assets/team 2.png" alt="Project Presentation" class="project-image">
+                    <p><strong>Description:</strong> This AI-powered tool transcribes, summarizes, and allows users to interact with video content through a chatbot. It extracts key insights from lectures, meetings, and online videos.</p>
+                    <p><strong>Execution Plan:</strong> The system uses LLM-based summarization, video transcription, and chatbot features to provide interactive question-answering based on video content.</p>
+                    <p><strong>Team Members:</strong> Iliyan Valani, Shoaib Valani, Haydee Martinez, Carissa Lin, Tyler Nguyen Tran</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="project-card">
+                    <h3>QA AI Assistant for ITP 459</h3>
+                    <img src="assets/team 3.png" alt="Project Presentation" class="project-image">
+                    <p><strong>Description:</strong> A Retrieval-Augmented Generation (RAG)-based assistant designed for answering course-related queries using lecture materials. It enhances learning through real-time, course-specific answers.</p>
+                    <p><strong>Execution Plan:</strong> Uses a vector database and LLMs to retrieve relevant course materials, allowing students to receive precise, cited answers with minimal instructor intervention.</p>
+                    <p><strong>Team Members:</strong> Evans Alvarez, Lawrance Lui, Ju Lee</p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="project-card">
+                    <h3>AI Assistant for Internship/New Grad Job Finder</h3>
+                    <img src="assets/team 4.png" alt="Project Presentation" class="project-image">
+                    <p><strong>Description:</strong> HireWizard is an AI-driven job search assistant that matches job seekers to relevant roles based on resume analysis and job posting data.</p>
+                    <p><strong>Execution Plan:</strong> Uses NLP-powered resume screening, cosine similarity for job matching, and integrates with job databases like LinkedIn and Indeed to improve hiring outcomes.</p>
+                    <p><strong>Team Members:</strong> Thomas Murray, William Norris, Stan Loosmore, Zubin Hydrie</p>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="project-card">
+                    <h3>Sandwich or Salad Chatbot</h3>
+                    <img src="assets/team 5.png" alt="Project Presentation" class="project-image">
+                    <p><strong>Description:</strong> An AI-powered chatbot for customizing sandwich orders and providing personalized meal recommendations using dietary preferences and past orders.</p>
+                    <p><strong>Execution Plan:</strong> Implements a step-by-step ordering system, cross-selling features, and AI-powered dietary customization to improve customer experience.</p>
+                    <p><strong>Team Members:</strong> Eimon Amjadi, Reha Matai, Eddie Sanchez, Roei Ziv</p>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="project-card">
+                    <h3>AI Lecture Assistant: RAG-Driven Avatar for Interactive Course Q&A</h3>
+                    <img src="assets/team 6.png" alt="Project Presentation" class="project-image">
+                    <p><strong>Description:</strong> A virtual AI assistant that answers course-related questions in real-time using Retrieval-Augmented Generation (RAG) and an interactive avatar.</p>
+                    <p><strong>Execution Plan:</strong> Uses LLMs for text-based Q&A, voice synthesis for audio responses, and lip-syncing for realistic avatar interactions to enhance student engagement.</p>
+                    <p><strong>Team Members:</strong> Emma Guo, Elizabeth Phillips, Jason Liu, Hongkun Gong</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<footer class="footer">
+<div class="container">
+    <p>&copy; 2025 ITP-459, University of Southern California</p>
+</div>
+</footer>
+
+<script>
+function equalizeCardHeights() {
+    let cards = document.querySelectorAll(".project-card");
+    let maxHeight = 0;
+
+    // Reset heights before recalculating
+    cards.forEach(card => card.style.height = "auto");
+
+    // Find max height
+    cards.forEach(card => maxHeight = Math.max(maxHeight, card.offsetHeight));
+
+    // Apply max height to all cards
+    cards.forEach(card => card.style.height = maxHeight + "px");
+}
+
+// Run on page load and on window resize
+window.addEventListener("load", equalizeCardHeights);
+window.addEventListener("resize", equalizeCardHeights);
+        // JavaScript to toggle dropdown
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdown = document.querySelector('.dropdown');
+            const dropbtn = dropdown.querySelector('.dropbtn');
+
+            dropbtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle('open');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('open');
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const projdown = document.querySelector('.project');
+            const projbtn = projdown.querySelector('.projectbtn');
+
+            projbtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                projdown.classList.toggle('open');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!projdown.contains(e.target)) {
+                    projdown.classList.remove('open');
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+        // Select all toggle links
+        const toggleLinks = document.querySelectorAll(".toggle-text");
+
+        toggleLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                // Toggle text between Expand More and Expand Less
+                const isExpanded = this.getAttribute("aria-expanded") === "true";
+                this.textContent = isExpanded ? "Expand Less" : "Expand More";
+            });
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
