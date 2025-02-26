@@ -116,6 +116,40 @@
             background-color: #444; 
         }
 
+        .project {
+            position: relative;
+        }
+
+        .project-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            white-space: nowrap;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            flex-direction: column;
+            padding: 0.5rem;
+            gap: 10px; 
+        }
+
+        .project.open .project-content {
+            display: flex; 
+            width: 100%;
+        }
+
+        .project-content a {
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+
+        .project-content a:hover {
+            background-color: #444; 
+        }
+
         .section {
             padding: 0.75rem 0 0 0;
         }
@@ -202,6 +236,13 @@
                 <div class="dropdown-content">
                     <a href="./PastCourses/Fall2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Fall 2024</a>
                     <a href="./PastCourses/Spring2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Spring 2024</a>
+                </div>
+            </li>
+            <li class="project">
+                <a href="javascript:void(0)" class="projectbtn">Past Semester Final Project</a>
+                <div class="project-content">
+                    <a href="./PastCourses/Fall2024/project.html">Fall 2024</a>
+                    <a href="./PastCourses/Spring2024/project.html">Spring 2024</a>
                 </div>
             </li>
         </ul>
@@ -770,6 +811,22 @@
             document.addEventListener('click', (e) => {
                 if (!dropdown.contains(e.target)) {
                     dropdown.classList.remove('open');
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const projdown = document.querySelector('.project');
+            const projbtn = projdown.querySelector('.projectbtn');
+
+            projbtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                projdown.classList.toggle('open');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!projdown.contains(e.target)) {
+                    projdown.classList.remove('open');
                 }
             });
         });
