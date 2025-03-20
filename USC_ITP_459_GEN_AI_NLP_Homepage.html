@@ -653,36 +653,14 @@
 
     <script>
     // Function to load external HTML into a placeholder element
-//     function getBaseURL() {
-//     const hostname = window.location.hostname;
-//     // Check for localhost (or 127.0.0.1) for local development
-//     console.log(hostname);
-//     if (hostname === "localhost" || hostname === "127.0.0.1") {
-//       return "http://127.0.0.1:5500/"; // adjust as needed
-//     } else {
-//       // Otherwise, assume production (GitHub Pages)
-//       return "https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/";
-//     }
-//   }
-
-//   // Create or update the <base> tag dynamically
-//   (function() {
-//     let baseTag = document.querySelector('base');
-//     if (!baseTag) {
-//       baseTag = document.createElement('base');
-//       document.head.insertBefore(baseTag, document.head.firstChild);
-//     }
-//     baseTag.href = getBaseURL();
-//     console.log("Base URL set to:", baseTag.href);
-//   })();
-//     function loadHTML(selector, url) {
-//       fetch(url)
-//         .then(response => response.text())
-//         .then(data => {
-//           document.querySelector(selector).innerHTML = data;
-//         })
-//         .catch(err => console.error('Error loading HTML:', err));
-//     }
+    function loadHTML(selector, url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector(selector).innerHTML = data;
+        })
+        .catch(err => console.error('Error loading HTML:', err));
+    }
     
     // Load header and footer into their placeholders
     loadHTML('#header-placeholder', './header.html');
