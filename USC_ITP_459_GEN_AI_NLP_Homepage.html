@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITP-459: Generative AI & NLP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <base href="http://allen-ml.github.io/USC-AI_GenerativeAI_NLP/USC_ITP_459_GEN_AI_NLP_Homepage.html"> 
     <style>
         /* CSS Code */
         body {
@@ -15,107 +16,6 @@
             background-color: #f9f9f9;
             color: #333;
         }
-        .header {
-            background: #a50000; /* USC red color */
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        .header .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        .header-content {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem; 
-        }
-
-        .header-content .logo {
-            max-width: 60px;
-            margin-top: 10px;
-            height: auto;
-        }
-
-        .header h1 {
-            font-size: 1.5rem; 
-            margin: 0;
-            text-align: center;
-        }
-
-        .header p {
-            margin-top: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .navbars {
-            background: #333;
-            color: #fff;
-            padding: 0.5rem 0;
-        }
-
-        .navbars ul {
-            list-style: none;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        .navbars ul li {
-            display: inline-block;
-            position: relative; 
-            margin: 0 15px;
-        }
-
-        .navbars ul li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            display: inline-block;
-        }
-
-        .navbars ul li a:hover {
-            background-color: #444; 
-            border-radius: 5px;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            white-space: nowrap;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            flex-direction: column;
-            padding: 0.5rem;
-            gap: 10px; 
-        }
-
-        .dropdown.open .dropdown-content {
-            display: flex; 
-        }
-
-        .dropdown-content a {
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-
-        .dropdown-content a:hover {
-            background-color: #444; 
-        }
-
         .project {
             position: relative;
         }
@@ -175,13 +75,6 @@
             padding: 10px;
             text-align: left;
         }
-
-        .footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
         .fixed-image {
             width: 100px;
             height: auto;
@@ -216,37 +109,7 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <img src="assets/Shield_RegUse_Wh_RGB.png" alt="USC Logo" class="logo">
-                <h1>ITP-459: Generative AI and Natural Language Processing</h1>
-            </div>
-            <p>Spring 2025 | Mondays 5:00 PM - 8:20 PM | Location: KAP 160</p>
-        </div>
-    </header>
-
-    <nav class="navbars">
-        <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#contacts">Instructors</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Past Semester</a>
-                <div class="dropdown-content">
-                    <a href="./PastCourses/Fall2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Fall 2024</a>
-                    <a href="./PastCourses/Spring2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Spring 2024</a>
-                </div>
-            </li>
-            <li class="project">
-                <a href="javascript:void(0)" class="projectbtn">Past Semester Final Project</a>
-                <div class="project-content">
-                    <a href="./PastCourses/Fall2024/project.html">Fall 2024</a>
-                    <a href="./PastCourses/Spring2024/project.html">Spring 2024</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
+    <div id="header-placeholder"></div>
 
     <section id="overview" class="section" style="margin-top: 20px;">
         <div class="container">
@@ -271,15 +134,14 @@
                 <div class="col-md-6 mb-3">
                     <div class="text-center p-3">
                         <img src="assets/allen.jpg" alt="Prof. Allen Bolourchi" class="fixed-image rounded-circle mb-3">
-                        <h5>Prof. Allen Bolourchi <a href="https://www.linkedin.com/in/allenbolourchi/"><img src="assets/linkedin.png" style="height: 17px; width: auto;"></a></h5>
-                        <p>Email: <a href="mailto:bolourch@usc.edu">bolourch@usc.edu</a></p>
+                        <h5><a href="staff.html?id=allen" style="color:#990000">Prof. Allen Bolourchi</a> </h5>
+                        <!-- <a href="https://www.linkedin.com/in/allenbolourchi/"><img src="assets/linkedin.png" style="height: 17px; width: auto;"></a> -->
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="text-center p-3">
                         <img src="assets/rezaJ.png" alt="Prof. Reza Jafarkhani" class="fixed-image rounded-circle mb-3">
-                        <h5>Prof. Reza Jafarkhani <a href="https://www.linkedin.com/in/reza-jafarkhani-a6065828/"><img src="assets/linkedin.png" style="height: 17px; width: auto;"></a></h5>
-                        <p>Email: <a href="mailto:jafarkha@usc.edu">jafarkha@usc.edu</a></p>
+                        <h5><a href="staff.html?id=reza" style="color:#990000">Prof. Reza Jafarkhani</a></h5>
                     </div>
                 </div>
             </div>
@@ -294,22 +156,19 @@
                 <div class="col-md-4 mb-3">
                     <div class="text-center p-3">
                         <img src="assets/Rajeev_Dharmendra_Singh.jpg" alt="Rajeev Singh" class="fixed-image rounded-circle mb-3">
-                        <h5>Rajeev Singh <a href="https://www.linkedin.com/in/rajeevsinghusc/"><img src="assets/linkedin.png" style="height: 17px; width: auto;"></a></h5>
-                        <p>Email: <a href="mailto:rajeevdh@usc.edu">rajeevdh@usc.edu</a></p>
+                        <h5><a href="staff.html?id=rajeev" style="color:#990000">Rajeev Singh</a></h5>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="text-center p-3">
                         <img src="assets/nitin.jpeg" alt="Nitin Sai Bommi" class="fixed-image rounded-circle mb-3">
-                        <h5>Nitin Sai Bommi <a href="https://www.linkedin.com/in/nitin-sai-bommi/"><img src="assets/linkedin.png" style="height: 17px; width: auto;"></a></h5>
-                        <p>Email: <a href="mailto:nbommi@usc.edu">nbommi@usc.edu</a></p>
+                        <h5><a href="staff.html?id=nitin" style="color:#990000">Nitin Sai Bommi</a></h5>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="text-center p-3">
                         <img src="assets/tbd.jpg" alt="tbd" class="fixed-image rounded-circle mb-3">
-                        <h5>TBD <a href="https://www.linkedin.com/in/tbd/"><img src="assets/linkedin.png" style="height: 17px; width: auto;"></a></h5>
-                        <p>Email: <a href="mailto:tbd@usc.edu">tbd@usc.edu</a></p>
+                        <h5>TBD</h5>
                     </div>
                 </div>
             </div>
@@ -790,47 +649,24 @@
     
     
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 ITP-459, University of Southern California</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
 
     <script>
-        // JavaScript to toggle dropdown
-        document.addEventListener('DOMContentLoaded', () => {
-            const dropdown = document.querySelector('.dropdown');
-            const dropbtn = dropdown.querySelector('.dropbtn');
-
-            dropbtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                dropdown.classList.toggle('open');
-            });
-
-            // Close dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('open');
-                }
-            });
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-            const projdown = document.querySelector('.project');
-            const projbtn = projdown.querySelector('.projectbtn');
-
-            projbtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                projdown.classList.toggle('open');
-            });
-
-            // Close dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!projdown.contains(e.target)) {
-                    projdown.classList.remove('open');
-                }
-            });
-        });
-        document.addEventListener("DOMContentLoaded", function () {
+    // Function to load external HTML into a placeholder element
+    function loadHTML(selector, url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector(selector).innerHTML = data;
+        })
+        .catch(err => console.error('Error loading HTML:', err));
+    }
+    
+    // Load header and footer into their placeholders
+    loadHTML('#header-placeholder', 'header.html');
+    loadHTML('#footer-placeholder', 'footer.html');
+    document.addEventListener("DOMContentLoaded", function () {
         // Select all toggle links
         const toggleLinks = document.querySelectorAll(".toggle-text");
 

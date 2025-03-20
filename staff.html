@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITP-459: Generative AI & NLP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    /* Global CSS for layout and main content */
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .staff-portfolio {
+      flex: 1;
+      padding: 2rem 0;
+    }
+    .staff-portfolio .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .staff-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .staff-image {
+      flex: 1 1 300px;
+      border: 3px solid #333;
+      overflow: hidden;
+      max-width: 400px;
+    }
+    .staff-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .staff-info {
+      flex: 2 1 300px;
+    }
+    .staff-info h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #a50000;
+    }
+    .staff-info p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .staff-info a {
+      color: #a50000;
+      text-decoration: none;
+    }
+    .staff-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+  
+  <!-- Main Content -->
+  <section class="staff-portfolio">
+    <div class="container">
+      <div id="staff-details">
+        <!-- Staff details will be injected here -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+  
+  <script>
+    // Function to load external HTML into a placeholder element
+    function loadHTML(selector, url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector(selector).innerHTML = data;
+        })
+        .catch(err => console.error('Error loading HTML:', err));
+    }
+    
+    // Load header and footer into their placeholders
+    loadHTML('#header-placeholder', 'header.html');
+    loadHTML('#footer-placeholder', 'footer.html');
+    function getQueryParams() {
+      const params = {};
+      window.location.search.slice(1).split('&').forEach(param => {
+        const [key, value] = param.split('=');
+        params[key] = decodeURIComponent(value || '');
+      });
+      return params;
+    }
+  
+    // Fetch staff data and render portfolio details based on query parameter id
+    fetch('staff.json')
+      .then(response => response.json())
+      .then(data => {
+        const params = getQueryParams();
+        const staffId = params.id; // e.g., staff.html?id=rajeev
+        const staffMember = data.find(member => member.id === staffId);
+        const container = document.getElementById('staff-details');
+  
+        if (staffMember) {
+          container.innerHTML = `
+            <div class="staff-content">
+              <div class="staff-image">
+                <img src="${staffMember.image}" alt="${staffMember.name}">
+              </div>
+              <div class="staff-info">
+                <h2>${staffMember.name}</h2>
+                <p><strong>Position:</strong> ${staffMember.position}</p>
+                <p><strong>Email:</strong> <a href="mailto:${staffMember.email}">${staffMember.email}</a></p>
+                <p><strong>LinkedIn:</strong> <a href="${staffMember.linkedin}" target="_blank">Profile</a></p>
+                <p>${staffMember.bio}</p>
+              </div>
+            </div>
+          `;
+        } else {
+          container.innerHTML = `<p>Staff member not found.</p>`;
+        }
+      })
+      .catch(error => {
+        console.error('Error loading staff data:', error);
+        document.getElementById('staff-details').innerHTML = `<p>Error loading staff details.</p>`;
+      });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
