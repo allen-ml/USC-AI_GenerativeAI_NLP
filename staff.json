@@ -7,7 +7,7 @@
       "linkedin":"https://www.linkedin.com/in/rajeevsinghusc/",
       "image":"assets/Rajeev_Dharmendra_Singh.jpg",
       "active":["Spring 2024", "Fall 2024","Spring 2025"],
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "bio": "Rajeev Singh is a passionate software engineer with a robust background in full-stack development, cloud computing, and machine learning. Currently pursuing his Master’s in Computer Science at the University of Southern California, Rajeev has honed his skills through practical experiences that include designing CI/CD pipelines and building real-time applications. His tenure at companies such as ASML, where he enhanced system uptime and error resolution efficiency, highlights his ability to develop scalable systems and optimize infrastructure. Rajeev will be joining Meta as a Software Engineer from June 2025"
     },
     {
       "id": "allen",
@@ -17,7 +17,7 @@
       "image":"assets/allen.jpg",
       "linkedin":"https://www.linkedin.com/in/allenbolourchi/",
       "active":["Spring 2024", "Fall 2024","Spring 2025"],
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "bio": "Professor Allen Bolourchi is a visionary leader in generative AI and natural language processing with an extensive career spanning academia, research, and industry. As an adjunct professor at the University of Southern California, he educates future AI professionals on cutting-edge generative AI techniques. Simultaneously, Allen plays a pivotal role in AI research and product management at Meta AI, FAIR. His prior experience includes strategic positions at Apple, where he managed machine learning initiatives for the App Store, and leadership roles in product development. Recognized for his contributions with numerous fellowships and awards, Allen’s blend of academic rigor and industry expertise drives innovation and transformational growth in technology. "
     },
     {
         "id": "reza",
@@ -27,7 +27,7 @@
         "linkedin":"https://www.linkedin.com/in/reza-jafarkhani-a6065828/",
         "image":"assets/rezaJ.png",
         "active":["Fall 2024","Spring 2025"],
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "bio": "Reza Jafarkhani is an accomplished academic and industry professional specializing in machine learning, artificial intelligence, and data analytics. Currently a Senior Lecturer at the University of Southern California’s Viterbi School of Engineering, he brings over five years of teaching experience in advanced technical subjects including AI and programming. He is dedicated to bridging theoretical knowledge with real-world applications, preparing the next generation of engineers for emerging technological challenges. "
       },
       {
         "id": "nitin",
@@ -37,7 +37,7 @@
         "linkedin":"https://www.linkedin.com/in/nitin-sai-bommi/",
         "image":"assets/nitin.jpeg",
         "active":["Fall 2024","Spring 2025"],
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "bio": "Nitin Sai Bommi is an emerging expert in deep learning and machine learning with a solid research and academic foundation. Having earned his Master’s degree from the University of Hyderabad—with a thesis focused on Explainable AI for Software Engineering—he is now advancing his studies at the University of Southern California. Nitin has built a diverse portfolio through internships at NVIDIA, where he is involved in deep learning performance analysis, as well as research roles at the University of Calgary, University College Dublin, and the University of Hyderabad. His proficiency in Python and machine learning, coupled with his hands-on experience in AI profiling and performance optimization, marks him as a promising innovator in the field. ​"
       },
       {
         "id": "varuna",
@@ -47,7 +47,7 @@
         "linkedin":"https://www.linkedin.com/in/varuna-krishna-a25521194/",
         "image":"assets/varuna.JPG",
         "active":["Spring 2025"],
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "bio": "Varuna Krishna is a driven computer science professional with extensive experience in machine learning and artificial intelligence. Currently pursuing his Master’s in Computer Science at the University of Southern California, he also serves as a Teaching Assistant for the Applied Machine Learning for Natural Language Processing course. His professional journey includes impactful roles such as a Generative AI Engineer Intern at Vimaan, Machine Learning Intern at AutomationEdge, and a research internship at the University of South Carolina’s Artificial Intelligence Institute. Varuna’s work on projects like Image2Tweet and innovative joint embedding learning techniques underlines his commitment to advancing AI. With robust programming skills in C, HTML, and Python, he is well-equipped to tackle complex technical challenges and contribute to the tech industry. Varuna will be joining Amazon as a Software Developer after his graduation in Summer 2025."
       }
   ]
   
