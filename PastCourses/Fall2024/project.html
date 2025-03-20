@@ -353,6 +353,28 @@
 
 
 <script>
+        function getBaseURL() {
+    const hostname = window.location.hostname;
+    // Check for localhost (or 127.0.0.1) for local development
+    console.log(hostname);
+    if (hostname === "localhost" || hostname === "127.0.0.1") {
+      return "http://127.0.0.1:5500/"; // adjust as needed
+    } else {
+      // Otherwise, assume production (GitHub Pages)
+      return "https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/";
+    }
+  }
+
+  // Create or update the <base> tag dynamically
+  (function() {
+    let baseTag = document.querySelector('base');
+    if (!baseTag) {
+      baseTag = document.createElement('base');
+      document.head.insertBefore(baseTag, document.head.firstChild);
+    }
+    baseTag.href = getBaseURL();
+    console.log("Base URL set to:", baseTag.href);
+  })();
 function equalizeCardHeights() {
     let cards = document.querySelectorAll(".project-card");
     let maxHeight = 0;
@@ -381,8 +403,8 @@ window.addEventListener("resize", equalizeCardHeights);
     }
     
     // Load header and footer into their placeholders
-    loadHTML('#header-placeholder', '../../header.html');
-    loadHTML('#footer-placeholder', '../../footer.html');
+    loadHTML('#header-placeholder', 'header.html');
+    loadHTML('#footer-placeholder', 'footer.html');
         document.addEventListener("DOMContentLoaded", function () {
         // Select all toggle links
         const toggleLinks = document.querySelectorAll(".toggle-text");
