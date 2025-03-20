@@ -6,15 +6,17 @@
       "email": "rajeevdh@usc.edu",
       "linkedin":"https://www.linkedin.com/in/rajeevsinghusc/",
       "image":"assets/Rajeev_Dharmendra_Singh.jpg",
+      "active":["Spring 2024", "Fall 2024","Spring 2025"],
       "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "id": "allen",
       "name": "Prof. Allen Bolourchi",
       "position": "Instructor",
-      "email": "allen@example.com",
+      "email": "bolourch@usc.edu",
       "image":"assets/allen.jpg",
       "linkedin":"https://www.linkedin.com/in/allenbolourchi/",
+      "active":["Spring 2024", "Fall 2024","Spring 2025"],
       "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
@@ -24,6 +26,7 @@
         "email": "jafarkha@usc.edu",
         "linkedin":"https://www.linkedin.com/in/reza-jafarkhani-a6065828/",
         "image":"assets/rezaJ.png",
+        "active":["Fall 2024","Spring 2025"],
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       },
       {
@@ -33,6 +36,17 @@
         "email": "nbommi@usc.edu",
         "linkedin":"https://www.linkedin.com/in/nitin-sai-bommi/",
         "image":"assets/nitin.jpeg",
+        "active":["Fall 2024","Spring 2025"],
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        "id": "varuna",
+        "name": "Varuna Krishna Kolla",
+        "position": "Course Assistant",
+        "email": "vkolla@usc.edu",
+        "linkedin":"https://www.linkedin.com/in/varuna-krishna-a25521194/",
+        "image":"assets/varuna.JPG",
+        "active":["Spring 2025"],
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       }
   ]

@@ -6,7 +6,7 @@
   <title>ITP-459: Generative AI & NLP</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
   <style>
-    /* Global CSS for layout and main content */
+    /* Global layout and styling */
     html, body {
       height: 100%;
     }
@@ -20,6 +20,8 @@
       background-color: #f9f9f9;
       color: #333;
     }
+
+    /* The container that holds the staff details */
     .staff-portfolio {
       flex: 1;
       padding: 2rem 0;
@@ -28,65 +30,81 @@
       max-width: 960px;
       margin: auto;
       padding: 0 20px;
+      text-align: center; /* center all text in this container */
     }
+
+    /* The main wrapper for the staff info */
     .staff-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
+      max-width: 800px; /* optional max width for centering */
+      margin: 2rem auto;
     }
-    .staff-image {
-      flex: 1 1 300px;
-      border: 3px solid #333;
-      overflow: hidden;
-      max-width: 400px;
-    }
+
+    /* The staff image (with default size for large devices) */
     .staff-image img {
-      width: 100%;
-      height: auto;
-      display: block;
+      border: 3px solid #333;
       object-fit: cover;
+      width: 300px;   /* default for large devices */
+      height: auto;
+      border-radius: 15% !important;
     }
-    .staff-info {
-      flex: 2 1 300px;
+
+    /* Medium devices: smaller image width */
+    @media (max-width: 992px) {
+      .staff-image img {
+        width: 250px;
+      }
     }
-    .staff-info h2 {
+
+    /* Small devices: even smaller image width */
+    @media (max-width: 768px) {
+      .staff-image img {
+        width: 200px;
+      }
+    }
+
+    /* Styling for the staff name, position, etc. */
+    .staff-name {
       font-size: 2rem;
+      font-weight: 700; /* bold */
+      color: #a50000;   /* USC red color */
       margin-bottom: 1rem;
-      color: #a50000;
     }
-    .staff-info p {
+    .staff-position,
+    .staff-email,
+    .staff-linkedin,
+    .staff-bio {
+      margin-bottom: 1rem;
       font-size: 1rem;
       line-height: 1.5;
-      margin-bottom: 1rem;
     }
-    .staff-info a {
+    .staff-email a,
+    .staff-linkedin a {
       color: #a50000;
       text-decoration: none;
     }
-    .staff-info a:hover {
+    .staff-email a:hover,
+    .staff-linkedin a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- Header placeholder -->
+  <!-- Header placeholder (loaded via JS) -->
   <div id="header-placeholder"></div>
   
-  <!-- Main Content -->
+  <!-- Main Content: Staff Portfolio Section -->
   <section class="staff-portfolio">
     <div class="container">
-      <div id="staff-details">
-        <!-- Staff details will be injected here -->
-      </div>
+      <div id="staff-details"><!-- Staff details injected here --></div>
     </div>
   </section>
   
-  <!-- Footer placeholder -->
+  <!-- Footer placeholder (loaded via JS) -->
   <div id="footer-placeholder"></div>
   
+  <!-- JavaScript to load header/footer and staff data -->
   <script>
-    // Function to load external HTML into a placeholder element
+    // Load external HTML for header/footer
     function loadHTML(selector, url) {
       fetch(url)
         .then(response => response.text())
@@ -95,10 +113,11 @@
         })
         .catch(err => console.error('Error loading HTML:', err));
     }
-    
-    // Load header and footer into their placeholders
+
     loadHTML('#header-placeholder', 'header.html');
     loadHTML('#footer-placeholder', 'footer.html');
+
+    // Parse query parameters
     function getQueryParams() {
       const params = {};
       window.location.search.slice(1).split('&').forEach(param => {
@@ -107,29 +126,32 @@
       });
       return params;
     }
-  
-    // Fetch staff data and render portfolio details based on query parameter id
+
+    // Load staff data and render the staff member's info
     fetch('staff.json')
       .then(response => response.json())
       .then(data => {
         const params = getQueryParams();
-        const staffId = params.id; // e.g., staff.html?id=rajeev
+        const staffId = params.id; // e.g., ?id=allen
         const staffMember = data.find(member => member.id === staffId);
         const container = document.getElementById('staff-details');
   
         if (staffMember) {
           container.innerHTML = `
             <div class="staff-content">
-              <div class="staff-image">
+              <div class="staff-image mb-4">
                 <img src="${staffMember.image}" alt="${staffMember.name}">
               </div>
-              <div class="staff-info">
-                <h2>${staffMember.name}</h2>
-                <p><strong>Position:</strong> ${staffMember.position}</p>
-                <p><strong>Email:</strong> <a href="mailto:${staffMember.email}">${staffMember.email}</a></p>
-                <p><strong>LinkedIn:</strong> <a href="${staffMember.linkedin}" target="_blank">Profile</a></p>
-                <p>${staffMember.bio}</p>
-              </div>
+              <h2 class="staff-name">${staffMember.name}</h2>
+              <p class="staff-position"><strong>Position:</strong> ${staffMember.position}</p>
+              <p class="staff-email"><strong>Email:</strong> <a href="mailto:${staffMember.email}">${staffMember.email}</a></p>
+              <p class="staff-linkedin"><strong>LinkedIn:</strong> <a href="${staffMember.linkedin}" target="_blank">Profile</a></p>
+              ${ staffMember.active && staffMember.active.length ? `
+                <div class="active-years">
+                  <p><strong>Active Years:</strong><br> ${staffMember.active.map(year => `<span class="badge me-1" style="background-color:#990000">${year}</span>`).join('')}</p>
+                </div>
+              ` : '' }
+              <p class="staff-bio">${staffMember.bio}</p>
             </div>
           `;
         } else {
@@ -141,7 +163,6 @@
         document.getElementById('staff-details').innerHTML = `<p>Error loading staff details.</p>`;
       });
   </script>
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
