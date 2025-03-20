@@ -1,0 +1,20 @@
+[
+    {
+      "id": "rajeev",
+      "name": "Rajeev Singh",
+      "position": "Course Assistant",
+      "email": "rajeevdh@usc.edu",
+      "linkedin":"https://www.linkedin.com/in/rajeevsinghusc/",
+      "image":"assets/Rajeev_Dharmendra_Singh.jpg",
+      "bio": "lorem ipsum"
+    },
+    {
+      "id": "allen",
+      "name": "Allen Bolourchi",
+      "position": "Professor",
+      "email": "allen@example.com",
+      "image":"assets/allen.jpg",
+      "bio": "Allen is an expert in NLP with a strong background in both academia and industry. He has been leading courses in generative AI for years."
+    }
+  ]
+  

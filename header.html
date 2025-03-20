@@ -1,0 +1,108 @@
+<!-- header.html -->
+<style>
+    /* Header and Navbar CSS */
+    .header {
+      background: #a50000;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .header .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .header-content {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .header-content .logo {
+      max-width: 60px;
+      margin-top: 10px;
+      height: auto;
+    }
+    .header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      text-align: center;
+    }
+    .header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+    .navbars {
+      background: #333;
+      color: #fff;
+      padding: 0.5rem 0;
+    }
+    .navbars ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+    .navbars ul li {
+      display: inline-block;
+      position: relative;
+      margin: 0 15px;
+    }
+    .navbars ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: inline-block;
+    }
+    .navbars ul li a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .dropdown-menu{
+        background-color: #333;
+        width: 100%;
+    }
+    .dropdown-menu .dropdown-item:hover,
+        .dropdown-menu .dropdown-item:focus {
+        background-color: transparent !important;
+        color: white !important;
+        text-decoration: none !important;
+        }
+    /* You can add additional header or navbar styles as needed */
+  </style>
+  
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <img src="assets/Shield_RegUse_Wh_RGB.png" alt="USC Logo" class="logo">
+        <h1>ITP-459: Generative AI and Natural Language Processing</h1>
+      </div>
+      <p>Spring 2025 | Mondays 5:00 PM - 8:20 PM | Location: KAP 160</p>
+    </div>
+  </header>
+  <nav class="navbars">
+    <ul>
+      <li><a href="/USC_ITP_459_GEN_AI_NLP_Homepage.html#overview">Overview</a></li>
+      <li><a href="/USC_ITP_459_GEN_AI_NLP_Homepage.html#schedule">Schedule</a></li>
+      <li><a href="/USC_ITP_459_GEN_AI_NLP_Homepage.html#contacts">Instructors</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pastSemesterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Past Semester
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="pastSemesterDropdown">
+          <li class="dropdown-list"><a class="dropdown-item" href="/PastCourses/Fall2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Fall 2024</a></li>
+          <li class="dropdown-list"><a class="dropdown-item" href="/PastCourses/Spring2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Spring 2024</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pastSemesterFinalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Past Semester Final Project
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="pastSemesterFinalDropdown">
+          <li class="dropdown-list"><a class="dropdown-item" href="/PastCourses/Fall2024/project.html">Fall 2024</a></li>
+          <li class="dropdown-list"><a class="dropdown-item" href="/PastCourses/Spring2024/project.html">Spring 2024</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  
