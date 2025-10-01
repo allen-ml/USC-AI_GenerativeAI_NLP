@@ -1,0 +1,168 @@
+/* Project Styles */
+.projectBody {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-y: auto;
+}
+
+.projectCard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.projectCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.projectCard h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #990000;
+  margin-bottom: 10px;
+}
+
+.projectCard p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.projectMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.projectAuthor {
+  font-weight: bold;
+}
+
+.projectDate {
+  font-style: italic;
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.projectLink {
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.projectLinkPrimary {
+  background-color: #990000;
+  color: white;
+}
+
+.projectLinkPrimary:hover {
+  background-color: #770000;
+  color: white;
+}
+
+.projectLinkSecondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.projectLinkSecondary:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #990000, #cc0000);
+  color: white;
+  border-radius: 10px;
+}
+
+.headerSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.headerSection p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: #990000;
+  text-align: center;
+  margin: 40px 0 30px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .headerSection h1 {
+    font-size: 2rem;
+  }
+
+  .headerSection p {
+    font-size: 1rem;
+  }
+
+  .projectLinks {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projectMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "label": "Home",
+    "href": "/",
+    "children": [
+      {
+        "label": "Hero",
+        "href": "/#hero"
+      },
+      {
+        "label": "Overview",
+        "href": "/#overview"
+      },
+      {
+        "label": "Quick Links",
+        "href": "/#quick-links"
+      }
+    ]
+  },
+  { "label": "Content", "href": "/content" },
+  { "label": "Schedule", "href": "/schedule" },
+  { "label": "Syllabus", "href": "/syllabus" },
+  {
+    "label": "Instructors",
+    "href": "/instructors",
+    "children": [
+      { "label": "Instructors", "href": "/instructors#instructors" },
+      { "label": "Course Assistants", "href": "/instructors#course-assistants" }
+    ]
+  },
+  {
+    "label": "Projects",
+    "href": "/projects",
+    "children": [
+      { "label": "Featured", "href": "/projects#featured" },
+      { "label": "Spring 2025", "href": "/projects#spring-2025" },
+      { "label": "Fall 2024", "href": "/projects#fall-2024" },
+      { "label": "Spring 2024", "href": "/projects#spring-2024" }
+    ]
+  },
+  {
+    "label": "Archive",
+    "href": "/archive",
+    "children": [
+      { "label": "Spring 2025", "href": "/archive/spring-2025" },
+      { "label": "Fall 2024", "href": "/archive/fall-2024" },
+      { "label": "Spring 2024", "href": "/archive/spring-2024" }
+    ]
+  },
+  { "label": "Credits", "href": "/credits" }
+]
