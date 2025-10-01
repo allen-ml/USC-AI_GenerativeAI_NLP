@@ -1,0 +1,259 @@
+/* Spring 2025 Specific Styles */
+.spring2025Body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-y: auto;
+}
+
+/* Navigation styles are now in shared ArchiveNavigation component */
+.section {
+  padding: 0.75rem 0 0 0;
+}
+
+.section .container {
+  max-width: 960px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #990000;
+}
+
+.hrDivider {
+  width: 83.33%;
+  margin: 0 auto;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.fixedImage {
+  width: 100px;
+  height: 100px;
+  max-height: min-content;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.projectToggle {
+  position: relative;
+}
+
+.toggleText {
+  color: #990000 !important;
+}
+
+.expandButton {
+  color: #990000 !important;
+  text-decoration: none;
+}
+
+.collapsibleContent {
+  margin-top: 10px;
+}
+
+.collapsibleContent ul {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.weekRow td {
+  vertical-align: top;
+}
+
+.projectContent {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  white-space: nowrap;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 10px;
+}
+
+.projectContent.open {
+  display: flex;
+  width: 100%;
+}
+
+.projectContent a {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.projectContent a:hover {
+  background-color: #444;
+}
+
+/* Removed duplicate header content styles - now using the main header styles above */
+
+.staffGrid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.staffMember {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  flex: 0 1 auto;
+}
+
+.staffMember:hover {
+  transform: translateY(-5px);
+}
+
+.staffMember img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.staffMember h5 {
+  margin: 0;
+}
+
+.staffMember h5 a {
+  color: #990000;
+  text-decoration: none;
+}
+
+.staffMember h5 a:hover {
+  text-decoration: underline;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table th {
+  background-color: #343a40;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.moduleHeader {
+  background-color: #e9ecef;
+  font-weight: bold;
+  text-align: center;
+}
+
+.weekRow {
+  border-bottom: 1px solid #ddd;
+}
+
+.scheduleTitle {
+  font-size: 2rem;
+  margin: 40px 0 20px 0;
+  color: #990000;
+  text-align: center;
+}
+
+.collapsibleContent {
+  margin-top: 10px;
+}
+
+.collapsibleContent ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.collapsibleContent li {
+  margin: 5px 0;
+}
+
+.expandButton {
+  color: #990000;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.expandButton:hover {
+  text-decoration: underline;
+}
+
+.hrDivider {
+  width: 83.33%;
+  margin: 30px auto;
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .headerContent .logo {
+    margin-right: 0;
+    margin-bottom: 15px;
+    max-width: 45px;
+  }
+
+  .headerTitle {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .headerSubtitle {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .staffGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .fixedImage {
+    width: 80px;
+    height: 80px;
+  }
+}

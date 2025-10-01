@@ -1,0 +1,225 @@
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-y: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.bannerImg {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 0.3px solid grey;
+  padding-bottom: 20px;
+}
+
+.headerTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.headerSubtitle {
+  font-size: 18px;
+  color: gray;
+  margin: 0;
+}
+
+.headerDescription {
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 0 15px;
+  text-align: justify;
+}
+
+.details {
+  margin-bottom: 40px;
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+  border-bottom: 0.3px solid grey;
+  padding-bottom: 20px;
+}
+
+.details li {
+  margin-bottom: 10px;
+}
+
+.staffSection {
+  border-bottom: 0.3px solid grey;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.staffGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.staffMember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.staffImg {
+  border-radius: 50%;
+  margin-right: 15px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.staffName {
+  color: #990000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.staffName:hover {
+  text-decoration: underline;
+}
+
+.staffInfo {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0 0 0;
+}
+
+.staffInfo a {
+  color: #990000;
+  text-decoration: none;
+}
+
+.staffInfo a:hover {
+  text-decoration: underline;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.tableHeader {
+  background-color: #e0ecf8;
+  font-weight: bold;
+  text-align: center;
+}
+
+.moduleHeader {
+  background-color: #d3e7fd;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+
+.weekRow {
+  border-bottom: 1px solid #ccc;
+}
+
+.weekRow td {
+  padding: 10px;
+  vertical-align: top;
+  border: 1px solid #ccc;
+}
+
+.weekRow:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.scheduleTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  border-top: 0.3px solid grey;
+  padding-top: 30px;
+}
+
+.officeHours {
+  font-size: 14px;
+  color: gray;
+}
+
+.contactNote {
+  font-size: 14px;
+  color: gray;
+}
+
+.navbar {
+  border-bottom: 0.3px solid grey;
+  padding: 15px 0;
+}
+
+.navbarBrand {
+  color: #990000;
+  white-space: nowrap;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbarBrand:hover {
+  color: #990000;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .staffGrid {
+    flex-direction: column;
+  }
+
+  .staffMember {
+    flex-direction: column;
+    text-align: center;
+    min-width: unset;
+  }
+
+  .staffImg {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bannerImg {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .headerDescription {
+    padding: 0;
+  }
+}

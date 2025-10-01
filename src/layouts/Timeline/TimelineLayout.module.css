@@ -1,0 +1,184 @@
+/* Timeline Layout Styles */
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-end;
+  padding: 50px;
+  gap: 50px;
+}
+
+.leftSection {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 50px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  gap: 40px;
+}
+
+.timelineLineContainer {
+  position: absolute;
+  top: 20px;
+  right: 30.5px;
+  height: calc(100% - 40px);
+  width: 3px;
+  z-index: 1;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-right: 70px;
+}
+
+.timelineDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 3px solid var(--color-white);
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 24px;
+  z-index: 4;
+}
+
+.timelineLabel {
+  text-decoration: none;
+  cursor: pointer;
+  flex: 1;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.labelContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.labelText {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-weight: 600;
+  color: var(--color-white);
+  font-family: var(--font-family-primary);
+  transition: color var(--transition-slow);
+  line-height: 1.2;
+}
+
+.labelDescription {
+  font-size: 0.9rem;
+  color: var(--color-gray-300);
+  font-family: var(--font-family-primary);
+  line-height: 1.4;
+  transition: color var(--transition-slow);
+}
+
+.timelineLabel:hover .labelText {
+  color: var(--color-usc-gold);
+  text-decoration: none;
+}
+
+.timelineLabel:hover .labelDescription {
+  color: var(--color-gray-200);
+}
+
+.timelineItem:hover .timelineDot {
+  background: var(--color-usc-gold);
+  border-color: var(--color-usc-gold);
+  transform: scale(1.2);
+}
+
+.timelineLine {
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 30px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .leftSection {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rightSection {
+    flex: none;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .timeline {
+    max-width: 100%;
+    gap: 32px;
+  }
+
+  .timelineLineContainer {
+    right: 26.5px;
+  }
+
+  .timelineItem {
+    padding-right: 60px;
+  }
+
+  .timelineDot {
+    right: 20px;
+  }
+
+  .labelText {
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
+  }
+
+  .labelDescription {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .timeline {
+    max-width: 350px;
+    gap: 36px;
+  }
+
+  .labelText {
+    font-size: clamp(1.15rem, 3.5vw, 1.8rem);
+  }
+}
