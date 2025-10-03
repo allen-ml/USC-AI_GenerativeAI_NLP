@@ -154,4 +154,4 @@ const WeekOverview: React.FC<WeekOverviewProps> = ({
   );
 };
 
-export default WeekOverview;
+export { WeekOverview };

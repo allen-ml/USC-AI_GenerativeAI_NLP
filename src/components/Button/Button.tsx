@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "../../utils/formatters";
 import styles from "./Button.module.css";
 
@@ -64,4 +63,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export { Button };

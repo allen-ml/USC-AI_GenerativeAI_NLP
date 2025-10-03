@@ -13,7 +13,7 @@ interface Node {
 /**
  * A React component that renders an animated, interactive neural network background.
  */
-function NeuralNetworkBackground() {
+const NeuralNetworkBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -178,6 +178,6 @@ function NeuralNetworkBackground() {
   }, []); // Empty dependency array ensures this effect runs only once on mount.
 
   return <canvas ref={canvasRef} className={styles.neuralNetworkCanvas} />;
-}
+};
 
-export default NeuralNetworkBackground;
+export { NeuralNetworkBackground };

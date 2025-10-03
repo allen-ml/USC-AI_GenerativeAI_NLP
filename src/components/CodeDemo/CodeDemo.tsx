@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import sampleOutputRaw from "../../content/overview_blurb.txt?raw";
@@ -12,7 +12,7 @@ interface CodeDemoProps {
   className?: string;
 }
 
-export const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
+const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
   const [isRunning, setIsRunning] = useState(false);
   const [output, setOutput] = useState("");
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -147,4 +147,4 @@ export const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
   );
 };
 
-export default CodeDemo;
+export { CodeDemo };

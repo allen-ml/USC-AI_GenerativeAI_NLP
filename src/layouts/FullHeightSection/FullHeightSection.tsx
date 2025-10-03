@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "../../utils/formatters";
 import styles from "./FullHeightSection.module.css";
 
@@ -39,4 +38,4 @@ const FullHeightSection: React.FC<FullHeightSectionProps> = ({
   );
 };
 
-export default FullHeightSection;
+export { FullHeightSection };

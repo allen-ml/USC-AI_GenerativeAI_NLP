@@ -17,14 +17,14 @@ type Props = {
  * A navigation item that can expand to show children or navigate to a link.
  * Items with children expand on hover, items without children navigate to href.
  */
-export function NavigationItem({
+const NavigationItem: React.FC<Props> = ({
   num,
   item,
   isExpanded,
   onHover,
   onLeave,
   onClick,
-}: Props) {
+}: Props) => {
   const childrenRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const hasChildren = Boolean(item.children && item.children.length > 0);
@@ -141,6 +141,6 @@ export function NavigationItem({
       )}
     </div>
   );
-}
+};
 
-export default NavigationItem;
+export { NavigationItem };

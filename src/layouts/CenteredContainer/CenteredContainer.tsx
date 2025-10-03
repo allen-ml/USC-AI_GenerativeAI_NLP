@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "../../utils/formatters";
 import styles from "./CenteredContainer.module.css";
 
@@ -25,4 +24,4 @@ const CenteredContainer: React.FC<CenteredContainerProps> = ({
   return <div className={containerClass}>{children}</div>;
 };
 
-export default CenteredContainer;
+export { CenteredContainer };

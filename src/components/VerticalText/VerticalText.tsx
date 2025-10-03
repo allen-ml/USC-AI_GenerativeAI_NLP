@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./VerticalText.module.css";
 
 interface VerticalTextProps {
@@ -14,4 +13,4 @@ const VerticalText: React.FC<VerticalTextProps> = ({ text, className }) => {
   );
 };
 
-export default VerticalText;
+export { VerticalText };
