@@ -92,13 +92,13 @@
   min-width: 160px;
 }
 
-/* Use default Bootstrap HR styling (gray) */
+/* Use darker gray for section separations */
 .spring2025Page :global(hr) {
   margin: 1rem 0;
   color: inherit;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-  opacity: 0.25;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
 }
 
 /* Link styling */
