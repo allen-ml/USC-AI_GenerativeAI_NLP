@@ -1,5 +1,7 @@
 import React from "react";
-import { TimelineLayout, type TimelineItem } from "../../layouts/Timeline";
+import TimelineLayout, {
+  type TimelineItem,
+} from "../../layouts/Timeline/TimelineLayout";
 import styles from "./QuickLinks.module.css";
 
 const quickLinks: TimelineItem[] = [

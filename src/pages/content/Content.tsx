@@ -3,15 +3,6 @@ import Card from "../../components/Card/Card";
 import courseContent from "../../content/course_content.json";
 import styles from "./Content.module.css";
 
-interface CourseWeek {
-  Week: number;
-  Module: number;
-  Title: string;
-  TitleShort: string;
-  Deliverables: string[];
-  Overview: string[];
-}
-
 const Content: React.FC = () => {
   const [activeWeek, setActiveWeek] = useState(0);
   const [isDragging, setIsDragging] = useState(false);

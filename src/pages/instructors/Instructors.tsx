@@ -1,5 +1,6 @@
 import React from "react";
-import { ScrollIndicator, VerticalText } from "../../components";
+import ScrollIndicator from "../../components/ScrollIndicator/ScrollIndicator";
+import VerticalText from "../../components/VerticalText/VerticalText";
 import instructorsData from "../../content/instructors.json";
 import { ScrollProvider } from "../../hooks/ScrollContext";
 import { useScrollSnap } from "../../hooks/useScrollSnap";
