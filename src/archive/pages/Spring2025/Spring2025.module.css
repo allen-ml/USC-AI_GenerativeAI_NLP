@@ -1,0 +1,163 @@
+/* Spring 2025 Home Page Styles */
+
+.spring2025Page {
+  /* Container class to scope all Spring 2025 specific styles */
+  position: relative;
+}
+
+.section {
+  padding: 0.75rem 0 0 0;
+}
+
+.fixedImage {
+  width: 100px;
+  height: auto;
+  max-height: min-content;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+/* Toggle text styles moved to ExpandableTopics component */
+
+/* Bootstrap table styling to match original - scoped to Spring2025 page */
+.spring2025Page :global(.table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.spring2025Page :global(.table th),
+.spring2025Page :global(.table td) {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Week number column should stay at top and be wider */
+.spring2025Page :global(.table th:first-child),
+.spring2025Page :global(.table td:first-child) {
+  vertical-align: top;
+  text-align: left;
+  width: 80px;
+  min-width: 80px;
+}
+
+/* Deliverables column should also stay at top */
+.spring2025Page :global(.table td:last-child) {
+  vertical-align: top;
+  text-align: center;
+}
+
+/* Module header rows should be left-aligned */
+.spring2025Page :global(.table tr.fw-bold td),
+.spring2025Page :global(.table .fw-bold td) {
+  text-align: left !important;
+}
+
+/* Office Hours table column widths */
+.spring2025Page :global(#schedules .table th:nth-child(1)),
+.spring2025Page :global(#schedules .table td:nth-child(1)) {
+  width: 20%;
+  min-width: 150px;
+}
+
+.spring2025Page :global(#schedules .table th:nth-child(2)),
+.spring2025Page :global(#schedules .table td:nth-child(2)) {
+  width: 16%;
+  min-width: 100px;
+}
+
+.spring2025Page :global(#schedules .table th:nth-child(3)),
+.spring2025Page :global(#schedules .table td:nth-child(3)) {
+  width: 10%;
+  min-width: 80px;
+}
+
+.spring2025Page :global(#schedules .table th:nth-child(4)),
+.spring2025Page :global(#schedules .table td:nth-child(4)) {
+  width: 12%;
+  min-width: 130px;
+}
+
+.spring2025Page :global(#schedules .table th:nth-child(5)),
+.spring2025Page :global(#schedules .table td:nth-child(5)) {
+  width: 10%;
+  min-width: 70px;
+}
+
+.spring2025Page :global(#schedules .table th:nth-child(6)),
+.spring2025Page :global(#schedules .table td:nth-child(6)) {
+  width: 32%;
+  min-width: 160px;
+}
+
+/* Use default Bootstrap HR styling (gray) */
+.spring2025Page :global(hr) {
+  margin: 1rem 0;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  opacity: 0.25;
+}
+
+/* Link styling */
+.spring2025Page :global(a) {
+  color: #990000;
+  text-decoration: none;
+}
+
+.spring2025Page :global(a:hover) {
+  color: #770000;
+  text-decoration: underline;
+}
+
+/* Container adjustments - match original exactly with high specificity */
+.spring2025Page :global(.section .container),
+.spring2025Page :global(section .container),
+.spring2025Page :global(.container),
+.spring2025Page :global(.container-fluid) {
+  max-width: 960px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
+
+/* Section headings - ensure red color with higher specificity */
+.spring2025Page :global(h2),
+.spring2025Page :global(.container h2),
+.spring2025Page :global(section h2) {
+  color: #990000 !important;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.spring2025Page :global(h5) {
+  margin-bottom: 0.5rem;
+}
+
+/* Text alignment utilities */
+.spring2025Page :global(.text-center) {
+  text-align: center;
+}
+
+.spring2025Page :global(.text-start) {
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fixedImage {
+    max-width: 45px;
+    height: auto;
+  }
+
+  .section {
+    padding: 1rem 0;
+  }
+
+  .spring2025Page :global(.table-responsive) {
+    font-size: 0.875rem;
+  }
+}
