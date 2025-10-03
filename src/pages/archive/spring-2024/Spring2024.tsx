@@ -59,7 +59,7 @@ const Spring2024: React.FC = () => {
         </a>
         <br />
         <img
-          src="/archive/people/Rajeev_Dharmendra_Singh.jpg"
+          src="/people/rajeev_singh.jpg"
           alt="Course Assistant"
           className={styles.courseAssistantImage}
         />
@@ -73,7 +73,7 @@ const Spring2024: React.FC = () => {
         </a>
         <br />
         <img
-          src="/archive/people/gaurav.jpeg"
+          src="/people/gaurav_tadkapally.jpeg"
           alt="Course Assistant"
           className={styles.courseAssistantImage}
         />
