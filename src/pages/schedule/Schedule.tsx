@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import info from "../../content/info.json";
-import CalendarView from "./CalendarView";
+import { CalendarView } from "./CalendarView";
 import styles from "./Schedule.module.css";
-import WeekOverview from "./WeekOverview";
+import { WeekOverview } from "./WeekOverview";
 
 const Schedule = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -85,4 +85,4 @@ const Schedule = () => {
   );
 };
 
-export default Schedule;
+export { Schedule };

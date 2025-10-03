@@ -56,4 +56,4 @@ const Credits: React.FC = () => {
   );
 };
 
-export default Credits;
+export { Credits };

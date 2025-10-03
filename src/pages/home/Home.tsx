@@ -1,9 +1,9 @@
 import { ScrollProvider } from "../../hooks/ScrollContext";
 import { useScrollSnap } from "../../hooks/useScrollSnap";
-import Hero from "./Hero";
+import { Hero } from "./Hero";
 import styles from "./Home.module.css";
-import Overview from "./Overview";
-import QuickLinks from "./QuickLinks";
+import { Overview } from "./Overview";
+import { QuickLinks } from "./QuickLinks";
 
 function Home(): React.JSX.Element {
   const { scrollContainerRef, scrollToSection, snapToClosestSection } =
@@ -33,4 +33,4 @@ function Home(): React.JSX.Element {
   );
 }
 
-export default Home;
+export { Home };

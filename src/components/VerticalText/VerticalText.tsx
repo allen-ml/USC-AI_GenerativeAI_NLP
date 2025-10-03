@@ -14,4 +14,4 @@ const VerticalText: React.FC<VerticalTextProps> = ({ text, className }) => {
   );
 };
 
-export default VerticalText;
+export { VerticalText };

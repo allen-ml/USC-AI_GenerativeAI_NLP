@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ArchiveNavigation from "../../../components/Archive/ArchiveNavigation";
+import { ArchiveNavigation } from "../../../components/Archive/ArchiveNavigation";
 import { ClassPhotoSection } from "../../../components/Archive/ClassPhotoSection";
 import { ProjectCarousel } from "../../../components/Archive/ProjectCarousel";
 import styles from "../Projects.module.css";
@@ -235,4 +235,4 @@ const Fall2024Projects: React.FC = () => {
     </div>
   );
 };
-export default Fall2024Projects;
+export { Fall2024Projects };

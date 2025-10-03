@@ -180,4 +180,4 @@ function NeuralNetworkBackground() {
   return <canvas ref={canvasRef} className={styles.neuralNetworkCanvas} />;
 }
 
-export default NeuralNetworkBackground;
+export { NeuralNetworkBackground };

@@ -163,4 +163,4 @@ const ArchiveNavigation: React.FC<ArchiveNavigationProps> = ({
   );
 };
 
-export default ArchiveNavigation;
+export { ArchiveNavigation };

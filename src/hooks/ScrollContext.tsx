@@ -8,7 +8,7 @@ interface ScrollContextType {
 
 const ScrollContext = createContext<ScrollContextType | undefined>(undefined);
 
-export const useScrollContext = () => {
+const useScrollContext = () => {
   const context = useContext(ScrollContext);
   if (!context) {
     throw new Error("useScrollContext must be used within a ScrollProvider");
@@ -22,7 +22,7 @@ interface ScrollProviderProps {
   snapToClosestSection: () => void;
 }
 
-export const ScrollProvider: React.FC<ScrollProviderProps> = ({
+const ScrollProvider: React.FC<ScrollProviderProps> = ({
   children,
   scrollToSection,
   snapToClosestSection,
@@ -33,3 +33,5 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({
     </ScrollContext.Provider>
   );
 };
+
+export { ScrollProvider, useScrollContext };

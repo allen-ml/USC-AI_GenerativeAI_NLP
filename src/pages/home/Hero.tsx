@@ -1,5 +1,5 @@
-import ScrollIndicator from "../../components/ScrollIndicator/ScrollIndicator";
-import FullHeightSection from "../../layouts/FullHeightSection/FullHeightSection";
+import { ScrollIndicator } from "../../components/ScrollIndicator/ScrollIndicator";
+import { FullHeightSection } from "../../layouts/FullHeightSection/FullHeightSection";
 
 function Hero(): React.JSX.Element {
   return (
@@ -14,4 +14,4 @@ function Hero(): React.JSX.Element {
   );
 }
 
-export default Hero;
+export { Hero };

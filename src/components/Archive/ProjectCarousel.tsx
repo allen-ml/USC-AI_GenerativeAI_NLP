@@ -11,7 +11,7 @@ interface ProjectCarouselProps {
   interval?: number;
 }
 
-export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
+const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
   projectId,
   images,
   currentIndex,
@@ -204,3 +204,5 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
     </div>
   );
 };
+
+export { ProjectCarousel };

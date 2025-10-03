@@ -56,4 +56,4 @@ function TimelineLayout({
   );
 }
 
-export default TimelineLayout;
+export { TimelineLayout };

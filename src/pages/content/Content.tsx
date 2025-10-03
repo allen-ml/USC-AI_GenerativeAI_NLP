@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import Card from "../../components/Card/Card";
+import { Card } from "../../components/Card/Card";
 import courseContent from "../../content/course_content.json";
 import styles from "./Content.module.css";
 
@@ -211,4 +211,4 @@ const Content: React.FC = () => {
   );
 };
 
-export default Content;
+export { Content };
