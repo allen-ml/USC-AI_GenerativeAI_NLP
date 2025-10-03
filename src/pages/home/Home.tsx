@@ -5,7 +5,7 @@ import styles from "./Home.module.css";
 import { Overview } from "./Overview";
 import { QuickLinks } from "./QuickLinks";
 
-function Home(): React.JSX.Element {
+const Home: React.FC = () => {
   const { scrollContainerRef, scrollToSection, snapToClosestSection } =
     useScrollSnap({
       threshold: 30, // Minimum scroll distance to trigger snap
@@ -31,6 +31,6 @@ function Home(): React.JSX.Element {
       </div>
     </ScrollProvider>
   );
-}
+};
 
 export { Home };

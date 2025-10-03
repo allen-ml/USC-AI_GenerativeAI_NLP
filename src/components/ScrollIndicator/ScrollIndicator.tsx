@@ -1,4 +1,3 @@
-import React from "react";
 import { useScrollContext } from "../../hooks/ScrollContext";
 import styles from "./ScrollIndicator.module.css";
 

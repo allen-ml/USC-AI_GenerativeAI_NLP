@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArchiveNavigation } from "../../../components/Archive/ArchiveNavigation";
 import styles from "./Spring2025.module.css";

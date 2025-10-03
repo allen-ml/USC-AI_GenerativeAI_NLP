@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ArchiveNavigation } from "../../../components/Archive/ArchiveNavigation";
 import { ClassPhotoSection } from "../../../components/Archive/ClassPhotoSection";
 import { ProjectCarousel } from "../../../components/Archive/ProjectCarousel";

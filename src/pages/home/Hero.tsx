@@ -1,7 +1,7 @@
 import { ScrollIndicator } from "../../components/ScrollIndicator/ScrollIndicator";
 import { FullHeightSection } from "../../layouts/FullHeightSection/FullHeightSection";
 
-function Hero(): React.JSX.Element {
+const Hero: React.FC = () => {
   return (
     <FullHeightSection id="hero">
       <h1 className="heroTitle">
@@ -12,6 +12,6 @@ function Hero(): React.JSX.Element {
       <ScrollIndicator targetId="overview" />
     </FullHeightSection>
   );
-}
+};
 
 export { Hero };

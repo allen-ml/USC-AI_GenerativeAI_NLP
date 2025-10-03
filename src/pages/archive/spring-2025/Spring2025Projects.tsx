@@ -1,4 +1,3 @@
-import React from "react";
 import { ArchiveNavigation } from "../../../components/Archive/ArchiveNavigation";
 import { ClassPhotoSection } from "../../../components/Archive/ClassPhotoSection";
 import styles from "../Projects.module.css";

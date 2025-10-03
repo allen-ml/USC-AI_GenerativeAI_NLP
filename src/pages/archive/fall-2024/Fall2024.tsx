@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Fall2024.module.css";
 
 const Fall2024: React.FC = () => {
