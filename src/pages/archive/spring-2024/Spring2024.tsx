@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Spring2024.module.css";
 
 const Spring2024: React.FC = () => {

@@ -2,7 +2,7 @@ import { CodeDemo } from "../../components/CodeDemo/CodeDemo";
 import { FullHeightSection } from "../../layouts/FullHeightSection/FullHeightSection";
 import styles from "./Overview.module.css";
 
-function Overview(): React.JSX.Element {
+const Overview: React.FC = () => {
   return (
     <FullHeightSection
       id="overview"
@@ -14,6 +14,6 @@ function Overview(): React.JSX.Element {
       </div>
     </FullHeightSection>
   );
-}
+};
 
 export { Overview };
