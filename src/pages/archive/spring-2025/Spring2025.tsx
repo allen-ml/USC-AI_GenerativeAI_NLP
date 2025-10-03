@@ -94,7 +94,7 @@ const Spring2025: React.FC = () => {
             <div className="col-md-6 mb-3">
               <div className="text-center p-3">
                 <img
-                  src="/people/allen.jpg"
+                  src="/people/allen_bolourchi.jpg"
                   alt="Prof. Allen Bolourchi"
                   className={`${styles.fixedImage} rounded-circle mb-3`}
                 />
@@ -111,7 +111,7 @@ const Spring2025: React.FC = () => {
             <div className="col-md-6 mb-3">
               <div className="text-center p-3">
                 <img
-                  src="/people/rezaJ.png"
+                  src="/people/reza_jafarkhani.png"
                   alt="Prof. Reza Jafarkhani"
                   className={`${styles.fixedImage} rounded-circle mb-3`}
                 />
@@ -138,7 +138,7 @@ const Spring2025: React.FC = () => {
             <div className="col-md-4 mb-3">
               <div className="text-center p-3">
                 <img
-                  src="/archive/people/Rajeev_Dharmendra_Singh.jpg"
+                  src="/people/rajeev_singh.jpg"
                   alt="Rajeev Singh"
                   className={`${styles.fixedImage} rounded-circle mb-3`}
                 />
@@ -155,7 +155,7 @@ const Spring2025: React.FC = () => {
             <div className="col-md-4 mb-3">
               <div className="text-center p-3">
                 <img
-                  src="/archive/people/nitin.jpeg"
+                  src="/people/nitin_sai_bommi.jpeg"
                   alt="Nitin Sai Bommi"
                   className={`${styles.fixedImage} rounded-circle mb-3`}
                 />
@@ -172,7 +172,7 @@ const Spring2025: React.FC = () => {
             <div className="col-md-4 mb-3">
               <div className="text-center p-3">
                 <img
-                  src="/archive/people/varuna.JPG"
+                  src="/people/varuna_krishna_kolla.JPG"
                   alt="Varuna"
                   className={`${styles.fixedImage} rounded-circle mb-3`}
                 />

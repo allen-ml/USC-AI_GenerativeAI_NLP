@@ -59,7 +59,7 @@ const Fall2024: React.FC = () => {
               <h4>Instructor</h4>
               <div className={styles.staffMember}>
                 <img
-                  src="/people/allen.jpg"
+                  src="/people/allen_bolourchi.jpg"
                   alt="Instructor Photo"
                   className={styles.staffImg}
                 />
@@ -86,7 +86,7 @@ const Fall2024: React.FC = () => {
               <h4>Lead Course Assistant</h4>
               <div className={styles.staffMember}>
                 <img
-                  src="/archive/people/Rajeev_Dharmendra_Singh.jpg"
+                  src="/people/rajeev_singh.jpg"
                   alt="TA Photo"
                   className={styles.staffImg}
                 />
@@ -113,7 +113,7 @@ const Fall2024: React.FC = () => {
               <h4>Course Assistant</h4>
               <div className={styles.staffMember}>
                 <img
-                  src="/archive/people/nitin.jpeg"
+                  src="/people/nitin_sai_bommi.jpeg"
                   alt="TA Photo"
                   className={styles.staffImg}
                 />
