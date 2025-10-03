@@ -21,7 +21,7 @@ const TimelineLayout: React.FC<TimelineLayoutProps> = ({
     <div className={`${styles.container} ${className}`}>
       {/* Left side - Title */}
       <div className={styles.leftSection}>
-        <h1 className="heroTitle">
+        <h1 className="title-hero">
           <div>{title}</div>
         </h1>
       </div>
