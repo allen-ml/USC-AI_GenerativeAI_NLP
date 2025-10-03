@@ -1,5 +1,7 @@
-import React from "react";
-import { TimelineLayout, type TimelineItem } from "../../layouts/Timeline";
+import {
+  TimelineLayout,
+  type TimelineItem,
+} from "../../layouts/Timeline/TimelineLayout";
 
 const archiveItems: TimelineItem[] = [
   {
@@ -20,4 +22,4 @@ const Archive: React.FC = () => {
   return <TimelineLayout title="Archive" items={archiveItems} />;
 };
 
-export default Archive;
+export { Archive };

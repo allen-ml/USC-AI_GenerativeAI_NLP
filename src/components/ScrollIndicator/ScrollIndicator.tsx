@@ -1,4 +1,3 @@
-import React from "react";
 import { useScrollContext } from "../../hooks/ScrollContext";
 import styles from "./ScrollIndicator.module.css";
 
@@ -39,4 +38,4 @@ const ScrollIndicator: React.FC<ScrollIndicatorProps> = ({
   );
 };
 
-export default ScrollIndicator;
+export { ScrollIndicator };

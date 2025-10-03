@@ -1,0 +1,365 @@
+{
+  "logoImage": "archive/usc_logo_white.png",
+  "title": "TAC-459: Generative AI and Natural Language Processing",
+  "descriptors": {
+    "term": "Spring 2025",
+    "time": "Mondays 5:00 PM - 8:20 PM",
+    "location": "KAP 160"
+  },
+  "overview": "Welcome to TAC 459 - Generative AI and Natural Language Processing (NLP) at the University of Southern California. This course is designed to immerse students in the rapidly evolving fields of Generative AI and NLP, providing hands-on experience with cutting-edge Machine Learning Techniques & LLMs. Throughout the semester, you'll explore how generative models are transforming industries, from text generation to conversational agents. Students will gain hands-on experience with tools such as Hugging Face, TensorFlow, and PyTorch, while learning about applications in conversational agents, text summarization, and machine translation. By the end, students will be prepared to tackle real-world challenges in AI-driven fields.",
+  "instructors": [
+    {
+      "title": "Instructor",
+      "name": "Prof. Allen Bolourchi",
+      "linkedin": "https://www.linkedin.com/in/allenbolourchi/",
+      "email": "bolourch@usc.edu",
+      "profilePicture": "/people/allen_bolourchi.png",
+      "activeYears": ["Spring 2024", "Fall 2024", "Spring 2025"],
+      "bio": "Professor Allen Bolourchi is a visionary leader in generative AI and natural language processing with an extensive career spanning academia, research, and industry. As an adjunct professor at the University of Southern California, he educates future AI professionals on cutting-edge generative AI techniques. Simultaneously, Allen plays a pivotal role in AI research and product management at Meta AI, FAIR. His prior experience includes strategic positions at Apple, where he managed machine learning initiatives for the App Store, and leadership roles in product development. Recognized for his contributions with numerous fellowships and awards, Allen’s blend of academic rigor and industry expertise drives innovation and transformational growth in technology."
+    },
+    {
+      "title": "Instructor",
+      "name": "Prof. Reza Jafarkhani",
+      "linkedin": "https://www.linkedin.com/in/reza-jafarkhani-a6065828/",
+      "email": "jafarkha@usc.edu",
+      "profilePicture": "/people/reza_jafarkhani.png",
+      "activeYears": ["Fall 2024", "Spring 2025"],
+      "bio": "Reza Jafarkhani is an accomplished academic and industry professional specializing in machine learning, artificial intelligence, and data analytics. Currently a Senior Lecturer at the University of Southern California’s Viterbi School of Engineering, he brings over five years of teaching experience in advanced technical subjects including AI and programming. He is dedicated to bridging theoretical knowledge with real-world applications, preparing the next generation of engineers for emerging technological challenges."
+    }
+  ],
+  "teachingAssistants": [
+    {
+      "title": "Course Assistant",
+      "name": "Rajeev Singh",
+      "linkedin": "https://www.linkedin.com/in/rajeevsinghusc/",
+      "email": "rajeevdh@usc.edu",
+      "profilePicture": "/people/rajeev_singh.jpg",
+      "activeYears": ["Spring 2024", "Fall 2024", "Spring 2025"],
+      "bio": "Rajeev Singh is a passionate software engineer with a robust background in full-stack development, cloud computing, and machine learning. Currently pursuing his Master’s in Computer Science at the University of Southern California, Rajeev has honed his skills through practical experiences that include designing CI/CD pipelines and building real-time applications. His tenure at companies such as ASML, where he enhanced system uptime and error resolution efficiency, highlights his ability to develop scalable systems and optimize infrastructure. Rajeev will be joining Meta as a Software Engineer from June 2025"
+    },
+    {
+      "title": "Course Assistant",
+      "name": "Nitin Sai Bommi",
+      "linkedin": "https://www.linkedin.com/in/nitin-sai-bommi/",
+      "email": "nbommi@usc.edu",
+      "profilePicture": "/people/nitin_sai_bommi.jpeg",
+      "activeYears": ["Fall 2024", "Spring 2025"],
+      "bio": "Nitin Sai Bommi is an emerging expert in deep learning and machine learning with a solid research and academic foundation. Having earned his Master’s degree from the University of Hyderabad—with a thesis focused on Explainable AI for Software Engineering—he is now advancing his studies at the University of Southern California. Nitin has built a diverse portfolio through internships at NVIDIA, where he is involved in deep learning performance analysis, as well as research roles at the University of Calgary, University College Dublin, and the University of Hyderabad. His proficiency in Python and machine learning, coupled with his hands-on experience in AI profiling and performance optimization, marks him as a promising innovator in the field. Nitin will be joining NVIDIA in May 2025 after his graduation.​"
+    },
+    {
+      "title": "Course Assistant",
+      "name": "Varuna Krishna Kolla",
+      "linkedin": "https://www.linkedin.com/in/varuna-krishna-a25521194/",
+      "email": "vkolla@usc.edu",
+      "profilePicture": "/people/varuna_krishna_kolla.jpg",
+      "activeYears": ["Spring 2025"],
+      "bio": "Varuna Krishna is a driven computer science professional with extensive experience in machine learning and artificial intelligence. Currently pursuing his Master’s in Computer Science at the University of Southern California, he also serves as a Teaching Assistant for the Applied Machine Learning for Natural Language Processing course. His professional journey includes impactful roles such as a Generative AI Engineer Intern at Vimaan, Machine Learning Intern at AutomationEdge, and a research internship at the University of South Carolina’s Artificial Intelligence Institute. Varuna’s work on projects like Image2Tweet and innovative joint embedding learning techniques underlines his commitment to advancing AI. With robust programming skills in C, HTML, and Python, he is well-equipped to tackle complex technical challenges and contribute to the tech industry. Varuna will be joining Amazon as a Software Developer from June 2025."
+    }
+  ],
+  "officeHours": [
+    {
+      "instructor": "Rajeev Singh",
+      "mode": "Online",
+      "day": "Monday",
+      "time": "11:00 AM - 1:00 PM",
+      "location": "Zoom",
+      "link": {
+        "text": "Meeting Link",
+        "href": "https://usc.zoom.us/j/96998396690?pwd=mr6xwwjwvP1CPiLAe06NF636HEhHhH.1"
+      }
+    },
+    {
+      "instructor": "Reza Jafarkhani",
+      "mode": "Online + Offline (RRB 211)",
+      "day": "Tuesday",
+      "time": "2:30 PM - 3:30 PM",
+      "location": "Zoom",
+      "link": {
+        "text": "Meeting Link",
+        "href": "https://usc.zoom.us/j/91374847273?pwd=1j65d6xvOTUXKSBbIBpk7iHyEQzd3e.1"
+      }
+    },
+    {
+      "instructor": "Allen Bolourchi",
+      "mode": "Online",
+      "day": "Tuesday",
+      "time": "7 PM - 8 PM",
+      "location": "Zoom",
+      "link": {
+        "text": "Email Professor atleast 48 hours before to Schedule(15 minutes meet)"
+      }
+    },
+    {
+      "instructor": "Rajeev Singh",
+      "mode": "Online",
+      "day": "Wednesday",
+      "time": "11:00 AM - 1:00 PM",
+      "location": "Zoom",
+      "link": {
+        "text": "Meeting Link",
+        "href": "https://usc.zoom.us/j/96998396690?pwd=mr6xwwjwvP1CPiLAe06NF636HEhHhH.1"
+      }
+    },
+    {
+      "instructor": "Reza Jafarkhani",
+      "mode": "Online + Offline (RRB 211)",
+      "day": "Thursday",
+      "time": "2:30 PM - 3:30 PM",
+      "location": "Zoom",
+      "link": {
+        "text": "Meeting Link",
+        "href": "https://usc.zoom.us/j/91374847273?pwd=1j65d6xvOTUXKSBbIBpk7iHyEQzd3e.1"
+      }
+    },
+    {
+      "instructor": "Rajeev Singh",
+      "mode": "Online",
+      "day": "Friday",
+      "time": "11:00 AM - 1:00 PM",
+      "location": "Zoom",
+      "link": {
+        "text": "Meeting Link",
+        "href": "https://usc.zoom.us/j/96998396690?pwd=mr6xwwjwvP1CPiLAe06NF636HEhHhH.1"
+      }
+    }
+  ],
+  "courseSchedule": [
+    {
+      "week": 1,
+      "title": "Introduction to NLP, Generative AI, and Text Processing",
+      "topics": [
+        "Course Overview",
+        "Historical Evolution of AI and NLP",
+        "Key Concepts in Machine Learning and NLP",
+        "Overview of NLP Applications in Various Domains",
+        "Basic Text Processing and Language Understanding",
+        "Challenges and Limitations in NLP"
+      ],
+      "module": "Module 1: Introduction to Text Processing, NLP, and AI",
+      "deliverables": []
+    },
+    {
+      "week": 2,
+      "title": "Text Cleaning and Preprocessing",
+      "topics": [
+        "Text Cleaning and Preprocessing",
+        "Techniques for Noise Reduction",
+        "Text Normalization and Tokenization",
+        "Lemmatization and Stemming",
+        "Co-occurrence Matrix in Text Analysis",
+        "Feature Extraction from Text",
+        "Regular Expressions in Text Processing",
+        "Basic Overview of Word Embeddings",
+        "Overview of python libraries such as NLTK, Spacy, regex etc."
+      ],
+      "module": "Module 1: Introduction to Text Processing, NLP, and AI",
+      "deliverables": ["Assignment 1 Due"]
+    },
+    {
+      "week": 3,
+      "title": "Fundamentals of Machine Learning for NLP, Metrics, and Cross-Validation",
+      "topics": [
+        "Supervised Learning and Unsupervised Learning - Key Algorithms for NLP",
+        "Evaluation Metrics for NLP Models",
+        "Training, Validation, and Test Sets in Model Development",
+        "Overfitting and Underfitting in NLP",
+        "Cross-Validation Techniques",
+        "Introduction to Python ML Libraries"
+      ],
+      "module": "Module 2: Fundamentals of Machine Learning for NLP",
+      "deliverables": ["Assignment 2 Due"]
+    },
+    {
+      "week": 4,
+      "title": "Neural Networks and Deep Learning in NLP",
+      "topics": [
+        "Neural Networks and Deep Learning in NLP",
+        "Activation Functions and Network Topologies",
+        "Backpropagation and Gradient Descent",
+        "CNNs and RNNs for NLP",
+        "Advanced RNNs: LSTM and GRU",
+        "Sequence Modeling in NLP",
+        "Challenges in Deep Learning for NLP",
+        "Case Studies in Deep Learning for NLP"
+      ],
+      "module": "Module 2: Fundamentals of Machine Learning for NLP",
+      "deliverables": ["Assignment 3 Due"]
+    },
+    {
+      "week": 5,
+      "title": "Transformer Models and Attention Mechanisms",
+      "topics": [
+        "Transformer Models and Attention Mechanisms",
+        "Understanding the Transformer Architecture",
+        "Concepts of Self-Attention and Positional Encoding",
+        "Overview of BERT, GPT, and Transformer Variants",
+        "Applications of Transformer Models in NLP",
+        "Training Transformer Models for NLP Tasks",
+        "Challenges and Solutions with Transformer Models"
+      ],
+      "module": "Module 2: Fundamentals of Machine Learning for NLP",
+      "deliverables": ["Assignment 4 Due"]
+    },
+    {
+      "week": 6,
+      "title": "Syntax, Parsing, Word Embeddings, and POS Tagging",
+      "topics": [
+        "Syntax, Parsing, Word Embeddings, and POS Tagging",
+        "Syntax in Natural Language Processing",
+        "Dependency and Constituency Parsing",
+        "Deep Dive into Word Embeddings",
+        "Word2Vec, GloVe, and FastText Embeddings",
+        "Using Embeddings in NLP Tasks",
+        "Part-of-Speech (POS) Tagging: Importance, Methods, and Tools",
+        "Practical Parsing, Embedding, and POS Tagging Techniques",
+        "Vector Database"
+      ],
+      "module": "Module 3: NLP Techniques and Applications",
+      "deliverables": ["Assignment 5 Due"]
+    },
+    {
+      "week": 7,
+      "title": "Semantic Analysis, Language Models, and Question Answering",
+      "topics": [
+        "Semantic Analysis, Language Models, and Question Answering",
+        "Semantic Role Labeling (SRL)",
+        "Knowledge Graphs in Semantic Analysis",
+        "Advances in Contextual Embeddings",
+        "Overview of Language Models in NLP",
+        "Introduction to Question Answering System and Utilizing Language Models",
+        "Challenges in QA and Semantic Analysis",
+        "Word Sense Disambiguation Techniques"
+      ],
+      "module": "Module 3: NLP Techniques and Applications",
+      "deliverables": ["Assignment 6 Due"]
+    },
+    {
+      "week": 8,
+      "title": "Text Classification and Machine Translation + Midterm Exam",
+      "topics": [
+        "MidTerm Exams!!",
+        "Text Classification and Machine Translation",
+        "Fundamentals of Text Classification",
+        "Techniques and Algorithms for Classification",
+        "Introduction to Machine Translation",
+        "Neural Machine Translation (NMT) models",
+        "Challenges and Evaluation Metrics for MT",
+        "Practical Implementation of MT Systems"
+      ],
+      "module": "Module 3: NLP Techniques and Applications",
+      "deliverables": []
+    },
+    {
+      "week": 9,
+      "title": "Advanced Topics in Machine Learning and NLP",
+      "topics": [
+        "Advanced Topics in Machine Learning and NLP",
+        "Deep Transfer Learning in NLP",
+        "Strategies for Addressing Data Imbalance",
+        "Model Interpretability and Explainability in NLP",
+        "Advanced Optimization Techniques in NLP",
+        "Utilizing Pre-Trained NLP Models",
+        "Case Studies of Advanced ML in NLP"
+      ],
+      "module": "Module 4: Specialized Topics and Advanced Techniques in NLP",
+      "deliverables": ["Assignment 7 Due"]
+    },
+    {
+      "week": 10,
+      "title": "Named Entity Recognition, Information Retrieval and Search",
+      "topics": [
+        "Named Entity Recognition, Information Retrieval and Search",
+        "Advanced Techniques in NER",
+        "Contextual NER and Its Applications",
+        "Fundamentals of Information Retrieval",
+        "Deep Dive into TF-IDF and Co-occurrence Matrix",
+        "Search Engines and Indexing Techniques",
+        "Evaluation Metrics in Information Retrieval",
+        "Case Studies and Real-World Applications"
+      ],
+      "module": "Module 4: Specialized Topics and Advanced Techniques in NLP",
+      "deliverables": ["Assignment 8 Due"]
+    },
+    {
+      "week": 11,
+      "title": "Advanced Machine Translation and Summarization",
+      "topics": [
+        "Advanced Machine Translation and Summarization",
+        "Advanced Techniques in Machine Translation",
+        "Handling Low-Resource Languages in MT",
+        "Text Summarization",
+        "Extractive vs. Abstractive Summarization",
+        "Challenges in Summarization",
+        "Evaluation of Summarization Techniques",
+        "Current Trends in MT and Summarization"
+      ],
+      "module": "Module 4: Specialized Topics and Advanced Techniques in NLP",
+      "deliverables": ["Assignment 9 Due"]
+    },
+    {
+      "week": 12,
+      "title": "Speech Processing and Conversational AI",
+      "topics": [
+        "Speech Processing and Conversational AI",
+        "Basics of Speech Recognition",
+        "Challenges in Automatic Speech Recognition (ASR)",
+        "Design and Development of Conversational Agents",
+        "Evaluating Dialogue Systems in Conversational AI",
+        "Multimodal Interaction in Conversational AI",
+        "Natural Language Understanding in Conversational AI",
+        "Case Studies in Speech Processing and Conversational AI"
+      ],
+      "module": "Module 4: Specialized Topics and Advanced Techniques in NLP",
+      "deliverables": ["Assignment 10 Due"]
+    },
+    {
+      "week": 13,
+      "title": "Generative AI, Products, Techniques, APIs, and Ethical Considerations",
+      "topics": [
+        "Generative AI, Products, Techniques, APIs, and Ethical Considerations",
+        "Generative Models in NLP (ChatGPT, BARD, Gemini, Llama)",
+        "Advanced Prompt Engineering: Few-shot, Chain-of-thought, and Self-Consistency",
+        "Expanding LLM Capabilities: Knowledge Generation Prompting and Program-aided (PAL)",
+        "Developing an API with MongoDB and ngrok, and interfacing via Postman",
+        "LLM Safety: Prompt Injection, Prompt Leaking, Jailbreaking",
+        "Responsible AI, Data Privacy, Ethical Considerations, and Governance in AI",
+        "Business Intelligence, Marketing, Analytics, and Brand Analysis Use Cases",
+        "Introduction to Product Management and Business Considerations"
+      ],
+      "module": "Module 5: Generative AI",
+      "deliverables": ["Assignment 11 Due"]
+    },
+    {
+      "week": 14,
+      "title": "Training and Fine-Tuning LLMs, Hugging Face, LangChain, and RAG",
+      "topics": [
+        "Training and Fine-Tuning LLMs, Hugging Face, LangChain, and RAG",
+        "RAG: Retrieval Augmented Generation",
+        "Training of Chat GPT with Reinforcement Learning, HITL, and Proximal Policy Optimization",
+        "Evaluation of LLMs: MMLU, HellaSwag Benchmark, ARC, WinoGrade, GSM-8k, Truthful QA, PIQA",
+        "LoRA and QLoRA for Efficient Model Adaptation",
+        "Fine Tuning LLMs, Best Practices and Challenges",
+        "Fine-Tuned LLMs Application",
+        "Overview and Practical Use of Hugging Face in NLP Based Products",
+        "Utilizing LangChain and Llama for Customized Language Models"
+      ],
+      "module": "Module 5: Generative AI",
+      "deliverables": ["Assignment 12 Due"]
+    },
+    {
+      "week": 15,
+      "title": "Course Review, Future Trends, and Project Presentations + Final Exam",
+      "topics": [
+        "Course Review, Future Trends, and Project Presentations + Final Exam",
+        "Recap of Key NLP and Generative AI Concepts",
+        "Discussion on the Future Trends in NLP and Generative AI",
+        "Student Project Presentations",
+        "Feedback and Review of Projects",
+        "Resources for Advanced Learning",
+        "Closing Remarks and Course Evaluation"
+      ],
+      "module": "Module 5: Generative AI",
+      "deliverables": ["Final Project Deliverables Due"]
+    }
+  ]
+}

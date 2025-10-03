@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import navigationData from "../../content/navigation.json";
 import type { NavItemData } from "../../types/navigationTypes";
 import styles from "./Navigation.module.css";
-import NavigationItem from "./NavigationItem";
+import { NavigationItem } from "./NavigationItem";
 
 const Navigation = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -86,4 +86,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export { Navigation };

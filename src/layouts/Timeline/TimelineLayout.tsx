@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./TimelineLayout.module.css";
 
 export interface TimelineItem {
@@ -13,16 +12,16 @@ interface TimelineLayoutProps {
   className?: string;
 }
 
-function TimelineLayout({
+const TimelineLayout: React.FC<TimelineLayoutProps> = ({
   title,
   items,
   className = "",
-}: TimelineLayoutProps): React.JSX.Element {
+}) => {
   return (
     <div className={`${styles.container} ${className}`}>
       {/* Left side - Title */}
       <div className={styles.leftSection}>
-        <h1 className="heroTitle">
+        <h1 className="title-hero">
           <div>{title}</div>
         </h1>
       </div>
@@ -54,6 +53,6 @@ function TimelineLayout({
       </div>
     </div>
   );
-}
+};
 
-export default TimelineLayout;
+export { TimelineLayout };

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./Credits.module.css";
 
 const Credits: React.FC = () => {
@@ -56,4 +56,4 @@ const Credits: React.FC = () => {
   );
 };
 
-export default Credits;
+export { Credits };

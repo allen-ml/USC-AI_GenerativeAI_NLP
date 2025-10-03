@@ -1,9 +1,10 @@
 import React from "react";
-import { ScrollIndicator, VerticalText } from "../../components";
+import { ScrollIndicator } from "../../components/ScrollIndicator/ScrollIndicator";
+import { VerticalText } from "../../components/VerticalText/VerticalText";
 import instructorsData from "../../content/instructors.json";
 import { ScrollProvider } from "../../hooks/ScrollContext";
 import { useScrollSnap } from "../../hooks/useScrollSnap";
-import FullHeightSection from "../../layouts/FullHeightSection/FullHeightSection";
+import { FullHeightSection } from "../../layouts/FullHeightSection/FullHeightSection";
 import styles from "./Instructors.module.css";
 
 interface Instructor {
@@ -169,4 +170,4 @@ const Instructors: React.FC = () => {
   );
 };
 
-export default Instructors;
+export { Instructors };

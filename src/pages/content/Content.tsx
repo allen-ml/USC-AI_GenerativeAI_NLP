@@ -1,16 +1,7 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import Card from "../../components/Card/Card";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Card } from "../../components/Card/Card";
 import courseContent from "../../content/course_content.json";
 import styles from "./Content.module.css";
-
-interface CourseWeek {
-  Week: number;
-  Module: number;
-  Title: string;
-  TitleShort: string;
-  Deliverables: string[];
-  Overview: string[];
-}
 
 const Content: React.FC = () => {
   const [activeWeek, setActiveWeek] = useState(0);
@@ -120,7 +111,7 @@ const Content: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.titleSection}>
-        <h1 className="heroTitle">
+        <h1 className="title-hero">
           <div>Course Content</div>
         </h1>
       </div>
@@ -220,4 +211,4 @@ const Content: React.FC = () => {
   );
 };
 
-export default Content;
+export { Content };

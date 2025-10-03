@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "../../utils/formatters";
 import styles from "./Card.module.css";
 
@@ -28,4 +27,4 @@ const Card: React.FC<CardProps> = ({
   return <div className={cardClass}>{children}</div>;
 };
 
-export default Card;
+export { Card };
