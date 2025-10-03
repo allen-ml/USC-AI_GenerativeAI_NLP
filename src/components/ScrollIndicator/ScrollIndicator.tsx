@@ -39,4 +39,4 @@ const ScrollIndicator: React.FC<ScrollIndicatorProps> = ({
   );
 };
 
-export default ScrollIndicator;
+export { ScrollIndicator };

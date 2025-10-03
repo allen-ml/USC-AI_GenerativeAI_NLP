@@ -1,21 +1,21 @@
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import styles from "./App.module.css";
-import NeuralNetworkBackground from "./components/Background/NeuralNetworkBackground";
-import Navigation from "./components/Navigation/Navigation";
+import { NeuralNetworkBackground } from "./components/Background/NeuralNetworkBackground";
+import { Navigation } from "./components/Navigation/Navigation";
 import metaData from "./content/info.json";
-import Archive from "./pages/archive/Archive";
-import Fall2024 from "./pages/archive/fall-2024/Fall2024";
-import Fall2024Projects from "./pages/archive/fall-2024/Fall2024Projects";
-import Spring2024 from "./pages/archive/spring-2024/Spring2024";
-import Spring2024Projects from "./pages/archive/spring-2024/Spring2024Projects";
-import Spring2025 from "./pages/archive/spring-2025/Spring2025";
-import Spring2025Projects from "./pages/archive/spring-2025/Spring2025Projects";
-import Content from "./pages/content/Content";
-import Credits from "./pages/credits/Credits";
-import Home from "./pages/home/Home";
-import Instructors from "./pages/instructors/Instructors";
-import Schedule from "./pages/schedule/Schedule";
-import Syllabus from "./pages/syllabus/Syllabus";
+import { Archive } from "./pages/archive/Archive";
+import { Fall2024 } from "./pages/archive/fall-2024/Fall2024";
+import { Fall2024Projects } from "./pages/archive/fall-2024/Fall2024Projects";
+import { Spring2024 } from "./pages/archive/spring-2024/Spring2024";
+import { Spring2024Projects } from "./pages/archive/spring-2024/Spring2024Projects";
+import { Spring2025 } from "./pages/archive/spring-2025/Spring2025";
+import { Spring2025Projects } from "./pages/archive/spring-2025/Spring2025Projects";
+import { Content } from "./pages/content/Content";
+import { Credits } from "./pages/credits/Credits";
+import { Home } from "./pages/home/Home";
+import { Instructors } from "./pages/instructors/Instructors";
+import { Schedule } from "./pages/schedule/Schedule";
+import { Syllabus } from "./pages/syllabus/Syllabus";
 
 const AppContent = () => {
   const location = useLocation();

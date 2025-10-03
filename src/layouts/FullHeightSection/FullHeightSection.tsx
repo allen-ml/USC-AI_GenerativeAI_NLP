@@ -39,4 +39,4 @@ const FullHeightSection: React.FC<FullHeightSectionProps> = ({
   );
 };
 
-export default FullHeightSection;
+export { FullHeightSection };

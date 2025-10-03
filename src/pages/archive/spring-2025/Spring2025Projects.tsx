@@ -1,5 +1,5 @@
 import React from "react";
-import ArchiveNavigation from "../../../components/Archive/ArchiveNavigation";
+import { ArchiveNavigation } from "../../../components/Archive/ArchiveNavigation";
 import { ClassPhotoSection } from "../../../components/Archive/ClassPhotoSection";
 import styles from "../Projects.module.css";
 
@@ -45,4 +45,4 @@ const Spring2025Projects: React.FC = () => {
   );
 };
 
-export default Spring2025Projects;
+export { Spring2025Projects };

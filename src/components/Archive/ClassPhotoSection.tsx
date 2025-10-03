@@ -8,7 +8,7 @@ interface ClassPhotoSectionProps {
   showPlaceholder?: boolean;
 }
 
-export const ClassPhotoSection: React.FC<ClassPhotoSectionProps> = ({
+const ClassPhotoSection: React.FC<ClassPhotoSectionProps> = ({
   semester,
   year,
   photoSrc,
@@ -36,3 +36,5 @@ export const ClassPhotoSection: React.FC<ClassPhotoSectionProps> = ({
     </div>
   );
 };
+
+export { ClassPhotoSection };

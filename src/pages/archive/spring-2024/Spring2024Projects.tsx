@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ArchiveNavigation from "../../../components/Archive/ArchiveNavigation";
+import { ArchiveNavigation } from "../../../components/Archive/ArchiveNavigation";
 import { ClassPhotoSection } from "../../../components/Archive/ClassPhotoSection";
 import { ProjectCarousel } from "../../../components/Archive/ProjectCarousel";
 import styles from "../Projects.module.css";
@@ -183,4 +183,4 @@ const Spring2024Projects: React.FC = () => {
   );
 };
 
-export default Spring2024Projects;
+export { Spring2024Projects };

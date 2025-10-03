@@ -12,7 +12,7 @@ interface CodeDemoProps {
   className?: string;
 }
 
-export const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
+const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
   const [isRunning, setIsRunning] = useState(false);
   const [output, setOutput] = useState("");
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -147,4 +147,4 @@ export const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
   );
 };
 
-export default CodeDemo;
+export { CodeDemo };

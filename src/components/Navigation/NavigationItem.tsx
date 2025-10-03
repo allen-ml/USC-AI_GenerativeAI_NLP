@@ -17,7 +17,7 @@ type Props = {
  * A navigation item that can expand to show children or navigate to a link.
  * Items with children expand on hover, items without children navigate to href.
  */
-export function NavigationItem({
+function NavigationItem({
   num,
   item,
   isExpanded,
@@ -143,4 +143,4 @@ export function NavigationItem({
   );
 }
 
-export default NavigationItem;
+export { NavigationItem };

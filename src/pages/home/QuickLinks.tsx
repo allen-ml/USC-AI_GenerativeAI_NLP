@@ -1,5 +1,6 @@
 import React from "react";
-import TimelineLayout, {
+import {
+  TimelineLayout,
   type TimelineItem,
 } from "../../layouts/Timeline/TimelineLayout";
 import styles from "./QuickLinks.module.css";
@@ -35,4 +36,4 @@ function QuickLinks(): React.JSX.Element {
   );
 }
 
-export default QuickLinks;
+export { QuickLinks };

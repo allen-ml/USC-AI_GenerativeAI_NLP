@@ -388,4 +388,4 @@ const Spring2024: React.FC = () => {
   );
 };
 
-export default Spring2024;
+export { Spring2024 };

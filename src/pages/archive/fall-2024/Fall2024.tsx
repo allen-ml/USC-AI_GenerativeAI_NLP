@@ -574,4 +574,4 @@ const Fall2024: React.FC = () => {
   );
 };
 
-export default Fall2024;
+export { Fall2024 };
