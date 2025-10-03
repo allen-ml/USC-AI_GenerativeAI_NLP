@@ -23,11 +23,11 @@ jobs:
       - name: Check Google Calendar API Key
         run: |
           if [ -z "$GCAL_API_KEY" ]; then
-            echo "❌ ERROR: Google Calendar API key is not configured!"
+            echo "ERROR: Google Calendar API key is not configured!"
             echo ""
-            echo "⚠️  WARNING: Deployment aborted due to missing API key configuration."
+            echo "WARNING: Deployment aborted due to missing API key configuration."
             echo ""
-            echo "📋 To fix this issue:"
+            echo "To fix this issue:"
             echo "1. Go to your repository's Settings → Secrets and variables → Actions"
             echo "2. Add a new repository secret with name: GCAL_API_KEY"
             echo "3. Set the value to your Google Calendar API key"
@@ -35,7 +35,7 @@ jobs:
             echo ""
             exit 1
           fi
-          echo "✅ Google Calendar API key is configured"
+          echo "Google Calendar API key is configured"
         env:
           GCAL_API_KEY: ${{ secrets.GCAL_API_KEY }}
 
