@@ -1,5 +1,5 @@
-import { ScrollIndicator } from "../../components";
-import FullHeightSection from "../../layouts/FullHeightSection";
+import ScrollIndicator from "../../components/ScrollIndicator/ScrollIndicator";
+import FullHeightSection from "../../layouts/FullHeightSection/FullHeightSection";
 
 function Hero(): React.JSX.Element {
   return (

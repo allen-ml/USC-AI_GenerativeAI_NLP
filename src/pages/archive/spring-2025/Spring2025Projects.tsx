@@ -1,5 +1,6 @@
 import React from "react";
-import { ArchiveNavigation, ClassPhotoSection } from "../../../components";
+import ArchiveNavigation from "../../../components/Archive/ArchiveNavigation";
+import { ClassPhotoSection } from "../../../components/Archive/ClassPhotoSection";
 import styles from "../Projects.module.css";
 
 const Spring2025Projects: React.FC = () => {

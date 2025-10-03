@@ -1,5 +1,5 @@
-import { CodeDemo } from "../../components";
-import FullHeightSection from "../../layouts/FullHeightSection";
+import { CodeDemo } from "../../components/CodeDemo/CodeDemo";
+import FullHeightSection from "../../layouts/FullHeightSection/FullHeightSection";
 import styles from "./Overview.module.css";
 
 function Overview(): React.JSX.Element {
