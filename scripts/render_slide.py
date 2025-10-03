@@ -1,5 +1,6 @@
 """Renders a single slide from a presentation file into an image.
 
+Utility script for USC TAC 459 course materials processing.
 This script uses the aspose-slides library to load a .pptx file, render a
 specified slide, and save it as a new image file (e.g., PNG, JPEG, SVG).
 
@@ -13,10 +14,7 @@ from collections.abc import Sequence
 
 import aspose.slides as slides
 from absl import app, flags, logging
-from aspose.slides import export
 
-# As per the Google Python Style Guide, flags are defined at the module level.
-# [cite: 341]
 _INPUT_FILE = flags.DEFINE_string(
     name="input_file",
     default=None,
@@ -47,11 +45,11 @@ _IMAGE_FORMAT = flags.DEFINE_enum(
 
 # Module-level constants are named in CONSTANT_CASE. [cite: 183]
 _FORMAT_MAP = {
-    "png": export.ImageFormat.PNG,
-    "jpeg": export.ImageFormat.JPEG,
-    "bmp": export.ImageFormat.BMP,
-    "tiff": export.ImageFormat.TIFF,
-    "svg": export.ImageFormat.SVG,
+    "png": slides.export.ImageFormat.PNG,
+    "jpeg": slides.export.ImageFormat.JPEG,
+    "bmp": slides.export.ImageFormat.BMP,
+    "tiff": slides.export.ImageFormat.TIFF,
+    "svg": slides.export.ImageFormat.SVG,
 }
 
 
@@ -101,7 +99,7 @@ def _render_slide_to_image(
             )
 
             # SVG export uses a different method than bitmap formats.
-            if image_format == export.ImageFormat.SVG:
+            if image_format == slides.export.ImageFormat.SVG:
                 with open(output_path, "wb") as svg_file:
                     slide_to_render.write_as_svg(svg_file)
             else:
