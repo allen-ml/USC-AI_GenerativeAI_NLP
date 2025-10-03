@@ -1,4 +1,5 @@
 {
+  // Root TypeScript configuration with project references
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

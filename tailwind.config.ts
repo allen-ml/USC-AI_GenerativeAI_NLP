@@ -7,7 +7,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // --- PRIMARY PALETTE ---
+        // --- PRIMARY PALETTE (Official USC Brand Colors) ---
         "usc-cardinal": "#990000", // PMS 201 C
         "usc-gold": "#FFCC00", // PMS 123 C
 
