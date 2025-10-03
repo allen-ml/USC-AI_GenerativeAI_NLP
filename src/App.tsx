@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import styles from "./App.module.css";
 import { NeuralNetworkBackground } from "./components/Background/NeuralNetworkBackground";
 import { Navigation } from "./components/Navigation/Navigation";
@@ -17,7 +17,7 @@ import { Instructors } from "./pages/instructors/Instructors";
 import { Schedule } from "./pages/schedule/Schedule";
 import { Syllabus } from "./pages/syllabus/Syllabus";
 
-const AppContent = () => {
+const App: React.FC = () => {
   const location = useLocation();
 
   // List of paths where neural network background should be skipped
@@ -75,14 +75,6 @@ const AppContent = () => {
         <Route path="/credits" element={<Credits />} />
       </Routes>
     </div>
-  );
-};
-
-const App = () => {
-  return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
   );
 };
 
