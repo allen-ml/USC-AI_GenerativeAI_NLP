@@ -4,7 +4,7 @@ import { FullHeightSection } from "../../layouts/FullHeightSection/FullHeightSec
 const Hero: React.FC = () => {
   return (
     <FullHeightSection id="hero">
-      <h1 className="heroTitle">
+      <h1 className="title-hero">
         <div>Natural</div>
         <div>Language</div>
         <div>Processing</div>

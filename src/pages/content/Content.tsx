@@ -111,7 +111,7 @@ const Content: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.titleSection}>
-        <h1 className="heroTitle">
+        <h1 className="title-hero">
           <div>Course Content</div>
         </h1>
       </div>
