@@ -2,6 +2,8 @@
 .body * {
   /* Reset any global styles that might interfere */
   box-sizing: border-box;
+  color: initial;
+  background-color: initial;
 }
 
 .body h1 {
@@ -95,7 +97,6 @@
 }
 
 .assistantLink {
-  color: inherit;
   text-decoration: underline;
 }
 
