@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { allProjectSemesters, type Project, type SemesterProjects } from '../../content/projects/index';
+import { publicUrl } from '../../utils/config';
 import styles from './Projects.module.css';
 
 interface ProjectCarouselProps {
@@ -36,7 +37,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, title }) => {
       {images.map((img, i) => (
         <img
           key={i}
-          src={img}
+          src={publicUrl(img)}
           alt={`${title} — slide ${i + 1}`}
           className={`${styles.carouselImage} ${i === currentIndex ? styles.carouselImageActive : ''}`}
         />
@@ -133,7 +134,7 @@ const SemesterSection: React.FC<SemesterSectionProps> = ({ data, isCurrent }) =>
         <div className={styles.classPhotoSection}>
           <h3 className={styles.classPhotoTitle}>Class Photo</h3>
           <img
-            src={data.classPhoto}
+            src={publicUrl(data.classPhoto)}
             alt={`${data.term} Class Photo`}
             className={styles.classPhoto}
           />
