@@ -1,614 +1,101 @@
 /*
- * Content Page Styles
+ * Content Page Styles - Main Container
  *
- * This layout uses a CSS Grid for the main structure, allowing for a robust
- * two-column desktop layout that transitions to a single-column mobile layout.
+ * This file contains only the layout styles for the main content page.
+ * Individual component styles are in their respective component folders.
  */
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr; /* Ratio for title vs content width */
-  grid-template-rows: calc(100vh - 100px);
-  grid-template-areas: "title content";
-  padding: 50px;
-  gap: var(--spacing-2xl);
-  overflow: hidden; /* Prevent body scroll */
-  width: 100vw;
-  max-width: 100vw;
-  box-sizing: border-box;
-}
-
-.titleSection {
-  grid-area: title;
-  display: flex;
-  align-items: center; /* Vertically centers the title */
-  justify-content: flex-start;
-}
-
-.contentSection {
-  grid-area: content;
-  display: flex;
-  position: relative; /* Anchor for dot navigation */
-  height: 100%;
-}
-
-/* Main Content Area - Scrollable Cards */
-.mainContent {
   width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Never allow horizontal scrolling */
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  /* Hide default scrollbar */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  /* Enable smooth touch scrolling on mobile */
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
+  padding: var(--spacing-2xl);
+  box-sizing: border-box;
+  outline: none;
 }
 
-.mainContent::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
+.container:focus {
+  outline: none;
 }
 
-.weekContainer {
-  position: relative;
+/* ============================================
+   WEEK LIST GRID
+   ============================================ */
+
+.weekList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-2xl);
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Dot Navigation */
-.dotNavigation {
-  position: absolute;
-  right: -40px; /* Position to the right of the content area */
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-md);
-  z-index: 30;
-  cursor: grab;
-}
+/* ============================================
+   EXPANDED VIEW
+   ============================================ */
 
-.dotNavigation:active {
-  cursor: grabbing;
-}
-
-.dotIndicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  padding: 0;
-}
-
-.dotIndicator:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: scale(1.2);
-}
-
-.dotActive {
-  background: var(--color-usc-gold) !important;
-  border-color: var(--color-usc-gold) !important;
-  transform: scale(1.5);
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
-}
-
-/* Week Sections & Cards */
-.weekSection {
-  height: 100vh;
+.expandedView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
+  padding: var(--spacing-2xl);
+  animation: fadeIn 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
 }
 
-.weekCard {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  backdrop-filter: blur(15px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  opacity: 0.5;
-  transform: scale(0.95);
-  /* More reasonable max height - about 60% of viewport */
-  max-height: 70vh;
-  min-height: 300px; /* Ensure cards have a reasonable minimum size */
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* Prevent card itself from scrolling */
-  /* Prevent horizontal overflow */
-  box-sizing: border-box;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  /* Custom scrollbar for card content */
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 204, 0, 0.5) transparent;
-}
+/* ============================================
+   ANIMATIONS
+   ============================================ */
 
-.weekCardActive {
-  opacity: 1;
-  transform: scale(1);
-  border-color: rgba(255, 204, 0, 0.5);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-}
-
-/* Custom scrollbar styles for week cards */
-.weekCard::-webkit-scrollbar {
-  width: 6px;
-}
-
-.weekCard::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-}
-
-.weekCard::-webkit-scrollbar-thumb {
-  background: rgba(255, 204, 0, 0.5);
-  border-radius: 3px;
-}
-
-.weekCard::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 204, 0, 0.7);
-}
-
-/* Mobile-specific fixes for touch scrolling */
-@media (max-width: 900px) {
-  /* Hide scrollbars on mobile for cleaner look */
-  .weekCard::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-
-  /* Ensure touch events work properly */
-  .weekCard {
-    touch-action: pan-y;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Make dot navigation less intrusive on mobile */
-  .dotNavigation {
-    opacity: 0.7;
-    transition: opacity var(--transition-normal);
-  }
-
-  .dotNavigation:hover,
-  .dotNavigation:active {
+  to {
     opacity: 1;
   }
 }
 
-/*
- * Responsive Design for Mobile
- *
- * On smaller screens, the layout becomes a single column with the title on
- * top and the content below.
- */
-@media (max-width: 900px) {
+/* ============================================
+   RESPONSIVE DESIGN - TABLET
+   ============================================ */
+
+@media (max-width: 1024px) {
   .container {
-    /* Switch to a flex column layout for better height distribution */
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Ensure container is full viewport height */
-    padding: var(--spacing-lg); /* Apply overall padding here */
-    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
   }
 
-  .dotIndicator {
-    width: 8px;
-    height: 8px;
-  }
-
-  .dotActive {
-    transform: scale(1.25);
-  }
-
-  .titleSection {
-    flex-shrink: 0; /* Prevent the title from shrinking */
-    text-align: center;
-    justify-content: center;
-  }
-
-  .contentSection {
-    flex-grow: 1; /* Allow content to fill all remaining vertical space */
-    min-height: 0; /* Crucial fix for flex children to allow scrolling */
-    position: relative;
-    width: 100%; /* Ensure full width usage */
-    /* Remove overflow hidden which can interfere with positioning */
-  }
-
-  .mainContent {
-    /* Keep scroll snap on mobile for better UX */
-    scroll-snap-type: y mandatory;
-    /* Prevent horizontal overflow */
-    overflow-x: hidden !important;
-    /* Remove right padding that causes issues */
-    padding-right: 0;
-    /* Ensure full height usage */
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .dotNavigation {
-    /* Position at the screen edge with fixed positioning */
-    position: fixed !important;
-    right: 8px !important;
-    left: auto !important; /* Ensure no left positioning */
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    z-index: 1000 !important;
-    /* Make navigation smaller on mobile */
-    gap: var(--spacing-sm) !important;
-    padding: 0 !important; /* Remove any padding */
-    /* Optimize for touch devices */
-    pointer-events: auto;
-    touch-action: manipulation;
-    /* Ensure proper display */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .weekSection {
-    /* Maintain proper height for mobile scroll-snap */
-    height: 100vh;
-    min-height: 100vh;
-    padding: var(--spacing-md) 0;
-    /* Keep scroll-snap alignment on mobile */
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-    /* Prevent horizontal overflow */
-    overflow-x: hidden;
-    box-sizing: border-box;
-  }
-
-  .weekTitle {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: var(--spacing-md);
+  .weekList {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: var(--spacing-md);
   }
 
-  .mainContent {
-    /* Remove any right padding on small screens */
-    padding-right: 0;
-  }
-
-  .dotNavigation {
-    /* Position at the very edge of the screen */
-    right: 4px !important;
-    left: auto !important; /* Ensure no left positioning */
-    /* Smaller gap between dots on tiny screens */
-    gap: var(--spacing-xs) !important;
-    padding: 0 !important; /* Remove any padding */
-  }
-
-  .dotIndicator {
-    width: 6px;
-    height: 6px;
-  }
-
-  .dotActive {
-    transform: scale(1.2);
-  }
-
-  .weekCard {
-    padding: var(--spacing-md) !important;
-    /* More reasonable height for mobile - about 70% of viewport */
-    max-height: 70vh;
-    min-height: 250px; /* Smaller min-height for mobile */
-    /* Maintain flex layout on mobile */
-    display: flex !important;
-    flex-direction: column !important;
-    overflow: hidden !important; /* Card itself doesn't scroll */
-  }
-
-  .weekTitle {
-    font-size: 1.3rem;
+  .expandedView {
+    padding: var(--spacing-xl);
   }
 }
 
-/* Week Header */
-.weekHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: var(--spacing-md);
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-}
-
-.weekMeta {
-  display: flex;
-  gap: var(--spacing-sm);
-  flex-wrap: wrap;
-}
-
-.weekNumber {
-  background: var(--color-usc-gold);
-  color: var(--color-black);
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-lg);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.moduleNumber {
-  background: rgba(255, 255, 255, 0.2);
-  color: var(--color-white);
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-lg);
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.deliverablesBadge {
-  background: linear-gradient(
-    135deg,
-    var(--color-gray-600),
-    var(--color-gray-700)
-  );
-  color: var(--color-white);
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-lg);
-  font-size: 0.75rem;
-  font-weight: 500;
-  white-space: nowrap;
-  border: 1px solid rgba(255, 204, 0, 0.3);
-}
-
-/* Week Title */
-.weekTitle {
-  color: var(--color-white);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: var(--spacing-lg);
-  line-height: 1.4;
-}
-
-/* Section Titles */
-.sectionTitle {
-  color: var(--color-usc-gold);
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: var(--spacing-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Deliverables */
-.deliverables {
-  margin-bottom: var(--spacing-lg);
-}
-
-.deliverablesList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-}
-
-.deliverableTag {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--color-white);
-  padding: 0.375rem 0.75rem;
-  border-radius: var(--radius-md);
-  font-size: 0.85rem;
-  font-weight: 500;
-  border: 1px solid rgba(255, 204, 0, 0.3);
-}
-
-/* Overview */
-.overview {
-  margin-top: var(--spacing-lg);
-  flex-grow: 1;
-  overflow-y: auto;
-  min-height: 0; /* Allow flex child to shrink */
-  -webkit-overflow-scrolling: touch;
-  /* Custom scrollbar for topics section */
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 204, 0, 0.3) transparent;
-}
-
-/* Custom scrollbar styles for overview section */
-.overview::-webkit-scrollbar {
-  width: 4px;
-}
-
-.overview::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 2px;
-}
-
-.overview::-webkit-scrollbar-thumb {
-  background: rgba(255, 204, 0, 0.3);
-  border-radius: 2px;
-}
-
-.overview::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 204, 0, 0.5);
-}
-
-.topicsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: var(--spacing-sm);
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.topicItem {
-  color: rgba(255, 255, 255, 0.9);
-  padding: var(--spacing-sm);
-  /* Ensure text wraps properly */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  hyphens: auto;
-  max-width: 100%;
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-sm);
-  border-left: 3px solid var(--color-usc-gold);
-  font-size: 0.9rem;
-  line-height: 1.4;
-  transition: all var(--transition-normal);
-}
-
-.topicItem:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(4px);
-}
-
-/* No Results */
-.noResults {
-  grid-column: 1 / -1;
-  min-height: 300px;
-}
-
-.noResultsContent {
-  text-align: center;
-  color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-md);
-  height: 100%;
-}
-
-.noResultsIcon {
-  font-size: 4rem;
-  opacity: 0.6;
-}
-
-.noResultsContent h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.noResultsContent p {
-  font-size: 1rem;
-  opacity: 0.8;
-  margin: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 1400px) {
-  .mainContent {
-    max-width: 1200px;
-  }
-
-  .weekCard {
-    max-width: 900px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .mainContent {
-    max-width: 1000px;
-  }
-
-  .weekCard {
-    max-width: 800px;
-  }
-}
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    align-items: flex-start;
     padding: var(--spacing-lg);
-    padding-left: var(--spacing-lg);
-    gap: var(--spacing-lg);
-    justify-content: flex-start;
   }
 
-  .leftSection {
-    position: fixed;
-    top: var(--spacing-lg);
-    left: var(--spacing-lg);
-    bottom: auto;
-    align-items: flex-start;
-    z-index: 25;
-  }
-
-  .rightSection {
-    width: 100%;
-    max-width: 100%;
-    align-items: stretch;
-    justify-content: flex-start;
-    padding-bottom: 0;
-    margin-left: 0;
-    padding-top: calc(var(--spacing-2xl) + 60px);
-  }
-
-  .contentLayout {
-    height: 75vh;
-  }
-
-  .dotNavigation {
-    /* Keep right positioning on mobile */
-    right: 8px;
-    left: auto; /* Override any left positioning */
-    padding: 0; /* Remove padding that can interfere */
-    gap: var(--spacing-xs);
-  }
-
-  .dotIndicator {
-    /* Keep mobile-appropriate size */
-    width: 8px;
-    height: 8px;
-  }
-
-  .dotNumber {
-    font-size: 0.7rem;
-  }
-
-  .mainContent {
-    padding: 0 var(--spacing-md);
-    max-width: 100%;
-  }
-
-  .weekCard {
-    max-width: 100%;
-  }
-
-  .weekSection {
-    height: 75vh;
-    min-height: 500px;
-    padding: var(--spacing-lg) 0;
-  }
-
-  .weekTitle {
-    font-size: 1.5rem;
-  }
-
-  .topicsList {
+  .weekList {
     grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
 
-  .weekHeader {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .weekMeta {
-    justify-content: center;
+  .expandedView {
+    padding: var(--spacing-lg);
   }
 }
 
@@ -617,19 +104,23 @@
     padding: var(--spacing-md);
   }
 
-  .weekSection {
-    padding: var(--spacing-lg) 0;
+  .weekList {
+    gap: var(--spacing-sm);
   }
 
-  .weekTitle {
-    font-size: 1.3rem;
+  .expandedView {
+    padding: var(--spacing-md);
   }
+}
 
-  .topicItem {
-    font-size: 0.9rem;
-  }
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
 
-  .weekCard {
-    padding: var(--spacing-lg) !important;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

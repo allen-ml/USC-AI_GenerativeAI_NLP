@@ -7,7 +7,7 @@ interface UseScrollSnapOptions {
 }
 
 export function useScrollSnap(options: UseScrollSnapOptions = {}) {
-  const { threshold = 50, snapDuration = 500, maxScrollSpeed = 2000 } = options;
+  const { threshold = 30, snapDuration = 800, maxScrollSpeed = 1000 } = options;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const isScrollingRef = useRef(false);
   const scrollTimeoutRef = useRef<number | null>(null);

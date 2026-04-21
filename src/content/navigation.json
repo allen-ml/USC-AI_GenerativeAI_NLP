@@ -10,16 +10,9 @@
       {
         "label": "Overview",
         "href": "/#overview"
-      },
-      {
-        "label": "Quick Links",
-        "href": "/#quick-links"
       }
     ]
   },
-  { "label": "Content", "href": "/content" },
-  { "label": "Schedule", "href": "/schedule" },
-  { "label": "Syllabus", "href": "/syllabus" },
   {
     "label": "Instructors",
     "href": "/instructors",
@@ -28,6 +21,9 @@
       { "label": "Course Assistants", "href": "/instructors#course-assistants" }
     ]
   },
+  { "label": "Content", "href": "/content" },
+  { "label": "Syllabus", "href": "/syllabus" },
+
   {
     "label": "Projects",
     "href": "/projects",
