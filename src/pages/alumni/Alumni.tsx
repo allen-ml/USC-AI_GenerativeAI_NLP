@@ -1,5 +1,6 @@
 import React from 'react';
 import { allPastSemesters, type AlumniPerson, type SemesterAlumni } from '../../content/past-instructors/index';
+import { publicUrl } from '../../utils/config';
 import styles from './Alumni.module.css';
 
 interface PersonCardProps {
@@ -13,11 +14,11 @@ const PersonCard: React.FC<PersonCardProps> = ({ person }) => {
     <div className={styles.personCard}>
       <div className={styles.avatarWrapper}>
         <img
-          src={`/people/${person.Image}`}
+          src={publicUrl(`/people/${person.Image}`)}
           alt={person.Name}
           className={styles.avatar}
           onError={(e) => {
-            (e.target as HTMLImageElement).src = '/usc-logo.png';
+            (e.target as HTMLImageElement).src = publicUrl('/usc-logo.png');
           }}
         />
       </div>

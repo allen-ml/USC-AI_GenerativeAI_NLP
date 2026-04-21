@@ -3,6 +3,7 @@ import { ExpandableTopics } from "../../components/ExpandableTopics/ExpandableTo
 import spring2025Data from "../../content/spring-2025.json";
 import { Spring2025Layout } from "../../layouts/Spring2025Layout/Spring2025Layout";
 import type { Spring2025ContentFormat } from "../../types/ContentTypes";
+import { publicUrl } from "../../../utils/config";
 import styles from "./Spring2025.module.css";
 
 const Spring2025: React.FC = () => {
@@ -48,7 +49,7 @@ const Spring2025: React.FC = () => {
                 <div key={index} className="col-md-6 mb-3">
                   <div className="text-center p-3">
                     <img
-                      src={instructor.profilePicture}
+                      src={publicUrl(instructor.profilePicture ?? "/usc-logo.png")}
                       alt={instructor.name}
                       className={`${styles.fixedImage} rounded-circle mb-3`}
                     />
@@ -80,7 +81,7 @@ const Spring2025: React.FC = () => {
                 <div key={index} className="col-md-4 mb-3">
                   <div className="text-center p-3">
                     <img
-                      src={assistant.profilePicture}
+                      src={publicUrl(assistant.profilePicture ?? "/usc-logo.png")}
                       alt={assistant.name}
                       className={`${styles.fixedImage} rounded-circle mb-3`}
                     />

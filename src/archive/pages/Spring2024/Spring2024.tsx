@@ -1,6 +1,7 @@
 import React from "react";
 import spring2024Data from "../../content/spring-2024.json";
 import type { Spring2024ContentFormat } from "../../types/ContentTypes";
+import { publicUrl } from "../../../utils/config";
 import styles from "./Spring2024.module.css";
 
 const Spring2024: React.FC = () => {
@@ -59,7 +60,10 @@ const Spring2024: React.FC = () => {
   return (
     <div className={styles.body}>
       <div className={styles.contentWrapper}>
-        <div className={styles.imageRepeatTop}></div>
+        <div
+          className={styles.imageRepeatTop}
+          style={{ backgroundImage: `url(${publicUrl("/archive/GenAI_Image_small.png")})` }}
+        ></div>
         <h1>{data.title}</h1>
         <h2>{data.subtitle}</h2>
         <p className={styles.courseInfo}>
@@ -102,7 +106,7 @@ const Spring2024: React.FC = () => {
             </a>
             <br />
             <img
-              src={assistant.profilePicture || "/usc-logo.png"}
+              src={publicUrl(assistant.profilePicture || "/usc-logo.png")}
               alt="Course Assistant"
               className={styles.assistantImage}
             />
