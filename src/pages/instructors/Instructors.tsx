@@ -77,7 +77,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
 
       <div className={styles.footer}>
         <button
-          onClick={copyEmail}
+          onClick={() => { void copyEmail(); }}
           className={`${styles.emailBtn} ${copied ? styles.emailBtnCopied : ''}`}
           title={instructor.Email}
         >

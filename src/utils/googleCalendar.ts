@@ -29,7 +29,7 @@ export interface ParsedEvent {
   eventType: "class"; // Only classes are displayed
 }
 
-const GOOGLE_CALENDAR_API_KEY = import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY;
+const GOOGLE_CALENDAR_API_KEY = import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY as string;
 
 // Utility function to extract calendar ID from shareable URL
 export const extractCalendarId = (urlOrId: string): string => {
@@ -175,7 +175,7 @@ export class GoogleCalendarService {
         throw new Error(`Calendar API error: ${response.status}`);
       }
 
-      const data: CalendarResponse = await response.json();
+      const data = (await response.json()) as CalendarResponse;
       return this.parseEvents(data.items);
     } catch (error) {
       console.error("Error fetching calendar events:", error);

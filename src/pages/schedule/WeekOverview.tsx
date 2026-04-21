@@ -38,7 +38,7 @@ const WeekOverview: React.FC<WeekOverviewProps> = ({
       }
     };
 
-    fetchEvents();
+    void fetchEvents();
   }, [calendarId]);
 
   const formatTime = (date: Date): string => {
