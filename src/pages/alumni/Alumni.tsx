@@ -18,7 +18,9 @@ const PersonCard: React.FC<PersonCardProps> = ({ person }) => {
           alt={person.Name}
           className={styles.avatar}
           onError={(e) => {
-            (e.target as HTMLImageElement).src = publicUrl('/usc-logo.png');
+            const img = e.target as HTMLImageElement;
+            img.onerror = null;
+            img.src = publicUrl('/usc-logo.png');
           }}
         />
       </div>
