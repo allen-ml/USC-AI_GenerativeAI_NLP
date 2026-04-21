@@ -1,0 +1,33 @@
+FAILED=""
+
+run_check() {
+  label="$1"; shift
+  printf "  checking %-20s" "$label..."
+  if "$@" > /tmp/hook-out 2>&1; then
+    printf "ok\n"
+  else
+    printf "FAIL\n"
+    FAILED="$FAILED $label"
+    sed 's/^/    /' /tmp/hook-out
+  fi
+}
+
+echo ""
+echo "Pre-commit checks (warnings only — commit will not be blocked)"
+echo "───────────────────────────────────────────────────────────────"
+
+run_check "typecheck" npm run typecheck --silent
+run_check "lint"      npm run lint --silent
+run_check "build"     npm run build --silent
+
+echo ""
+
+if [ -z "$FAILED" ]; then
+  echo "All checks passed."
+else
+  echo "Warning: the following checks failed:$FAILED"
+  echo "These issues will block the CI merge check — fix them before opening a PR."
+fi
+
+echo ""
+exit 0

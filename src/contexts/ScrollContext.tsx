@@ -34,4 +34,5 @@ const ScrollProvider: React.FC<ScrollProviderProps> = ({
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { ScrollProvider, useScrollContext };

@@ -1,6 +1,6 @@
 export const getGoogleCalendarConfig = () => {
   return {
-    apiKey: import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY,
+    apiKey: import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY as string,
     hasApiKey: !!import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY,
   };
 };
