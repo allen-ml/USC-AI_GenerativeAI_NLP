@@ -28,6 +28,23 @@ See [docs/dev-setup.md](docs/dev-setup.md) for the full environment guide.
 
 ---
 
+## Contributing
+
+**Never push directly to `main`.** Every change — however small — goes through a branch and a pull request.
+
+```bash
+git checkout -b yourname/short-description
+# make changes
+git push -u origin yourname/short-description
+# open a PR → get CI green → merge
+```
+
+`main` is live. Anything merged there deploys to the public site automatically. Only merge when CI passes and the change is in a working state.
+
+See [docs/ci-cd.md](docs/ci-cd.md) for branch protection setup and workflow details.
+
+---
+
 ## CI/CD
 
 | Mechanism | Trigger | Behavior |
