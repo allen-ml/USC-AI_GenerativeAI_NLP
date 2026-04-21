@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { publicUrl } from '../../utils/config';
 import styles from './Credits.module.css';
 
 const Credits: React.FC = () => {
@@ -47,7 +48,7 @@ const Credits: React.FC = () => {
         <a href="https://github.com/arvinduh" target="_blank" rel="noopener noreferrer">
           <img
             ref={githubLogoRef}
-            src="/github-mark-white.svg"
+            src={publicUrl("/github-mark-white.svg")}
             alt="GitHub Profile"
             className={styles.githubLogo}
           />

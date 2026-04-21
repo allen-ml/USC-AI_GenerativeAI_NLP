@@ -1,6 +1,7 @@
 import React from "react";
 import fall2024Data from "../../content/fall-2024.json";
 import type { Fall2024ContentFormat } from "../../types/ContentTypes";
+import { publicUrl } from "../../../utils/config";
 import styles from "./Fall2024.module.css";
 
 const Fall2024: React.FC = () => {
@@ -37,7 +38,7 @@ const Fall2024: React.FC = () => {
         {/* Banner */}
         <div className={styles.banner}>
           <img
-            src="/usc-logo.png"
+            src={publicUrl("/usc-logo.png")}
             alt="USC Logo"
             className={styles.bannerImg}
           />
@@ -76,7 +77,7 @@ const Fall2024: React.FC = () => {
               <h4>{staffMember.title}</h4>
               <div className={index === 0 ? styles.instructor : styles.ta}>
                 <img
-                  src={staffMember.profilePicture || "/usc-logo.png"}
+                  src={publicUrl(staffMember.profilePicture || "/usc-logo.png")}
                   alt={`${staffMember.title} Photo`}
                   className={index === 0 ? styles.instructorImg : styles.taImg}
                 />

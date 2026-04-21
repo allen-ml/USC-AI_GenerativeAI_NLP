@@ -64,7 +64,7 @@
 .imageRepeatTop {
   width: 100%; /* Full width */
   height: 200px; /* Height of the repeating area */
-  background-image: url("/archive/GenAI_Image_small.png"); /* Path to your image */
+  /* background-image set via inline style in Spring2024.tsx using publicUrl() */
   background-repeat: repeat-x; /* Repeat horizontally */
   background-position: top center; /* Align the background image to the top center */
 }
