@@ -15,16 +15,16 @@
 }
 
 .pageTitle {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 300;
-  letter-spacing: 0.08em;
+  font-size: var(--page-title-size);
+  font-weight: var(--page-title-weight);
+  letter-spacing: var(--page-title-tracking);
   text-transform: uppercase;
   color: var(--color-white);
   margin: 0 0 var(--spacing-md);
 }
 
 .pageSubtitle {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-size: var(--page-subtitle-size);
   color: var(--color-gray-400);
   margin: 0 auto;
   line-height: 1.6;
@@ -190,7 +190,7 @@
   align-items: center;
   gap: 6px;
   padding: 5px 12px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.04);
   color: var(--color-gray-400);
@@ -239,7 +239,7 @@
   display: inline-flex;
   align-items: center;
   padding: 5px 12px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
   color: var(--color-gray-400);
