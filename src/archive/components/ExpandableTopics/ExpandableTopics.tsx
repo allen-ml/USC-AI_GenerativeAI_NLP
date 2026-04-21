@@ -31,17 +31,12 @@ const ExpandableTopics: React.FC<ExpandableTopicsProps> = ({
         </ul>
       </div>
       {isExpanded && <br />}
-      <a
-        href="#"
-        onClick={(e) => {
-          e.preventDefault();
-          toggleExpanded();
-        }}
+      <button
+        onClick={toggleExpanded}
         className={styles.toggleText}
-        style={{ textDecoration: "none" }}
       >
         {isExpanded ? "Expand Less" : "Expand More"}
-      </a>
+      </button>
     </div>
   );
 };

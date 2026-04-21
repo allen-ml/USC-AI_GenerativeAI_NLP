@@ -33,13 +33,16 @@
 }
 
 .toggleText {
-  color: #990000 !important;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #990000;
   cursor: pointer;
   font-size: 0.875rem;
-  text-decoration: none !important;
+  font-family: inherit;
+  text-decoration: none;
 }
 
 .toggleText:hover {
-  text-decoration: none !important;
-  color: #990000 !important;
+  text-decoration: underline;
 }

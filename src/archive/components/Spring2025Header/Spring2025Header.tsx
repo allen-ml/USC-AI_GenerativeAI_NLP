@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import type { Spring2025NavigationFormat } from "../../types/ContentTypes";
 import styles from "./Spring2025Header.module.css";
 
@@ -13,6 +13,19 @@ const Spring2025Header: React.FC<Spring2025HeaderProps> = ({
   title,
   subtitle,
 }) => {
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <>
       <header className={styles.header}>
@@ -28,7 +41,7 @@ const Spring2025Header: React.FC<Spring2025HeaderProps> = ({
           <p>{subtitle}</p>
         </div>
       </header>
-      <nav className={styles.navbars}>
+      <nav className={styles.navbars} ref={navRef}>
         <ul>
           {navigationData.mainNavigation.map((item, index) => (
             <li key={index}>
@@ -36,29 +49,31 @@ const Spring2025Header: React.FC<Spring2025HeaderProps> = ({
             </li>
           ))}
           {navigationData.dropdownNavigation.map((dropdown, index) => (
-            <li key={index} className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id={`dropdown${index}`}
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <li key={index} className={styles.dropdownItem}>
+              <button
+                className={styles.dropdownToggle}
+                onClick={() =>
+                  setOpenDropdown(openDropdown === index ? null : index)
+                }
+                aria-expanded={openDropdown === index}
               >
-                {dropdown.text}
-              </a>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby={`dropdown${index}`}
-              >
-                {dropdown.links.map((link, linkIndex) => (
-                  <li key={linkIndex} className="dropdown-list">
-                    <a className="dropdown-item" href={link.href}>
-                      {link.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                {dropdown.text} ▾
+              </button>
+              {openDropdown === index && (
+                <ul className={styles.dropdownMenu}>
+                  {dropdown.links.map((link, linkIndex) => (
+                    <li key={linkIndex}>
+                      <a
+                        className={styles.dropdownLink}
+                        href={link.href}
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
