@@ -1,0 +1,145 @@
+.weekListCard {
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.weekListCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 204, 0, 0.05) 0%,
+    rgba(255, 204, 0, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+
+.weekListCard:hover::before {
+  opacity: 1;
+}
+
+.weekListCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 204, 0, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.weekListButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+}
+
+.weekListButton:focus-visible {
+  outline: 2px solid var(--color-usc-gold);
+  outline-offset: 2px;
+  border-radius: var(--radius-md);
+}
+
+.weekListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.weekListMeta {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.weekNumber {
+  background: var(--color-usc-gold);
+  color: var(--color-black);
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.moduleNumber {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.deliverablesBadge {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 204, 0, 0.2),
+    rgba(255, 204, 0, 0.1)
+  );
+  color: var(--color-usc-gold);
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 204, 0, 0.3);
+}
+
+.weekListTitle {
+  color: var(--color-white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 var(--spacing-sm) 0;
+  transition: color var(--transition-normal);
+  /* Ensure title fits on one line */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.weekListCard:hover .weekListTitle {
+  color: var(--color-usc-gold);
+}
+
+.weekListSubtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+@media (max-width: 768px) {
+  .weekListTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .weekListTitle {
+    font-size: 1rem;
+  }
+
+  .weekNumber,
+  .moduleNumber,
+  .deliverablesBadge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.625rem;
+  }
+}

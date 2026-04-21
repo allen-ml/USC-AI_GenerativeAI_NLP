@@ -1,0 +1,24 @@
+.titleText,
+.verticalTitleText {
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.9;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.verticalTitleContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .verticalTitleContainer {
+    flex-direction: row-reverse;
+  }
+
+  .verticalTitleText {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}

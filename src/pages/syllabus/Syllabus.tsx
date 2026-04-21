@@ -1,36 +1,14 @@
-import { useEffect, useState } from "react";
-import { Button } from "../../components/Button/Button";
-import metaData from "../../content/info.json";
-import styles from "./Syllabus.module.css";
+import { useState } from 'react';
+import { Button } from '../../components/Button/Button';
+import metaData from '../../content/info.json';
+import styles from './Syllabus.module.css';
+
+const pdfPath = metaData.syllabus ? `/${metaData.syllabus}` : null;
 
 const Syllabus: React.FC = () => {
-  const [pdfPath, setPdfPath] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<boolean>(false);
+  const [iframeError, setIframeError] = useState(false);
 
-  useEffect(() => {
-    // Construct the PDF path from metadata
-    if (metaData.syllabus) {
-      setPdfPath(`/${metaData.syllabus}`);
-      setLoading(false);
-    } else {
-      setError(true);
-      setLoading(false);
-    }
-  }, []);
-
-  if (loading) {
-    return (
-      <div className={styles.syllabusContainer}>
-        <div className={styles.errorMessage}>
-          <h1>Loading...</h1>
-          <p>Please wait while the syllabus loads.</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error || !pdfPath) {
+  if (!pdfPath) {
     return (
       <div className={styles.syllabusContainer}>
         <div className={styles.errorMessage}>
@@ -51,12 +29,7 @@ const Syllabus: React.FC = () => {
           </div>
 
           <div className={styles.downloadSection}>
-            <Button
-              as="a"
-              href={pdfPath}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Button as="a" href={pdfPath} target="_blank" rel="noopener noreferrer">
               Download Syllabus
             </Button>
           </div>
@@ -69,18 +42,13 @@ const Syllabus: React.FC = () => {
             title="Course Syllabus"
             width="100%"
             height="100%"
-            onError={() => setError(true)}
+            onError={() => setIframeError(true)}
             loading="lazy"
           />
-          {error && (
+          {iframeError && (
             <div className={styles.fallbackMessage}>
               <p>Unable to display PDF in browser.</p>
-              <a
-                href={pdfPath}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.fallbackLink}
-              >
+              <a href={pdfPath} target="_blank" rel="noopener noreferrer" className={styles.fallbackLink}>
                 Click here to open the syllabus in a new tab
               </a>
             </div>

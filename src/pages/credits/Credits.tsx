@@ -1,28 +1,33 @@
-import { useEffect, useRef } from "react";
-import styles from "./Credits.module.css";
+import { useEffect, useRef } from 'react';
+import styles from './Credits.module.css';
 
 const Credits: React.FC = () => {
   const githubLogoRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (githubLogoRef.current && window.innerWidth > 768) {
-        const rect = githubLogoRef.current.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
+    const logoElement = githubLogoRef.current;
+    if (!logoElement) return;
 
-        githubLogoRef.current.style.setProperty("--mouse-x", `${x}%`);
-        githubLogoRef.current.style.setProperty("--mouse-y", `${y}%`);
-      }
+    // Check once whether we're on desktop; update only on viewport change
+    const mediaQuery = window.matchMedia('(min-width: 769px)');
+    let isDesktop = mediaQuery.matches;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDesktop) return;
+      const rect = logoElement.getBoundingClientRect();
+      logoElement.style.setProperty('--mouse-x', `${((e.clientX - rect.left) / rect.width) * 100}%`);
+      logoElement.style.setProperty('--mouse-y', `${((e.clientY - rect.top) / rect.height) * 100}%`);
     };
 
-    const logoElement = githubLogoRef.current;
-    if (logoElement) {
-      logoElement.addEventListener("mousemove", handleMouseMove);
-      return () => {
-        logoElement.removeEventListener("mousemove", handleMouseMove);
-      };
-    }
+    const handleMediaChange = (e: MediaQueryListEvent) => { isDesktop = e.matches; };
+
+    logoElement.addEventListener('mousemove', handleMouseMove);
+    mediaQuery.addEventListener('change', handleMediaChange);
+
+    return () => {
+      logoElement.removeEventListener('mousemove', handleMouseMove);
+      mediaQuery.removeEventListener('change', handleMediaChange);
+    };
   }, []);
 
   return (
@@ -39,11 +44,7 @@ const Credits: React.FC = () => {
       </div>
 
       <div className={styles.githubSection}>
-        <a
-          href="https://github.com/arvinduh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/arvinduh" target="_blank" rel="noopener noreferrer">
           <img
             ref={githubLogoRef}
             src="/github-mark-white.svg"

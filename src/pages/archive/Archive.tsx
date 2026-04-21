@@ -19,7 +19,7 @@ const archiveItems: TimelineItem[] = [
 ];
 
 const Archive: React.FC = () => {
-  return <TimelineLayout title="Archive" items={archiveItems} />;
+  return <TimelineLayout title={["Archive"]} items={archiveItems} />;
 };
 
 export { Archive };
