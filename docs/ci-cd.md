@@ -1,5 +1,25 @@
 # CI/CD
 
+## Branch policy
+
+**Never push directly to `main`.** Always work on a branch and open a pull request.
+
+```bash
+git checkout -b yourname/short-description
+# make changes, commit
+git push -u origin yourname/short-description
+# open PR on GitHub → wait for CI → merge
+```
+
+`main` is the production branch — anything merged there triggers an immediate deploy to the public site. Only merge when:
+
+- CI passes (typecheck, lint, build are all green)
+- The change is in a working, shippable state
+
+Branch naming convention: `yourname/what-it-does` (e.g. `arvinduh/fix-deploy`, `allen/spring-2026-content`).
+
+---
+
 ## Overview
 
 | Mechanism | Trigger | What it does |
