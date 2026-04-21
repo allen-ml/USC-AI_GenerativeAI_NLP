@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import instructorsData from '../../content/instructors.json';
+import { publicUrl } from '../../utils/config';
 import styles from './Instructors.module.css';
 
 interface Instructor {
@@ -52,10 +53,10 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
       <div className={styles.cardTop}>
         <div className={styles.avatarRing}>
           <img
-            src={`/people/${instructor.Image}`}
+            src={publicUrl(`/people/${instructor.Image}`)}
             alt={instructor.Name}
             className={styles.avatar}
-            onError={(e) => { (e.target as HTMLImageElement).src = '/usc-logo.png'; }}
+            onError={(e) => { (e.target as HTMLImageElement).src = publicUrl('/usc-logo.png'); }}
           />
         </div>
         <div className={styles.identity}>

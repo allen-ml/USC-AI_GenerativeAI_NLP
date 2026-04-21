@@ -1,5 +1,6 @@
 import React from "react";
 import type { Project } from "../../types/ProjectTypes";
+import { publicUrl } from "../../../utils/config";
 
 interface ProjectCardProps {
   project: Project;
@@ -78,7 +79,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           )
         ) : (
           <img
-            src="/archive/tbp.png"
+            src={publicUrl("/archive/tbp.png")}
             className="project-image d-block w-100"
             alt="To be published"
           />
