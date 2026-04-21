@@ -58,8 +58,10 @@ The `/projects` page carousel auto-cycles through all images in the array.
 Two Python scripts convert slide decks and PDFs into images for the project
 carousel. Full flag references are in `docs/scripts/`:
 
-- [docs/scripts/render_slide.md](./scripts/render_slide.md) — render one slide from a `.pptx`
-- [docs/scripts/render_pdf.md](./scripts/render_pdf.md) — render all pages of a PDF
+- [docs/scripts/render_slide.md](./scripts/render_slide.md) — render one slide
+  from a `.pptx`
+- [docs/scripts/render_pdf.md](./scripts/render_pdf.md) — render all pages of a
+  PDF
 
 ### Install dependencies
 
