@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --noEmit",
     "lint": "eslint .",
     "preview": "vite preview",
-    "new-semester": "python3 scripts/new_semester.py"
+    "new-semester": "python3 scripts/new_semester.py",
+    "prepare": "bash scripts/install-hooks.sh"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
