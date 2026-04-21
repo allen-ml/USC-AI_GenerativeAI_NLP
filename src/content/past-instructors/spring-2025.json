@@ -1,0 +1,52 @@
+{
+  "id": "spring-2025",
+  "term": "Spring 2025",
+  "people": [
+    {
+      "Type": "Instructor",
+      "Name": "Allen Bolourchi",
+      "Position": "Adjunct Professor of Generative AI and NLP",
+      "Image": "allen_bolourchi.png",
+      "Profiles": {
+        "LinkedIn": "https://www.linkedin.com/in/allenbolourchi/",
+        "Company": "https://www.crystalytic.ai/"
+      }
+    },
+    {
+      "Type": "Instructor",
+      "Name": "Reza Jafarkhani",
+      "Position": "Senior Lecturer of Technology and Applied Computing",
+      "Image": "reza_jafarkhani.png",
+      "Profiles": {
+        "LinkedIn": "https://www.linkedin.com/in/reza-jafarkani-8b3a0013/"
+      }
+    },
+    {
+      "Type": "Course Assistant",
+      "Name": "Rajeev Singh",
+      "Position": "Course Assistant",
+      "Image": "rajeev_singh.jpg",
+      "Profiles": {
+        "LinkedIn": "https://www.linkedin.com/in/rajeevsinghusc/"
+      }
+    },
+    {
+      "Type": "Course Assistant",
+      "Name": "Nitin Sai Bommi",
+      "Position": "Course Assistant",
+      "Image": "nitin_sai_bommi.jpeg",
+      "Profiles": {
+        "LinkedIn": "https://www.linkedin.com/in/nitin-sai-bommi/"
+      }
+    },
+    {
+      "Type": "Course Assistant",
+      "Name": "Varuna Krishna Kolla",
+      "Position": "Course Assistant",
+      "Image": "varuna_krishna_kolla.jpg",
+      "Profiles": {
+        "LinkedIn": "https://www.linkedin.com/in/varuna-krishna-a25521194/"
+      }
+    }
+  ]
+}

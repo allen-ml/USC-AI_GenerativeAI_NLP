@@ -1,0 +1,89 @@
+/* Card Component Styles */
+.card {
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Variants */
+.variant-default {
+  background: var(--color-white);
+  box-shadow: var(--shadow-md);
+  color: var(--color-gray-900);
+}
+
+.variant-dark {
+  background: var(--color-bg-secondary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.variant-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+}
+
+/* Padding Options */
+.padding-none {
+  padding: 0;
+}
+
+.padding-sm {
+  padding: var(--spacing-md);
+}
+
+.padding-md {
+  padding: var(--spacing-lg);
+}
+
+.padding-lg {
+  padding: var(--spacing-xl);
+}
+
+/* Hover Effects */
+.hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.variant-glass.hover:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Project Card specific styles for backward compatibility */
+.projectCard {
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-md);
+  color: var(--color-gray-900);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-normal);
+  margin-bottom: var(--spacing-lg);
+}
+
+.projectCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.projectCard h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-gray-900);
+}
+
+.projectCard p {
+  text-align: left;
+  color: var(--color-gray-600);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+}
+
+.projectCard p strong {
+  color: var(--color-gray-900);
+}

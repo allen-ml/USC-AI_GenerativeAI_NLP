@@ -1,0 +1,320 @@
+/* Projects Page CSS - exact match to original project.html */
+
+/* Global container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.container h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Project Card Styling - exact match to original with overflow fixes */
+:global(.project-card) {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  min-height: 450px;
+  height: auto;
+  overflow: visible;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  position: relative;
+}
+
+:global(.project-card:hover) {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+:global(.project-image) {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+
+:global(.project-card h3) {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #a50000;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+/* Content wrapper to manage flex growth */
+:global(.project-content-wrapper) {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+/* Ensure text content doesn't exceed card boundaries */
+:global(.project-content-wrapper p:last-child) {
+  margin-bottom: 0;
+}
+
+/* Add slight spacing between text sections */
+:global(.project-content-wrapper p) {
+  margin-bottom: 15px;
+  max-height: none;
+  overflow: visible;
+}
+
+:global(.project-card p) {
+  font-size: 1rem;
+  text-align: left;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+:global(.project-card p strong) {
+  color: #000;
+}
+
+/* Class photo styling */
+:global(.class-photo-container) {
+  padding: 20px 0;
+  margin: 2rem auto;
+}
+
+:global(.class-photo-title) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+:global(.class-photo-wrapper) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+:global(.class-photo) {
+  width: 100%; /* Default for small screens */
+  max-width: 70%; /* Limit size on large screens */
+  height: auto;
+  border-radius: 25px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+:global(.class-photo:hover) {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 992px) {
+  /* Tablets */
+  :global(.class-photo) {
+    max-width: 90%;
+  }
+
+  :global(.class-photo-title) {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  :global(.class-photo) {
+    max-width: 100%;
+  }
+
+  :global(.class-photo-title) {
+    font-size: 1.2rem;
+  }
+
+  :global(.class-photo-container) {
+    padding: 15px 0;
+    margin: 1.5rem auto;
+  }
+}
+
+/* Bootstrap overrides to match original exactly */
+:global(.mt-4) {
+  margin-top: 1.5rem !important;
+}
+
+:global(.mt-5) {
+  margin-top: 3rem !important;
+}
+
+:global(.text-center) {
+  text-align: center !important;
+}
+
+:global(.d-block) {
+  display: block !important;
+}
+
+:global(.w-100) {
+  width: 100% !important;
+}
+
+:global(.mx-auto) {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Bootstrap Grid System */
+:global(.row) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+:global(.col-lg-4) {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+:global(.col-md-6) {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+:global(.col-sm-12) {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (max-width: 991.98px) {
+  :global(.col-lg-4) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :global(.col-lg-4),
+  :global(.col-md-6) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Adjust card styling for mobile */
+  :global(.project-card) {
+    min-height: 300px;
+    margin-bottom: 20px;
+  }
+
+  :global(.project-card p) {
+    font-size: 0.9rem;
+  }
+}
+
+/* Carousel styling to match Bootstrap exactly */
+:global(.carousel-item) {
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out;
+}
+
+:global(.carousel-item.active) {
+  display: block;
+}
+
+:global(.carousel-control-prev),
+:global(.carousel-control-next) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+  border: 0;
+  background: none;
+}
+
+:global(.carousel-control-prev:hover),
+:global(.carousel-control-next:hover) {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+
+:global(.carousel-control-prev) {
+  left: 0;
+}
+
+:global(.carousel-control-next) {
+  right: 0;
+}
+
+:global(.carousel-control-prev-icon),
+:global(.carousel-control-next-icon) {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+:global(.carousel-control-prev-icon) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='m5.25 0-.75.75L2.75 2.5l1.75 1.75L5.25 5l-.75.75L1.75 3 4.5.25z'/%3e%3c/svg%3e");
+}
+
+:global(.carousel-control-next-icon) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='m2.75 0 .75.75L5.25 2.5 3.5 4.25 2.75 5l.75.75L6.25 3 3.5.25z'/%3e%3c/svg%3e");
+}
+
+:global(.visually-hidden) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

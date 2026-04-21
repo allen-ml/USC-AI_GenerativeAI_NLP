@@ -1,0 +1,126 @@
+/*
+ * Content Page Styles - Main Container
+ *
+ * This file contains only the layout styles for the main content page.
+ * Individual component styles are in their respective component folders.
+ */
+
+.container {
+  width: 100%;
+  padding: var(--spacing-2xl);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.container:focus {
+  outline: none;
+}
+
+/* ============================================
+   WEEK LIST GRID
+   ============================================ */
+
+.weekList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-2xl);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ============================================
+   EXPANDED VIEW
+   ============================================ */
+
+.expandedView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2xl);
+  animation: fadeIn 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: var(--spacing-xl);
+  }
+
+  .weekList {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .expandedView {
+    padding: var(--spacing-xl);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-lg);
+  }
+
+  .weekList {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .expandedView {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  .weekList {
+    gap: var(--spacing-sm);
+  }
+
+  .expandedView {
+    padding: var(--spacing-md);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
