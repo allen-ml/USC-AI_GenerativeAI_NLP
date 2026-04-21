@@ -20,25 +20,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check Google Calendar API Key
-        run: |
-          if [ -z "$GCAL_API_KEY" ]; then
-            echo "ERROR: Google Calendar API key is not configured!"
-            echo ""
-            echo "WARNING: Deployment aborted due to missing API key configuration."
-            echo ""
-            echo "To fix this issue:"
-            echo "1. Go to your repository's Settings → Secrets and variables → Actions"
-            echo "2. Add a new repository secret with name: GCAL_API_KEY"
-            echo "3. Set the value to your Google Calendar API key"
-            echo "4. Re-run this workflow"
-            echo ""
-            exit 1
-          fi
-          echo "Google Calendar API key is configured"
-        env:
-          GCAL_API_KEY: ${{ secrets.GCAL_API_KEY }}
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
