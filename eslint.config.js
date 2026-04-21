@@ -14,12 +14,17 @@ export default defineConfig([
       js.configs.recommended,
       reactHooks.configs["recommended-latest"],
       reactRefresh.configs.vite,
-      tseslint.configs.strictTypeChecked,
-      tseslint.configs.stylisticTypeChecked,
+      tseslint.configs.recommendedTypeChecked,
     ],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        projectService: {
+          allowDefaultProject: ["tailwind.config.ts"],
+        },
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
   },
 ]);
