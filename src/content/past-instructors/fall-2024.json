@@ -1,0 +1,34 @@
+{
+  "id": "fall-2024",
+  "term": "Fall 2024",
+  "people": [
+    {
+      "Type": "Instructor",
+      "Name": "Allen Bolourchi",
+      "Position": "Adjunct Professor of Generative AI and NLP",
+      "Image": "allen_bolourchi.png",
+      "Profiles": {
+        "LinkedIn": "https://www.linkedin.com/in/allenbolourchi/",
+        "Company": "https://www.crystalytic.ai/"
+      }
+    },
+    {
+      "Type": "Course Assistant",
+      "Name": "Rajeev Singh",
+      "Position": "Lead Course Assistant",
+      "Image": "rajeev_singh.jpg",
+      "Profiles": {
+        "LinkedIn": "https://www.linkedin.com/in/rajeevsinghusc/"
+      }
+    },
+    {
+      "Type": "Course Assistant",
+      "Name": "Nitin Sai Bommi",
+      "Position": "Course Assistant",
+      "Image": "nitin_sai_bommi.jpeg",
+      "Profiles": {
+        "LinkedIn": "https://www.linkedin.com/in/nitin-sai-bommi/"
+      }
+    }
+  ]
+}

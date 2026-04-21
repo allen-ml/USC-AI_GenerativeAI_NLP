@@ -1,0 +1,21 @@
+.appContainer {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.fixedBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.uscLogo {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
