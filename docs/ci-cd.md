@@ -8,19 +8,23 @@
 | CI workflow | Pull request → `main` | Runs typecheck, lint, build — **blocks merge on failure** |
 | Deploy workflow | Push to `main` | Builds and deploys to GitHub Pages |
 
+Two separate workflow files are intentional: CI runs on every PR commit (cheap, fast feedback), deploy only runs after code lands on `main` (you don't want to deploy unmerged code).
+
 ---
 
 ## Pre-commit Hook (local)
 
-The hook lives in `.hooks/pre-commit` and is installed into `.git/hooks/` by the `prepare` npm lifecycle script, so it runs automatically after `npm install`.
+Hooks are managed by [Husky](https://typicode.github.io/husky/) and live in `.husky/`. They are installed automatically when you run `npm install` (via the `prepare` lifecycle script) — no extra steps needed after cloning.
 
-**To install manually:**
+The hook runs `typecheck → lint → build` before every commit. Failures print a warning but the commit is **never blocked** — this is intentional so local work-in-progress commits aren't interrupted. Issues flagged here will block the CI merge check, so fix them before opening a PR.
+
+**To run the checks manually at any time:**
 
 ```bash
-bash scripts/install-hooks.sh
+npm run typecheck   # TypeScript type check (fast)
+npm run lint        # ESLint
+npm run build       # Full production build
 ```
-
-The hook runs `typecheck → lint → build` before every commit. Failures print a warning but the commit is **never blocked** — this is intentional so local work-in-progress commits aren't interrupted. Issues flagged here will, however, block the CI merge check, so fix them before opening a PR.
 
 ---
 
@@ -33,9 +37,9 @@ Runs on every pull request targeting `main`. The job (`Typecheck · Lint · Buil
 **Steps:**
 1. `npm run typecheck` — TypeScript project-references type check (`tsc -b --noEmit`)
 2. `npm run lint` — ESLint with typescript-eslint rules
-3. `npm run build` — full Vite production build (also type-checks via `tsc -b`)
+3. `npm run build` — full Vite production build
 
-To require this as a mandatory status check:
+**To enforce this as a required status check:**
 
 1. Go to **Settings → Branches → Add branch protection rule**
 2. Branch name pattern: `main`
@@ -49,14 +53,9 @@ To require this as a mandatory status check:
 
 File: `.github/workflows/deploy.yml`
 
-Runs automatically whenever a commit lands on `main` (direct push or merged PR). Requires the `GCAL_API_KEY` repository secret to be set, or the workflow will fail with an actionable error message.
+Runs automatically whenever a commit lands on `main` (direct push or merged PR). Runs the same typecheck + lint + build as CI, then deploys `dist/` to GitHub Pages.
 
-**Steps:**
-1. Validate `GCAL_API_KEY` secret is present
-2. `npm ci` — clean install
-3. `npm run build` — production build with `VITE_GOOGLE_CALENDAR_API_KEY` injected
-4. Upload `dist/` as a Pages artifact
-5. Deploy to GitHub Pages
+Requires the `GCAL_API_KEY` repository secret — the workflow will fail with an actionable error if it's missing.
 
 **Setting up the secret:**
 
@@ -68,13 +67,3 @@ Runs automatically whenever a commit lands on `main` (direct push or merged PR).
 
 1. Go to **Settings → Pages**
 2. Source: **GitHub Actions**
-
----
-
-## Running Checks Locally
-
-```bash
-npm run typecheck   # TypeScript type check only (fast)
-npm run lint        # ESLint
-npm run build       # Full production build
-```
