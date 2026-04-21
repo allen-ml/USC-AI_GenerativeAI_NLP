@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "new-semester": "python3 scripts/new_semester.py",
-    "prepare": "bash scripts/install-hooks.sh"
+    "prepare": "husky"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
@@ -30,6 +30,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.4.0",
+    "husky": "^9.1.7",
     "knip": "^5.80.0",
     "madge": "^8.0.0",
     "prismjs": "^1.30.0",
