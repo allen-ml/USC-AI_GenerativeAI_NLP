@@ -27,21 +27,19 @@
 }
 
 .title {
-  font-size: clamp(2rem, 8vw, 4rem);
-  font-weight: 300;
+  font-size: var(--page-title-size);
+  font-weight: var(--page-title-weight);
+  letter-spacing: var(--page-title-tracking);
+  text-transform: uppercase;
   color: var(--color-white);
-  margin: 0 0 1rem 0;
-  font-family: var(--font-family-primary);
-  letter-spacing: -0.02em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 0 0 var(--spacing-md);
 }
 
 .semester {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  color: var(--color-gray-300);
+  font-size: var(--page-subtitle-size);
+  color: var(--color-gray-400);
   margin: 0;
-  font-family: var(--font-family-primary);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  line-height: 1.6;
 }
 
 .pdfContainer {
@@ -253,12 +251,12 @@
   }
 
   .title {
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-    margin: 0 0 0.5rem 0;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin: 0 0 var(--spacing-sm);
   }
 
   .semester {
-    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
   }
 
   .downloadSection {
