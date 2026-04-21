@@ -1,11 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
+import { allProjectSemesters } from '../../content/projects/index';
 import navigationData from '../../content/navigation.json';
 import type { NavItemData } from '../../types/navigationTypes';
 import { cn } from '../../utils/formatters';
 import styles from './Navigation.module.css';
 import { NavigationItem } from './NavigationItem';
 
-const navigationItems: NavItemData[] = navigationData as NavItemData[];
+const projectNavChildren: NavItemData[] = allProjectSemesters.map((s, i) => ({
+  label: i === 0 ? `${s.term} (Current)` : s.term,
+  href: `/projects#${s.id}`,
+}));
+
+const navigationItems: NavItemData[] = (navigationData as NavItemData[]).map((item) =>
+  item.href === '/projects' ? { ...item, children: projectNavChildren } : item
+);
 
 const Navigation = () => {
   const [isHovered, setIsHovered] = useState(false);

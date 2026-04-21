@@ -1,0 +1,73 @@
+{
+  "id": "fall-2024",
+  "term": "Fall 2024",
+  "classPhoto": "/archive/Fall2024/class_photo.jpg",
+  "projects": [
+    {
+      "title": "AI-Based Career Advisor",
+      "images": [
+        "/archive/Fall2024/projects/Team 1/team 1 - 2.png",
+        "/archive/Fall2024/projects/Team 1/team 1 - 3.png",
+        "/archive/Fall2024/projects/Team 1/team 1 - 1.png"
+      ],
+      "description": "This AI-powered career advisor provides personalized job recommendations based on skill analysis and real-time job market insights. It integrates with Bing and LinkedIn APIs for real-time job search.",
+      "executionPlan": "The system uses GPT-4o for skill matching, cosine similarity, and real-time job updates, ensuring accurate and up-to-date recommendations.",
+      "teamMembers": ["David Wang", "Dracky Wei", "Keyu He", "Julian Jiang", "Qiang Zeng"]
+    },
+    {
+      "title": "AI Video Content Summarizer and Chatbot",
+      "images": [
+        "/archive/Fall2024/projects/Team 2/team 2 - 1.png",
+        "/archive/Fall2024/projects/Team 2/team 2 -3.png",
+        "/archive/Fall2024/projects/Team 2/team 2 - 5.png"
+      ],
+      "description": "This AI-powered tool transcribes, summarizes, and allows users to interact with video content through a chatbot. It extracts key insights from lectures, meetings, and online videos.",
+      "executionPlan": "The system uses LLM-based summarization, video transcription, and chatbot features to provide interactive question-answering based on video content.",
+      "teamMembers": ["Iliyan Valani", "Shoaib Valani", "Haydee Martinez", "Carissa Lin", "Tyler Nguyen Tran"]
+    },
+    {
+      "title": "QA AI Assistant for TAC 459",
+      "images": [
+        "/archive/Fall2024/projects/Team 3/team 3 - 5.png",
+        "/archive/Fall2024/projects/Team 3/team 3 - 1.png",
+        "/archive/Fall2024/projects/Team 3/team 3 - 2.png"
+      ],
+      "description": "A Retrieval-Augmented Generation (RAG)-based assistant designed for answering course-related queries using lecture materials. It enhances learning through real-time, course-specific answers.",
+      "executionPlan": "Uses a vector database and LLMs to retrieve relevant course materials, allowing students to receive precise, cited answers with minimal instructor intervention.",
+      "teamMembers": ["Evans Alvarez", "Lawrance Lui", "Ju Lee"]
+    },
+    {
+      "title": "AI Assistant for Internship/New Grad Job Finder",
+      "images": [
+        "/archive/Fall2024/projects/Team 4/team 4 - 1.png",
+        "/archive/Fall2024/projects/Team 4/team 4 -2.png",
+        "/archive/Fall2024/projects/Team 4/team 4 -  4.png"
+      ],
+      "description": "HireWizard is an AI-driven job search assistant that matches job seekers to relevant roles based on resume analysis and job posting data.",
+      "executionPlan": "Uses NLP-powered resume screening, cosine similarity for job matching, and integrates with job databases like LinkedIn and Indeed to improve hiring outcomes.",
+      "teamMembers": ["Thomas Murray", "William Norris", "Stan Loosmore", "Zubin Hydrie"]
+    },
+    {
+      "title": "Sandwich or Salad Chatbot",
+      "images": [
+        "/archive/Fall2024/projects/Team 5/team 5 - 2.png",
+        "/archive/Fall2024/projects/Team 5/team 5 - 3.png",
+        "/archive/Fall2024/projects/Team 5/team 5 - 1.png"
+      ],
+      "description": "An AI-powered chatbot for customizing sandwich orders and providing personalized meal recommendations using dietary preferences and past orders.",
+      "executionPlan": "Implements a step-by-step ordering system, cross-selling features, and AI-powered dietary customization to improve customer experience.",
+      "teamMembers": ["Eimon Amjadi", "Reha Matai", "Eddie Sanchez", "Roei Ziv"]
+    },
+    {
+      "title": "AI Lecture Assistant: RAG-Driven Avatar for Interactive Course Q&A",
+      "images": [
+        "/archive/Fall2024/projects/Team 6/team 6 - 3.png",
+        "/archive/Fall2024/projects/Team 6/team 6 - 1.png",
+        "/archive/Fall2024/projects/Team 6/team 6 - 2.png"
+      ],
+      "description": "A virtual AI assistant that answers course-related questions in real-time using Retrieval-Augmented Generation (RAG) and an interactive avatar.",
+      "executionPlan": "Uses LLMs for text-based Q&A, voice synthesis for audio responses, and lip-syncing for realistic avatar interactions to enhance student engagement.",
+      "teamMembers": ["Emma Guo", "Elizabeth Phillips", "Jason Liu", "Hongkun Gong"]
+    }
+  ]
+}

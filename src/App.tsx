@@ -12,8 +12,10 @@ import { NeuralNetworkBackground } from './components/Background/NeuralNetworkBa
 import { Navigation } from './components/Navigation/Navigation';
 import { Archive } from './pages/archive/Archive';
 import { Content } from './pages/content/Content';
+import { Alumni } from './pages/alumni/Alumni';
 import { Credits } from './pages/credits/Credits';
 import { Home } from './pages/home/Home';
+import { Projects } from './pages/projects/Projects';
 import { Instructors } from './pages/instructors/Instructors';
 import { Schedule } from './pages/schedule/Schedule';
 import { Syllabus } from './pages/syllabus/Syllabus';
@@ -47,6 +49,8 @@ const App: React.FC = () => {
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/instructors" element={<Instructors />} />
         <Route path="/syllabus" element={<Syllabus />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/alumni" element={<Alumni />} />
         <Route path="/credits" element={<Credits />} />
 
         <Route path="/archive" element={<Archive />} />
