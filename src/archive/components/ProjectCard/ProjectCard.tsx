@@ -38,11 +38,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                     }`}
                   >
                     <img
-                      src={image}
+                      src={publicUrl(image)}
                       className="project-image d-block w-100"
                       alt={`${project.title || `Project ${index + 1}`} Image ${
                         imgIndex + 1
                       }`}
+                      onError={(e) => { const img = e.target as HTMLImageElement; img.onerror = null; img.src = publicUrl("/archive/tbp.png"); }}
                     />
                   </div>
                 ))}

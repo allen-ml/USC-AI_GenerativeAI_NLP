@@ -56,7 +56,7 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
             src={publicUrl(`/people/${instructor.Image}`)}
             alt={instructor.Name}
             className={styles.avatar}
-            onError={(e) => { (e.target as HTMLImageElement).src = publicUrl('/usc-logo.png'); }}
+            onError={(e) => { const img = e.target as HTMLImageElement; img.onerror = null; img.src = publicUrl('/usc-logo.png'); }}
           />
         </div>
         <div className={styles.identity}>
