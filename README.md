@@ -28,6 +28,19 @@ See [docs/dev-setup.md](docs/dev-setup.md) for the full environment guide.
 
 ---
 
+## CI/CD
+
+| Mechanism | Trigger | Behavior |
+| --------- | ------- | -------- |
+| Pre-commit hook | `git commit` (local) | Warns on typecheck/lint/build failures — never blocks |
+| CI workflow | PR → `main` | **Blocks merge** if typecheck, lint, or build fails |
+| Deploy workflow | Push to `main` | Builds and deploys to GitHub Pages automatically |
+
+Hooks are installed automatically by `npm install` (via the `prepare` script).
+See [docs/ci-cd.md](docs/ci-cd.md) for setup details, including how to enable the branch protection rule and configure the `GCAL_API_KEY` secret.
+
+---
+
 ## Documentation
 
 | Doc                                                    | What's in it                                   |
@@ -37,6 +50,7 @@ See [docs/dev-setup.md](docs/dev-setup.md) for the full environment guide.
 | [docs/semester-rollover.md](docs/semester-rollover.md) | Running the rollover script + manual steps     |
 | [docs/assets.md](docs/assets.md)                       | Images, PDFs, slide/PDF rendering scripts      |
 | [docs/deploy.md](docs/deploy.md)                       | Production build and static hosting config     |
+| [docs/ci-cd.md](docs/ci-cd.md)                         | CI/CD workflows, pre-commit hooks, branch protection |
 | [docs/scripts/new_semester.md](docs/scripts/new_semester.md) | Semester rollover script reference       |
 | [docs/scripts/render_slide.md](docs/scripts/render_slide.md) | Slide-to-image script reference          |
 | [docs/scripts/render_pdf.md](docs/scripts/render_pdf.md)     | PDF-to-images script reference           |

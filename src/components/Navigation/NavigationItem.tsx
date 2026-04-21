@@ -24,7 +24,7 @@ const NavigationItem: React.FC<Props> = ({ num, item, isExpanded, onHover, onLea
     if (window.location.pathname === '/') {
       document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      navigate('/');
+      void navigate('/');
       // Wait for navigation before scrolling
       setTimeout(() => document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' }), 200);
     }

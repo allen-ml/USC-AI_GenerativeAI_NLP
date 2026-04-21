@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 interface UseCardHeightEqualizationProps {
   hasProjects: boolean;
-  projects: any[];
+  projects: unknown[];
 }
 
 export const useCardHeightEqualization = ({
@@ -126,7 +126,7 @@ export const useCardHeightEqualization = ({
     };
 
     // Run height calculation after all images are loaded
-    preloadImages().then(() => {
+    void preloadImages().then(() => {
       setTimeout(equalizeCardHeights, 150);
     });
 
