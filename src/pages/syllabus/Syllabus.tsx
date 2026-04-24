@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Button } from '../../components/Button/Button';
 import metaData from '../../content/info.json';
+import { publicUrl } from '../../utils/config';
 import styles from './Syllabus.module.css';
 
-const pdfPath = metaData.syllabus ? `/${metaData.syllabus}` : null;
+const pdfPath = metaData.syllabus ? publicUrl(`/${metaData.syllabus}`) : null;
 
 const Syllabus: React.FC = () => {
   const [iframeError, setIframeError] = useState(false);

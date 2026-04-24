@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Timeline.module.css';
 
 export interface TimelineItem {
@@ -47,14 +48,14 @@ function Timeline({ items }: TimelineProps) {
     <div className={styles.timeline} ref={timelineRef}>
       {items.map((item, index) => (
         <div key={index} className={styles.timelineItem}>
-          <a href={item.href} className={styles.timelineLabel}>
+          <Link to={item.href} className={styles.timelineLabel}>
             <div className={styles.labelContent}>
               <span className={styles.labelText}>{item.label}</span>
               {item.description && (
                 <span className={styles.labelDescription}>{item.description}</span>
               )}
             </div>
-          </a>
+          </Link>
           <div
             className={styles.timelineDot}
             ref={(el) => { dotRefs.current[index] = el; }}
