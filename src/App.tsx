@@ -15,6 +15,7 @@ import { Content } from './pages/content/Content';
 import { Alumni } from './pages/alumni/Alumni';
 import { Credits } from './pages/credits/Credits';
 import { Home } from './pages/home/Home';
+import { NotFound } from './pages/not-found/NotFound';
 import { Projects } from './pages/projects/Projects';
 import { Instructors } from './pages/instructors/Instructors';
 import { Schedule } from './pages/schedule/Schedule';
@@ -60,6 +61,8 @@ const App: React.FC = () => {
         <Route path="/archive/projects/fall-2024" element={<Fall2024Projects />} />
         <Route path="/archive/projects/spring-2025" element={<Spring2025Projects />} />
         <Route path="/archive/projects/spring-2024" element={<Spring2024Projects />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
