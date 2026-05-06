@@ -2,5 +2,105 @@
   "id": "spring-2025",
   "term": "Spring 2025",
   "classPhoto": "",
-  "projects": []
+  "projects": [
+    {
+      "title": "BriefTube - AI-Powered YouTube Video Summarizer",
+      "images": [
+        "/archive/Spring2025/projects/Team 1/team 1 - 1.png",
+        "/archive/Spring2025/projects/Team 1/team 1 - 2.png",
+        "/archive/Spring2025/projects/Team 1/team 1 - 3.png"
+      ],
+      "description": "BriefTube helps users get the gist of long YouTube videos in minutes by generating AI-powered summaries, clickable key timestamps, emotion and context metadata, and visual keyframes: designed for students, researchers, and busy professionals who consume long-form video content.",
+      "executionPlan": "Built as a Streamlit app powered by GPT-4 for long-context summarization, Whisper for speech-to-text transcription, and vision models for keyframe and mood inference, with yt-dlp and OpenCV handling video retrieval and frame analysis.",
+      "teamMembers": ["Andrew Kim", "Anton Wagner", "Celine Chen", "Taylor Yiu", "Vivek Raheja"]
+    },
+    {
+      "title": "Autonomous Web Navigation with MCP",
+      "images": [
+        "/archive/Spring2025/projects/Team 2/team 2 - 1.png",
+        "/archive/Spring2025/projects/Team 2/team 2 - 2.png",
+        "/archive/Spring2025/projects/Team 2/team 2 - 3.png"
+      ],
+      "description": "An autonomous web-search agent that mimics how a human researcher works by navigating the web, ranking sources by relevance and credibility, resolving conflicts between disagreeing sources, and returning a multi-source, citation-backed answer through a conversational Streamlit interface.",
+      "executionPlan": "Uses Anthropic's Claude with the Model Context Protocol (MCP) for autonomous Google search and web scraping, sentence-transformer cosine similarity for relevance scoring, Claude-evaluated credibility scores for pairwise conflict resolution, and RAG over the top-ranked documents for the final response.",
+      "teamMembers": ["Arjun Bedi", "Will Dolan", "Aditya Kumar", "Luke Legrand", "Allison Lim", "Aarav Monga"]
+    },
+    {
+      "title": "FEND.AI - Unreal News Detection Platform",
+      "images": [
+        "/archive/Spring2025/projects/Team 3/team 3 - 1.png",
+        "/archive/Spring2025/projects/Team 3/team 3 - 2.png",
+        "/archive/Spring2025/projects/Team 3/team 3 - 3.png"
+      ],
+      "description": "An AI-powered fact-checking tool that helps everyday users instantly assess the credibility of digital news articles, returning a confidence score along with a human-readable explanation of why a piece of content was flagged as real or fake.",
+      "executionPlan": "Combines a live web-search RAG pipeline (NLTK RAKE keyword extraction, the SERP Google Search API, and GPT-3.5-Turbo for verification) with classical ML baselines (TF-IDF + Logistic Regression, TF-IDF + XGBoost, and a Bi-LSTM with LIME for interpretability), all served through a Streamlit interface.",
+      "teamMembers": ["Maria Barun", "Luke Walsh", "Jack Wipf", "Jacob Grager", "Sean Potvin"]
+    },
+    {
+      "title": "Legal Document Processor",
+      "images": [
+        "/archive/Spring2025/projects/Team 4/team 4 - 1.png",
+        "/archive/Spring2025/projects/Team 4/team 4 - 2.png",
+        "/archive/Spring2025/projects/Team 4/team 4 - 3.png"
+      ],
+      "description": "An AI-powered legal document summarizer aimed at corporate law firms, legal aid clinics, and government agencies that need to quickly digest long PDFs. Users upload a contract, brief, or judgment and choose between an extractive or abstractive summary, with optional named-entity extraction for legally relevant entities.",
+      "executionPlan": "Extracts text from PDFs with PyMuPDF, then offers two summarization paths: an extractive pipeline that embeds sentences with BERT and selects them via Maximal Marginal Relevance (MMR) to balance relevance against redundancy, and an abstractive pipeline using Google's T5-small for paraphrased summaries. spaCy (en_core_web_sm) handles legal NER, and Gradio provides the interactive web UI.",
+      "teamMembers": ["Evans Chun", "Elissa Martial", "Will Macdonald", "Nikhil Murthy", "Arian Mirzamaani", "Dylan Chen"]
+    },
+    {
+      "title": "LLM Comparator",
+      "images": [
+        "/archive/Spring2025/projects/Team 5/team 5 - 1.png",
+        "/archive/Spring2025/projects/Team 5/team 5 - 2.png",
+        "/archive/Spring2025/projects/Team 5/team 5 - 3.png"
+      ],
+      "description": "A side-by-side comparison tool that runs the same prompt across multiple frontier LLMs — GPT-4o, Claude 3.7 Sonnet, Gemini 2.5, Llama 4, Mistral, DeepSeek, and Grok — and lets users upvote responses, run anonymous blind comparisons, and manage their own API keys for each provider.",
+      "executionPlan": "Built as a Streamlit app with consolidated chat-completion endpoints across OpenAI, Anthropic, and OpenRouter, streaming responses with tiktoken-based token accounting, prompt-keyed response caching, and an APIKeyManager that loads credentials from a .env file or per-session state.",
+      "teamMembers": ["Raymond Wang", "Ting Wang", "Ruiyang Zhang", "Xinyuan Tong"]
+    },
+    {
+      "title": "Runway Incursion Analysis",
+      "images": [
+        "/archive/Spring2025/projects/Team 6/team 6 - 1.png",
+        "/archive/Spring2025/projects/Team 6/team 6 - 2.png",
+        "/archive/Spring2025/projects/Team 6/team 6 - 3.png"
+      ],
+      "description": "An NLP-driven aviation safety project that automates the analysis of runway incursion narratives from NASA's ASRS database, surfacing recurring human, procedural, and environmental contributing factors and tracking how they evolve over time. Includes an interactive dashboard for filtering incident data by state and date range.",
+      "executionPlan": "Preprocesses ASRS narratives by normalizing aviation-specific jargon (FAA/NBAA abbreviations, ICAO and IATA airport codes), then applies two unsupervised topic models — LDA via gensim and BERTopic with sentence-transformers, UMAP, and HDBSCAN — and benchmarks the resulting clusters against hand-coded human-factor categories.",
+      "teamMembers": ["Christopher Kuzion", "Anisha Reddy", "Andrew Levy", "Hannah Bogen", "Rianna Herzlinger", "Tommaso Morini Bianzino", "Andre Rodrigues", "Souheil Moudarres"]
+    },
+    {
+      "title": "AI Academic Advisor",
+      "images": [
+        "/archive/Spring2025/projects/Team 7/team 7 - 1.png",
+        "/archive/Spring2025/projects/Team 7/team 7 - 2.png",
+        "/archive/Spring2025/projects/Team 7/team 7 - 3.png"
+      ],
+      "description": "A USC-specific chatbot that lets students explore course information through natural conversation and generates personalized weekly schedules based on their preferences and constraints, simplifying an otherwise overwhelming course-selection process across complex prerequisites, GE requirements, and unit caps.",
+      "executionPlan": "Implements a modified RAG architecture with a tool-using LLM agent backed by a custom Cache layer that pulls course data on demand from the USC Schedule of Classes (SOC) API and falls back to scraping when needed, with chat-history memory and live schedule updates from the agent's responses.",
+      "teamMembers": ["Iliyan Hariyani", "Fawny Arnyek", "David Wang", "Arvin Duh", "Aum Patel", "Anna Schwedt"]
+    },
+    {
+      "title": "ScholarFinder - Smart Research Paper Finder",
+      "images": [
+        "/archive/Spring2025/projects/Team 8/team 8 - 1.png",
+        "/archive/Spring2025/projects/Team 8/team 8 - 2.png",
+        "/archive/Spring2025/projects/Team 8/team 8 - 3.png"
+      ],
+      "description": "A semantic research-paper search tool that goes beyond keyword matching, letting students, researchers, and educators query an indexed corpus of arXiv papers with interpretable similarity scores, LLM-generated summaries, and recommendations for related work.",
+      "executionPlan": "Indexes papers fetched from the arXiv API, embeds titles and abstracts with OpenAI embeddings, and stores them in Pinecone for cosine-similarity retrieval. A FastAPI backend serves a Streamlit frontend, with PyMuPDF and chunked GPT-3.5-Turbo calls for full-paper summarization and Levenshtein-based fuzzy matching for author and journal filters.",
+      "teamMembers": ["Khai-Ly Tran", "Serena Li", "Eric Almendral", "Babo Hu", "Harmony Cen", "Demi Zhou"]
+    },
+    {
+      "title": "Briefly - AI Meeting Assistant",
+      "images": [
+        "/archive/Spring2025/projects/Team 9/team 9 - 1.png",
+        "/archive/Spring2025/projects/Team 9/team 9 - 2.png",
+        "/archive/Spring2025/projects/Team 9/team 9 - 3.png"
+      ],
+      "description": "An AI meeting note-taker that turns uploaded video recordings into clean transcripts, smart summaries, and delegated action items. Briefly is built to address the productivity loss from the 17 average weekly meetings the modern worker now sits through.",
+      "executionPlan": "A four-stage pipeline that extracts and trims audio from uploaded video, generates a transcript via speech-to-text, then runs LLM-based summarization and action-item extraction to surface decisions, owners, and follow-ups in a single dashboard view.",
+      "teamMembers": ["Santiago Briones", "Daniella Echeverria", "Brad Shen", "Matthew Cullen", "Yuki Yu", "Phillip Awong"]
+    }
+  ]
 }
