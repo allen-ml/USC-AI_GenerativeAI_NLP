@@ -47,7 +47,7 @@ const Navigation = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={styles.menuHeader}>
+      <div className={styles.menuHeader} onClick={() => setIsHovered(prev => !prev)}>
         <span className={styles.navigationText}>Navigation</span>
       </div>
 
