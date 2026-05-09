@@ -1,13 +1,13 @@
-import React from "react";
-import { PlaceholderCard } from "../components/ProjectCard/PlaceholderCard";
-import { ProjectCard } from "../components/ProjectCard/ProjectCard";
-import Fall2024ProjectData from "../content/projects/fall-2024.json";
-import Spring2024ProjectData from "../content/projects/spring-2024.json";
-import Spring2025ProjectData from "../content/projects/spring-2025.json";
-import { useCardHeightEqualization } from "../hooks/useCardHeightEqualization";
-import { Spring2025Layout } from "../layouts/Spring2025Layout/Spring2025Layout";
-import type { ProjectArchiveData } from "../types/ProjectTypes";
-import "./Projects.module.css"; // Import CSS to ensure exact styling match
+import React from 'react';
+import { PlaceholderCard } from '../components/ProjectCard/PlaceholderCard';
+import { ProjectCard } from '../components/ProjectCard/ProjectCard';
+import Fall2024ProjectData from '../content/projects/fall-2024.json';
+import Spring2024ProjectData from '../content/projects/spring-2024.json';
+import Spring2025ProjectData from '../content/projects/spring-2025.json';
+import { useCardHeightEqualization } from '../hooks/useCardHeightEqualization';
+import { Spring2025Layout } from '../layouts/Spring2025Layout/Spring2025Layout';
+import type { ProjectArchiveData } from '../types/ProjectTypes';
+import './Projects.module.css'; // Import CSS to ensure exact styling match
 
 interface ProjectsPageProps {
   data: ProjectArchiveData;
@@ -15,7 +15,7 @@ interface ProjectsPageProps {
 
 const ProjectsPage: React.FC<ProjectsPageProps> = ({ data }) => {
   const hasProjects = data.projects && data.projects.length > 0;
-  const title = data.term ? `${data.term} Final Projects` : "Final Projects";
+  const title = data.term ? `${data.term} Final Projects` : 'Final Projects';
 
   // Use custom hook for card height equalization
   useCardHeightEqualization({ hasProjects, projects: data.projects || [] });
@@ -46,15 +46,15 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ data }) => {
                 <img
                   src={data.classPhoto}
                   className="class-photo d-block mx-auto"
-                  alt={`${data.term || ""} Class Photo`}
+                  alt={`${data.term || ''} Class Photo`}
                   onLoad={() => {
                     // Ensure proper aspect ratio maintenance
                     const img = document.querySelector(
-                      ".class-photo"
+                      '.class-photo'
                     ) as HTMLImageElement;
                     if (img) {
-                      img.style.maxWidth = "70%";
-                      img.style.height = "auto";
+                      img.style.maxWidth = '70%';
+                      img.style.height = 'auto';
                     }
                   }}
                 />
@@ -70,9 +70,9 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ data }) => {
 const Spring2024Projects: React.FC = () => {
   const baseData = Spring2024ProjectData as ProjectArchiveData;
   const projects: ProjectArchiveData = {
-    term: baseData.term || "Spring 2024",
+    term: baseData.term || 'Spring 2024',
     projects: baseData.projects || [],
-    classPhoto: baseData.classPhoto || "",
+    classPhoto: baseData.classPhoto || '',
   };
   return <ProjectsPage data={projects} />;
 };
@@ -80,9 +80,9 @@ const Spring2024Projects: React.FC = () => {
 const Fall2024Projects: React.FC = () => {
   const baseData = Fall2024ProjectData as ProjectArchiveData;
   const projects: ProjectArchiveData = {
-    term: baseData.term || "Fall 2024",
+    term: baseData.term || 'Fall 2024',
     projects: baseData.projects || [],
-    classPhoto: baseData.classPhoto || "",
+    classPhoto: baseData.classPhoto || '',
   };
   return <ProjectsPage data={projects} />;
 };
@@ -90,9 +90,9 @@ const Fall2024Projects: React.FC = () => {
 const Spring2025Projects: React.FC = () => {
   const baseData = Spring2025ProjectData as ProjectArchiveData;
   const projects: ProjectArchiveData = {
-    term: baseData.term || "Spring 2025",
+    term: baseData.term || 'Spring 2025',
     projects: baseData.projects || [],
-    classPhoto: baseData.classPhoto || "",
+    classPhoto: baseData.classPhoto || '',
   };
   return <ProjectsPage data={projects} />;
 };

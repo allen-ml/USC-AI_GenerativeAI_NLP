@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from 'react';
 
 interface UseScrollSnapOptions {
   threshold?: number; // Minimum scroll distance to trigger snap (in pixels)
@@ -17,7 +17,7 @@ export function useScrollSnap(options: UseScrollSnapOptions = {}) {
     const container = scrollContainerRef.current;
     if (!container) return [];
 
-    const sections = container.querySelectorAll("[data-snap-section]");
+    const sections = container.querySelectorAll('[data-snap-section]');
     return Array.from(sections) as HTMLElement[];
   }, []);
 
@@ -149,10 +149,10 @@ export function useScrollSnap(options: UseScrollSnapOptions = {}) {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    container.addEventListener("scroll", handleScroll, { passive: true });
+    container.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      container.removeEventListener("scroll", handleScroll);
+      container.removeEventListener('scroll', handleScroll);
       if (scrollTimeoutRef.current) {
         clearTimeout(scrollTimeoutRef.current);
       }

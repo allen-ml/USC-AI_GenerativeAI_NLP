@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import type { Spring2025NavigationFormat } from "../../types/ContentTypes";
-import styles from "./Spring2025Header.module.css";
+import React, { useEffect, useRef, useState } from 'react';
+import type { Spring2025NavigationFormat } from '../../types/ContentTypes';
+import styles from './Spring2025Header.module.css';
 
 interface Spring2025HeaderProps {
   navigationData: Spring2025NavigationFormat;
@@ -22,8 +22,8 @@ const Spring2025Header: React.FC<Spring2025HeaderProps> = ({
         setOpenDropdown(null);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (

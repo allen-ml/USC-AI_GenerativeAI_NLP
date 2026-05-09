@@ -1,19 +1,19 @@
-import { cn } from "../../utils/formatters";
-import styles from "./Card.module.css";
+import { cn } from '../../utils/formatters';
+import styles from './Card.module.css';
 
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-  variant?: "default" | "dark" | "glass";
-  padding?: "none" | "sm" | "md" | "lg";
+  variant?: 'default' | 'dark' | 'glass';
+  padding?: 'none' | 'sm' | 'md' | 'lg';
   hover?: boolean;
 }
 
 const Card: React.FC<CardProps> = ({
   children,
   className,
-  variant = "default",
-  padding = "lg",
+  variant = 'default',
+  padding = 'lg',
   hover = true,
 }) => {
   const cardClass = cn(

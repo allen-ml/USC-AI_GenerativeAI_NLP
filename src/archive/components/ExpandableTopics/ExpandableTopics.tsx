@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styles from "./ExpandableTopics.module.css";
+import React, { useState } from 'react';
+import styles from './ExpandableTopics.module.css';
 
 interface ExpandableTopicsProps {
   title: string;
@@ -31,11 +31,8 @@ const ExpandableTopics: React.FC<ExpandableTopicsProps> = ({
         </ul>
       </div>
       {isExpanded && <br />}
-      <button
-        onClick={toggleExpanded}
-        className={styles.toggleText}
-      >
-        {isExpanded ? "Expand Less" : "Expand More"}
+      <button onClick={toggleExpanded} className={styles.toggleText}>
+        {isExpanded ? 'Expand Less' : 'Expand More'}
       </button>
     </div>
   );

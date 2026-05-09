@@ -7,14 +7,30 @@ interface NavigationArrowProps {
   ariaLabel: string;
 }
 
-const NavigationArrow: React.FC<NavigationArrowProps> = ({ direction, onClick, ariaLabel }) => {
+const NavigationArrow: React.FC<NavigationArrowProps> = ({
+  direction,
+  onClick,
+  ariaLabel,
+}) => {
   return (
     <button
-      className={cn(styles.navButton, direction === 'prev' ? styles.navButtonPrev : styles.navButtonNext)}
+      className={cn(
+        styles.navButton,
+        direction === 'prev' ? styles.navButtonPrev : styles.navButtonNext
+      )}
       onClick={onClick}
       aria-label={ariaLabel}
     >
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         {direction === 'prev' ? (
           <polyline points="15 18 9 12 15 6" />
         ) : (

@@ -16,11 +16,19 @@ const Credits: React.FC = () => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDesktop) return;
       const rect = logoElement.getBoundingClientRect();
-      logoElement.style.setProperty('--mouse-x', `${((e.clientX - rect.left) / rect.width) * 100}%`);
-      logoElement.style.setProperty('--mouse-y', `${((e.clientY - rect.top) / rect.height) * 100}%`);
+      logoElement.style.setProperty(
+        '--mouse-x',
+        `${((e.clientX - rect.left) / rect.width) * 100}%`
+      );
+      logoElement.style.setProperty(
+        '--mouse-y',
+        `${((e.clientY - rect.top) / rect.height) * 100}%`
+      );
     };
 
-    const handleMediaChange = (e: MediaQueryListEvent) => { isDesktop = e.matches; };
+    const handleMediaChange = (e: MediaQueryListEvent) => {
+      isDesktop = e.matches;
+    };
 
     logoElement.addEventListener('mousemove', handleMouseMove);
     mediaQuery.addEventListener('change', handleMediaChange);
@@ -45,10 +53,14 @@ const Credits: React.FC = () => {
       </div>
 
       <div className={styles.githubSection}>
-        <a href="https://github.com/arvinduh" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/arvinduh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             ref={githubLogoRef}
-            src={publicUrl("/github-mark-white.svg")}
+            src={publicUrl('/github-mark-white.svg')}
             alt="GitHub Profile"
             className={styles.githubLogo}
           />

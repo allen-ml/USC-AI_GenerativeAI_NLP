@@ -1,32 +1,32 @@
-import { cn } from "../../utils/formatters";
-import styles from "./Button.module.css";
+import { cn } from '../../utils/formatters';
+import styles from './Button.module.css';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline";
-  size?: "sm" | "md" | "lg";
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
   className?: string;
-  as?: "button" | "a";
+  as?: 'button' | 'a';
   href?: string;
   target?: string;
   rel?: string;
   onClick?: () => void;
   disabled?: boolean;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
   className,
-  variant = "primary",
-  size = "md",
-  as = "button",
+  variant = 'primary',
+  size = 'md',
+  as = 'button',
   href,
   target,
   rel,
   onClick,
   disabled,
-  type = "button",
+  type = 'button',
   ...props
 }) => {
   const buttonClass = cn(
@@ -36,7 +36,7 @@ const Button: React.FC<ButtonProps> = ({
     className
   );
 
-  if (as === "a") {
+  if (as === 'a') {
     return (
       <a
         href={href}

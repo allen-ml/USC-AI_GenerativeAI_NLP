@@ -11,8 +11,9 @@ const projectNavChildren: NavItemData[] = allProjectSemesters.map((s, i) => ({
   href: `/projects#${s.id}`,
 }));
 
-const navigationItems: NavItemData[] = (navigationData as NavItemData[]).map((item) =>
-  item.href === '/projects' ? { ...item, children: projectNavChildren } : item
+const navigationItems: NavItemData[] = (navigationData as NavItemData[]).map(
+  (item) =>
+    item.href === '/projects' ? { ...item, children: projectNavChildren } : item
 );
 
 const Navigation = () => {
@@ -43,15 +44,26 @@ const Navigation = () => {
 
   return (
     <nav
-      className={cn(styles.navContainer, isHovered ? styles.expanded : styles.collapsed)}
+      className={cn(
+        styles.navContainer,
+        isHovered ? styles.expanded : styles.collapsed
+      )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={styles.menuHeader} onClick={() => setIsHovered(prev => !prev)}>
+      <div
+        className={styles.menuHeader}
+        onClick={() => setIsHovered((prev) => !prev)}
+      >
         <span className={styles.navigationText}>Navigation</span>
       </div>
 
-      <div className={cn(styles.navItemsContainer, isHovered ? styles.expanded : styles.collapsed)}>
+      <div
+        className={cn(
+          styles.navItemsContainer,
+          isHovered ? styles.expanded : styles.collapsed
+        )}
+      >
         {navigationItems.map((item, index) => (
           <NavigationItem
             key={index}

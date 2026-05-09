@@ -16,14 +16,32 @@ interface Instructor {
 const typedInstructors = instructorsData as Instructor[];
 
 const CopyIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
   </svg>
 );
 
 const CheckIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <polyline points="20 6 9 17 4 12" />
   </svg>
 );
@@ -46,7 +64,9 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
   };
 
   const bioLines = instructor.Bio.split('\n');
-  const profileLinks = Object.entries(instructor.Profiles ?? {}).filter(([, url]) => url);
+  const profileLinks = Object.entries(instructor.Profiles ?? {}).filter(
+    ([, url]) => url
+  );
 
   return (
     <div className={styles.card}>
@@ -56,7 +76,11 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
             src={publicUrl(`/people/${instructor.Image}`)}
             alt={instructor.Name}
             className={styles.avatar}
-            onError={(e) => { const img = e.target as HTMLImageElement; img.onerror = null; img.src = publicUrl('/usc-logo.png'); }}
+            onError={(e) => {
+              const img = e.target as HTMLImageElement;
+              img.onerror = null;
+              img.src = publicUrl('/usc-logo.png');
+            }}
           />
         </div>
         <div className={styles.identity}>
@@ -78,7 +102,9 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
 
       <div className={styles.footer}>
         <button
-          onClick={() => { void copyEmail(); }}
+          onClick={() => {
+            void copyEmail();
+          }}
           className={`${styles.emailBtn} ${copied ? styles.emailBtnCopied : ''}`}
           title={instructor.Email}
         >
@@ -115,7 +141,12 @@ interface SectionProps {
   compact?: boolean;
 }
 
-const Section: React.FC<SectionProps> = ({ id, title, people, compact = false }) => (
+const Section: React.FC<SectionProps> = ({
+  id,
+  title,
+  people,
+  compact = false,
+}) => (
   <section id={id} className={styles.section}>
     <div className={styles.sectionHeader}>
       <h2 className={styles.sectionTitle}>{title}</h2>
@@ -131,7 +162,9 @@ const Section: React.FC<SectionProps> = ({ id, title, people, compact = false })
 
 const Instructors: React.FC = () => {
   const instructors = typedInstructors.filter((p) => p.Type === 'Instructor');
-  const courseAssistants = typedInstructors.filter((p) => p.Type === 'Course Assistant');
+  const courseAssistants = typedInstructors.filter(
+    (p) => p.Type === 'Course Assistant'
+  );
 
   return (
     <div className={styles.page}>
