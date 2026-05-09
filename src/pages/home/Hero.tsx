@@ -1,3 +1,4 @@
+import info from '../../content/info.json';
 import { Timeline } from '../../components/Timeline/Timeline';
 import { HeroLayout } from '../../layouts/Hero/HeroLayout';
 import type { TimelineItem } from '../../layouts/Timeline/TimelineLayout';
@@ -29,12 +30,9 @@ const quickLinks: TimelineItem[] = [
 function Hero(): React.JSX.Element {
   return (
     <HeroLayout
-      courseInfo="CSCI 499 — Spring 2025"
-      tagline={[
-        'Capstone Course of the AI minor @USC',
-        'Building Gen AI Products',
-      ]}
-      title={['Generative AI', '& NLP']}
+      courseInfo={`${info.courseNumber} — ${info.semester}`}
+      tagline={info.tagline}
+      title={info.title}
     >
       <div className={styles.rightSection}>
         <Timeline items={quickLinks} />
