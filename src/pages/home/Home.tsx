@@ -5,10 +5,14 @@ import styles from './Home.module.css';
 import { Overview } from './Overview';
 
 const Home: React.FC = () => {
-  const { scrollContainerRef, scrollToSection, snapToClosestSection } = useScrollSnap();
+  const { scrollContainerRef, scrollToSection, snapToClosestSection } =
+    useScrollSnap();
 
   return (
-    <ScrollProvider scrollToSection={scrollToSection} snapToClosestSection={snapToClosestSection}>
+    <ScrollProvider
+      scrollToSection={scrollToSection}
+      snapToClosestSection={snapToClosestSection}
+    >
       <div ref={scrollContainerRef} className={styles.scrollableContent}>
         <div data-snap-section className={styles.scrollSection}>
           <Hero />

@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-import sampleOutputRaw from "../../content/overview_blurb.txt?raw";
-import pythonCodeRaw from "../../content/overview_snippet.py?raw";
-import styles from "./CodeDemo.module.css";
+import { useEffect, useState } from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import sampleOutputRaw from '../../content/overview_blurb.txt?raw';
+import pythonCodeRaw from '../../content/overview_snippet.py?raw';
+import styles from './CodeDemo.module.css';
 
 const pythonCode = pythonCodeRaw;
 const sampleOutput = sampleOutputRaw.trim();
@@ -14,16 +14,16 @@ interface CodeDemoProps {
 
 const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
   const [isRunning, setIsRunning] = useState(false);
-  const [output, setOutput] = useState("");
+  const [output, setOutput] = useState('');
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
-  const words = sampleOutput.split(" ");
+  const words = sampleOutput.split(' ');
 
   const handleRun = () => {
     if (isRunning) return;
 
     setIsRunning(true);
-    setOutput("");
+    setOutput('');
     setCurrentWordIndex(0);
   };
 
@@ -37,7 +37,7 @@ const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
 
     const timer = setTimeout(() => {
       const newWord = words[currentWordIndex];
-      setOutput((prev) => prev + (prev ? " " : "") + newWord);
+      setOutput((prev) => prev + (prev ? ' ' : '') + newWord);
       setCurrentWordIndex((prev) => prev + 1);
     }, 150); // Adjust speed here (milliseconds between words)
 
@@ -49,13 +49,13 @@ const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
   };
 
   const handleClear = () => {
-    setOutput("");
+    setOutput('');
     setCurrentWordIndex(0);
     setIsRunning(false);
   };
 
   return (
-    <div className={`${styles.editorContainer} ${className || ""}`}>
+    <div className={`${styles.editorContainer} ${className || ''}`}>
       {/* Left Pane - Code Editor */}
       <div className={styles.codePane}>
         <div className={styles.codeHeader}>
@@ -65,7 +65,7 @@ const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
               onClick={handleRun}
               disabled={isRunning}
               className={`${styles.runButton} ${
-                isRunning ? styles.disabled : ""
+                isRunning ? styles.disabled : ''
               }`}
             >
               {isRunning ? (
@@ -106,8 +106,8 @@ const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
             customStyle={{
               margin: 0,
               borderRadius: 0,
-              background: "transparent",
-              fontSize: "14px",
+              background: 'transparent',
+              fontSize: '14px',
               fontFamily:
                 'Fira Code, Monaco, Consolas, "Courier New", monospace',
             }}
@@ -127,7 +127,7 @@ const CodeDemo: React.FC<CodeDemoProps> = ({ className }) => {
                 isRunning ? styles.running : styles.idle
               }`}
             >
-              {isRunning ? "Generating..." : "Ready"}
+              {isRunning ? 'Generating...' : 'Ready'}
             </div>
           </div>
         </div>

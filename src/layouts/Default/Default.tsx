@@ -1,6 +1,6 @@
-import { Title, VerticalTitle } from "../../components/Title/Title";
-import { BaseLayout } from "../Base/Base";
-import styles from "./Default.module.css";
+import { Title, VerticalTitle } from '../../components/Title/Title';
+import { BaseLayout } from '../Base/Base';
+import styles from './Default.module.css';
 
 interface DefaultLayoutProps {
   title: string[];

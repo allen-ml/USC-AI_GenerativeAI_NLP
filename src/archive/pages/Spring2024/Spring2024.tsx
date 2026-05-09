@@ -1,8 +1,8 @@
-import React from "react";
-import spring2024Data from "../../content/spring-2024.json";
-import type { Spring2024ContentFormat } from "../../types/ContentTypes";
-import { publicUrl } from "../../../utils/config";
-import styles from "./Spring2024.module.css";
+import React from 'react';
+import spring2024Data from '../../content/spring-2024.json';
+import type { Spring2024ContentFormat } from '../../types/ContentTypes';
+import { publicUrl } from '../../../utils/config';
+import styles from './Spring2024.module.css';
 
 const Spring2024: React.FC = () => {
   const data: Spring2024ContentFormat =
@@ -62,22 +62,24 @@ const Spring2024: React.FC = () => {
       <div className={styles.contentWrapper}>
         <div
           className={styles.imageRepeatTop}
-          style={{ backgroundImage: `url(${publicUrl("/archive/GenAI_Image_small.png")})` }}
+          style={{
+            backgroundImage: `url(${publicUrl('/archive/GenAI_Image_small.png')})`,
+          }}
         ></div>
         <h1>{data.title}</h1>
         <h2>{data.subtitle}</h2>
         <p className={styles.courseInfo}>
           <strong>Units:</strong>
-          {data.descriptors.units}, <strong>Term:</strong>{" "}
-          {data.descriptors.term}, <strong>Prerequisite(s):</strong>{" "}
+          {data.descriptors.units}, <strong>Term:</strong>{' '}
+          {data.descriptors.term}, <strong>Prerequisite(s):</strong>{' '}
           {data.descriptors.prerequisites}
           <br />
-          <strong>Time:</strong> {data.descriptors.time},{" "}
+          <strong>Time:</strong> {data.descriptors.time},{' '}
           <strong>Location:</strong> {data.descriptors.location}
         </p>
         <h2 className={styles.sectionTitle}>Instructor Infromation</h2>
         <h3 className={styles.instructorTitle}>
-          <strong>Instructor:</strong>{" "}
+          <strong>Instructor:</strong>{' '}
           <a href={data.instructor.linkedin}>{data.instructor.name}</a>
         </h3>
         <p className={styles.instructorInfo}>
@@ -90,7 +92,7 @@ const Spring2024: React.FC = () => {
         <img
           src={
             data.instructor.profilePicture ||
-            "https://static.wixstatic.com/media/1ea898_97bf6eb77cfc4cf183cb64ff74cc81c8~mv2.jpg/v1/fill/w_439,h_498,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/1ea898_97bf6eb77cfc4cf183cb64ff74cc81c8~mv2.jpg"
+            'https://static.wixstatic.com/media/1ea898_97bf6eb77cfc4cf183cb64ff74cc81c8~mv2.jpg/v1/fill/w_439,h_498,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/1ea898_97bf6eb77cfc4cf183cb64ff74cc81c8~mv2.jpg'
           }
           alt="Instructor Image"
           className={styles.instructorImage}
@@ -106,7 +108,7 @@ const Spring2024: React.FC = () => {
             </a>
             <br />
             <img
-              src={publicUrl(assistant.profilePicture || "/usc-logo.png")}
+              src={publicUrl(assistant.profilePicture || '/usc-logo.png')}
               alt="Course Assistant"
               className={styles.assistantImage}
             />
@@ -121,10 +123,10 @@ const Spring2024: React.FC = () => {
         ))}
         <h2 className={styles.sectionTitle}>Course Description</h2>
         <p className={styles.courseDescription}>
-          {data.courseDescription.split("\n").map((line, index) => (
+          {data.courseDescription.split('\n').map((line, index) => (
             <React.Fragment key={index}>
               {line}
-              {index < data.courseDescription.split("\n").length - 1 && (
+              {index < data.courseDescription.split('\n').length - 1 && (
                 <>
                   <br />
                   <br />

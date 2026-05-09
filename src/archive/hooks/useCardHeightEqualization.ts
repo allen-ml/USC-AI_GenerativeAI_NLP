@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 interface UseCardHeightEqualizationProps {
   hasProjects: boolean;
@@ -11,13 +11,13 @@ export const useCardHeightEqualization = ({
 }: UseCardHeightEqualizationProps) => {
   useEffect(() => {
     const equalizeCardHeights = () => {
-      const cards = document.querySelectorAll(".project-card");
+      const cards = document.querySelectorAll('.project-card');
 
       if (cards.length === 0) return;
 
       // Reset heights before recalculating
       cards.forEach((card: Element) => {
-        (card as HTMLElement).style.height = "auto";
+        (card as HTMLElement).style.height = 'auto';
       });
 
       // Wait for images to load before calculating height
@@ -56,7 +56,7 @@ export const useCardHeightEqualization = ({
             const cardElement = card as HTMLElement;
 
             // Find all images in this card (including carousel images)
-            const allImages = cardElement.querySelectorAll(".project-image");
+            const allImages = cardElement.querySelectorAll('.project-image');
             let maxImageHeight = 0;
 
             allImages.forEach((img) => {
@@ -73,9 +73,9 @@ export const useCardHeightEqualization = ({
 
             // Calculate card height with image height + text content + padding
             const textContent = cardElement.querySelector(
-              ".project-content-wrapper"
+              '.project-content-wrapper'
             );
-            const title = cardElement.querySelector("h3");
+            const title = cardElement.querySelector('h3');
             const titleHeight = title
               ? title.getBoundingClientRect().height
               : 0;
@@ -92,7 +92,7 @@ export const useCardHeightEqualization = ({
           // Apply the calculated height to all cards in this row
           row.forEach((card) => {
             (card as HTMLElement).style.height =
-              Math.max(maxRowHeight, 400) + "px";
+              Math.max(maxRowHeight, 400) + 'px';
           });
         });
       }, 100);
@@ -103,12 +103,12 @@ export const useCardHeightEqualization = ({
     const timeoutId2 = setTimeout(equalizeCardHeights, 500);
     const timeoutId3 = setTimeout(equalizeCardHeights, 1000);
 
-    window.addEventListener("resize", equalizeCardHeights);
-    window.addEventListener("load", equalizeCardHeights);
+    window.addEventListener('resize', equalizeCardHeights);
+    window.addEventListener('load', equalizeCardHeights);
 
     // Image preloader to ensure all images are loaded before height calculation
     const preloadImages = () => {
-      const images = document.querySelectorAll(".project-image");
+      const images = document.querySelectorAll('.project-image');
       const imagePromises: Promise<void>[] = [];
 
       images.forEach((img) => {
@@ -131,7 +131,7 @@ export const useCardHeightEqualization = ({
     });
 
     // Additional observer for when images finish loading
-    const images = document.querySelectorAll(".project-image");
+    const images = document.querySelectorAll('.project-image');
     let loadedImages = 0;
     const totalImages = images.length;
 
@@ -147,7 +147,7 @@ export const useCardHeightEqualization = ({
       if (imageEl.complete) {
         handleImageLoad();
       } else {
-        imageEl.addEventListener("load", handleImageLoad);
+        imageEl.addEventListener('load', handleImageLoad);
       }
     });
 
@@ -155,10 +155,10 @@ export const useCardHeightEqualization = ({
       clearTimeout(timeoutId1);
       clearTimeout(timeoutId2);
       clearTimeout(timeoutId3);
-      window.removeEventListener("resize", equalizeCardHeights);
-      window.removeEventListener("load", equalizeCardHeights);
+      window.removeEventListener('resize', equalizeCardHeights);
+      window.removeEventListener('load', equalizeCardHeights);
       images.forEach((img) => {
-        (img as HTMLImageElement).removeEventListener("load", handleImageLoad);
+        (img as HTMLImageElement).removeEventListener('load', handleImageLoad);
       });
     };
   }, [hasProjects, projects]);

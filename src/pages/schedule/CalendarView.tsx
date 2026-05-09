@@ -1,5 +1,5 @@
-import { useState } from "react";
-import styles from "./CalendarView.module.css";
+import { useState } from 'react';
+import styles from './CalendarView.module.css';
 
 interface CalendarViewProps {
   calendarId: string;
@@ -8,7 +8,7 @@ interface CalendarViewProps {
 
 const CalendarView: React.FC<CalendarViewProps> = ({
   calendarId,
-  className = "",
+  className = '',
 }) => {
   const [currentWeek, setCurrentWeek] = useState(new Date());
 
@@ -26,10 +26,10 @@ const CalendarView: React.FC<CalendarViewProps> = ({
     return end;
   };
 
-  const navigateWeek = (direction: "prev" | "next") => {
+  const navigateWeek = (direction: 'prev' | 'next') => {
     setCurrentWeek((prev) => {
       const newDate = new Date(prev);
-      newDate.setDate(newDate.getDate() + (direction === "next" ? 7 : -7));
+      newDate.setDate(newDate.getDate() + (direction === 'next' ? 7 : -7));
       return newDate;
     });
   };
@@ -38,14 +38,14 @@ const CalendarView: React.FC<CalendarViewProps> = ({
   const weekEnd = getWeekEnd(weekStart);
 
   const formatDateRange = (start: Date, end: Date): string => {
-    const startStr = start.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
+    const startStr = start.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
     });
-    const endStr = end.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
+    const endStr = end.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
     });
 
     return start.getMonth() === end.getMonth()
@@ -55,20 +55,20 @@ const CalendarView: React.FC<CalendarViewProps> = ({
 
   // Generate calendar embed URL
   const getCalendarEmbedUrl = (): string => {
-    const baseUrl = "https://calendar.google.com/calendar/embed";
+    const baseUrl = 'https://calendar.google.com/calendar/embed';
     const params = new URLSearchParams({
       src: calendarId,
-      ctz: "America/Los_Angeles",
-      mode: "WEEK",
-      showTitle: "0",
-      showNav: "1",
-      showDate: "1",
-      showPrint: "0",
-      showTabs: "0",
-      showCalendars: "0",
-      showTz: "0",
-      dates: `${weekStart.toISOString().split("T")[0]}/${
-        weekEnd.toISOString().split("T")[0]
+      ctz: 'America/Los_Angeles',
+      mode: 'WEEK',
+      showTitle: '0',
+      showNav: '1',
+      showDate: '1',
+      showPrint: '0',
+      showTabs: '0',
+      showCalendars: '0',
+      showTz: '0',
+      dates: `${weekStart.toISOString().split('T')[0]}/${
+        weekEnd.toISOString().split('T')[0]
       }`,
     });
     return `${baseUrl}?${params.toString()}`;
@@ -78,7 +78,7 @@ const CalendarView: React.FC<CalendarViewProps> = ({
     <div className={`${styles.calendarView} ${className}`}>
       <div className={styles.header}>
         <button
-          onClick={() => navigateWeek("prev")}
+          onClick={() => navigateWeek('prev')}
           className={styles.navButton}
           aria-label="Previous week"
         >
@@ -88,7 +88,7 @@ const CalendarView: React.FC<CalendarViewProps> = ({
           {formatDateRange(weekStart, weekEnd)}
         </h3>
         <button
-          onClick={() => navigateWeek("next")}
+          onClick={() => navigateWeek('next')}
           className={styles.navButton}
           aria-label="Next week"
         >

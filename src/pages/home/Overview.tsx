@@ -1,6 +1,6 @@
-import { CodeDemo } from "../../components/CodeDemo/CodeDemo";
-import { FullHeightSection } from "../../layouts/FullHeightSection/FullHeightSection";
-import styles from "./Overview.module.css";
+import { CodeDemo } from '../../components/CodeDemo/CodeDemo';
+import { FullHeightSection } from '../../layouts/FullHeightSection/FullHeightSection';
+import styles from './Overview.module.css';
 
 const Overview: React.FC = () => {
   return (

@@ -1,5 +1,9 @@
 import React from 'react';
-import { allPastSemesters, type AlumniPerson, type SemesterAlumni } from '../../content/past-instructors/index';
+import {
+  allPastSemesters,
+  type AlumniPerson,
+  type SemesterAlumni,
+} from '../../content/past-instructors/index';
 import { publicUrl } from '../../utils/config';
 import styles from './Alumni.module.css';
 
