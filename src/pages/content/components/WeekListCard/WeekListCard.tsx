@@ -10,8 +10,17 @@ interface WeekListCardProps {
 
 const WeekListCard: React.FC<WeekListCardProps> = ({ week, onClick }) => {
   return (
-    <Card className={styles.weekListCard} variant="glass" padding="md" hover={true}>
-      <button className={styles.weekListButton} onClick={onClick} aria-label={`View details for ${week.Title}`}>
+    <Card
+      className={styles.weekListCard}
+      variant="glass"
+      padding="md"
+      hover={true}
+    >
+      <button
+        className={styles.weekListButton}
+        onClick={onClick}
+        aria-label={`View details for ${week.Title}`}
+      >
         <div className={styles.weekListHeader}>
           <div className={styles.weekListMeta}>
             <span className={styles.weekNumber}>Week {week.Week}</span>
@@ -24,7 +33,9 @@ const WeekListCard: React.FC<WeekListCardProps> = ({ week, onClick }) => {
           )}
         </div>
         <h2 className={styles.weekListTitle}>{week.Title}</h2>
-        <p className={styles.weekListSubtitle}>{week.Overview.length} topics · Click to expand</p>
+        <p className={styles.weekListSubtitle}>
+          {week.Overview.length} topics · Click to expand
+        </p>
       </button>
     </Card>
   );

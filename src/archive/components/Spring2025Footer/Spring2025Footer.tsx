@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./Spring2025Footer.module.css";
+import React from 'react';
+import styles from './Spring2025Footer.module.css';
 
 interface Spring2025FooterProps {
   year?: number;
@@ -8,7 +8,7 @@ interface Spring2025FooterProps {
 
 const Spring2025Footer: React.FC<Spring2025FooterProps> = ({
   year = 2025,
-  courseName = "TAC-459",
+  courseName = 'TAC-459',
 }) => {
   return (
     <footer className={styles.footer}>

@@ -1,10 +1,10 @@
-import React from "react";
-import { ExpandableTopics } from "../../components/ExpandableTopics/ExpandableTopics";
-import spring2025Data from "../../content/spring-2025.json";
-import { Spring2025Layout } from "../../layouts/Spring2025Layout/Spring2025Layout";
-import type { Spring2025ContentFormat } from "../../types/ContentTypes";
-import { publicUrl } from "../../../utils/config";
-import styles from "./Spring2025.module.css";
+import React from 'react';
+import { ExpandableTopics } from '../../components/ExpandableTopics/ExpandableTopics';
+import spring2025Data from '../../content/spring-2025.json';
+import { Spring2025Layout } from '../../layouts/Spring2025Layout/Spring2025Layout';
+import type { Spring2025ContentFormat } from '../../types/ContentTypes';
+import { publicUrl } from '../../../utils/config';
+import styles from './Spring2025.module.css';
 
 const Spring2025: React.FC = () => {
   const data: Spring2025ContentFormat =
@@ -14,7 +14,7 @@ const Spring2025: React.FC = () => {
   const groupedCourses = () => {
     const modules = new Map<string, typeof data.courseSchedule>();
     data.courseSchedule.forEach((course) => {
-      const moduleName = course.module || "Other";
+      const moduleName = course.module || 'Other';
       if (!modules.has(moduleName)) {
         modules.set(moduleName, []);
       }
@@ -49,7 +49,9 @@ const Spring2025: React.FC = () => {
                 <div key={index} className="col-md-6 mb-3">
                   <div className="text-center p-3">
                     <img
-                      src={publicUrl(instructor.profilePicture ?? "/usc-logo.png")}
+                      src={publicUrl(
+                        instructor.profilePicture ?? '/usc-logo.png'
+                      )}
                       alt={instructor.name}
                       className={`${styles.fixedImage} rounded-circle mb-3`}
                     />
@@ -57,9 +59,9 @@ const Spring2025: React.FC = () => {
                       <a
                         href={`staff.html?id=${instructor.name
                           .toLowerCase()
-                          .replace(/\s+/g, "_")
-                          .replace(/\./g, "")}`}
-                        style={{ color: "#990000" }}
+                          .replace(/\s+/g, '_')
+                          .replace(/\./g, '')}`}
+                        style={{ color: '#990000' }}
                       >
                         {instructor.name}
                       </a>
@@ -81,7 +83,9 @@ const Spring2025: React.FC = () => {
                 <div key={index} className="col-md-4 mb-3">
                   <div className="text-center p-3">
                     <img
-                      src={publicUrl(assistant.profilePicture ?? "/usc-logo.png")}
+                      src={publicUrl(
+                        assistant.profilePicture ?? '/usc-logo.png'
+                      )}
                       alt={assistant.name}
                       className={`${styles.fixedImage} rounded-circle mb-3`}
                     />
@@ -89,9 +93,9 @@ const Spring2025: React.FC = () => {
                       <a
                         href={`staff.html?id=${assistant.name
                           .toLowerCase()
-                          .replace(/\s+/g, "_")
-                          .replace(/\./g, "")}`}
-                        style={{ color: "#990000" }}
+                          .replace(/\s+/g, '_')
+                          .replace(/\./g, '')}`}
+                        style={{ color: '#990000' }}
                       >
                         {assistant.name}
                       </a>
@@ -131,7 +135,7 @@ const Spring2025: React.FC = () => {
                       <td>{oh.location}</td>
                       <td>
                         {oh.link.href ? (
-                          <a href={oh.link.href} style={{ color: "#990000" }}>
+                          <a href={oh.link.href} style={{ color: '#990000' }}>
                             {oh.link.text}
                           </a>
                         ) : (
@@ -179,8 +183,8 @@ const Spring2025: React.FC = () => {
                           <td>
                             {course.deliverables &&
                             course.deliverables.length > 0
-                              ? course.deliverables.join(", ")
-                              : "-"}
+                              ? course.deliverables.join(', ')
+                              : '-'}
                           </td>
                         </tr>
                       ))}

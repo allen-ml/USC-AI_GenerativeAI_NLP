@@ -30,7 +30,12 @@ const Syllabus: React.FC = () => {
           </div>
 
           <div className={styles.downloadSection}>
-            <Button as="a" href={pdfPath} target="_blank" rel="noopener noreferrer">
+            <Button
+              as="a"
+              href={pdfPath}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Download Syllabus
             </Button>
           </div>
@@ -49,7 +54,12 @@ const Syllabus: React.FC = () => {
           {iframeError && (
             <div className={styles.fallbackMessage}>
               <p>Unable to display PDF in browser.</p>
-              <a href={pdfPath} target="_blank" rel="noopener noreferrer" className={styles.fallbackLink}>
+              <a
+                href={pdfPath}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.fallbackLink}
+              >
                 Click here to open the syllabus in a new tab
               </a>
             </div>

@@ -1,5 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { allProjectSemesters, type Project, type SemesterProjects } from '../../content/projects/index';
+import React, { useEffect, useState } from 'react';
+import {
+  allProjectSemesters,
+  type Project,
+  type SemesterProjects,
+} from '../../content/projects/index';
 import { publicUrl } from '../../utils/config';
 import styles from './Projects.module.css';
 
@@ -63,9 +67,14 @@ interface ProjectRowProps {
   reverse?: boolean;
 }
 
-const ProjectRow: React.FC<ProjectRowProps> = ({ project, reverse = false }) => {
+const ProjectRow: React.FC<ProjectRowProps> = ({
+  project,
+  reverse = false,
+}) => {
   return (
-    <div className={`${styles.projectRow} ${reverse ? styles.projectRowReverse : ''}`}>
+    <div
+      className={`${styles.projectRow} ${reverse ? styles.projectRowReverse : ''}`}
+    >
       <div className={styles.projectImageSection}>
         <ProjectCarousel images={project.images} title={project.title} />
       </div>
@@ -102,7 +111,10 @@ interface SemesterSectionProps {
   isCurrent: boolean;
 }
 
-const SemesterSection: React.FC<SemesterSectionProps> = ({ data, isCurrent }) => {
+const SemesterSection: React.FC<SemesterSectionProps> = ({
+  data,
+  isCurrent,
+}) => {
   const hasProjects = data.projects?.length > 0;
 
   return (
@@ -155,7 +167,11 @@ const Projects: React.FC = () => {
       </div>
 
       {allProjectSemesters.map((semester, i) => (
-        <SemesterSection key={semester.id} data={semester} isCurrent={i === 0} />
+        <SemesterSection
+          key={semester.id}
+          data={semester}
+          isCurrent={i === 0}
+        />
       ))}
     </div>
   );

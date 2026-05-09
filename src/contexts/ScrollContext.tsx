@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
-import { createContext, useContext } from "react";
+import type { ReactNode } from 'react';
+import { createContext, useContext } from 'react';
 
 interface ScrollContextType {
   scrollToSection: (sectionId: string) => void;
@@ -11,7 +11,7 @@ const ScrollContext = createContext<ScrollContextType | undefined>(undefined);
 const useScrollContext = () => {
   const context = useContext(ScrollContext);
   if (!context) {
-    throw new Error("useScrollContext must be used within a ScrollProvider");
+    throw new Error('useScrollContext must be used within a ScrollProvider');
   }
   return context;
 };

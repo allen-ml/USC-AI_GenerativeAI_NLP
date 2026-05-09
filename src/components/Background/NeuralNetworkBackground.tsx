@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import styles from "./NeuralNetworkBackground.module.css";
+import { useEffect, useRef } from 'react';
+import styles from './NeuralNetworkBackground.module.css';
 
 // Defines the structure for each node in our network.
 interface Node {
@@ -22,7 +22,7 @@ const NeuralNetworkBackground: React.FC = () => {
       return;
     }
 
-    const context = canvas.getContext("2d");
+    const context = canvas.getContext('2d');
     if (!context) {
       return;
     }
@@ -58,8 +58,8 @@ const NeuralNetworkBackground: React.FC = () => {
     const nodeRadius = 2;
     const connectionDistance = 100;
     const mouseRadius = 150;
-    const nodeColor = "rgba(255, 255, 255, 0.8)";
-    const lineColor = "rgba(255, 255, 255, 0.7)";
+    const nodeColor = 'rgba(255, 255, 255, 0.8)';
+    const lineColor = 'rgba(255, 255, 255, 0.7)';
 
     let nodes: Node[] = [];
     const mouse = {
@@ -163,16 +163,16 @@ const NeuralNetworkBackground: React.FC = () => {
 
     // We use arrow functions here to capture the correct `this` context, which
     // is a preferred pattern for event handlers. [cite: 4686]
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', handleResize);
 
     initialize();
     let animationFrameId = requestAnimationFrame(animate);
 
     // Cleanup function to remove listeners when the component unmounts.
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
     };
   }, []); // Empty dependency array ensures this effect runs only once on mount.
