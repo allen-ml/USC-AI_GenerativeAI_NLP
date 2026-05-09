@@ -26,28 +26,29 @@ export interface ParsedEvent {
   location?: string;
   dayOfWeek: string;
   formattedDate: string;
-  eventType: "class"; // Only classes are displayed
+  eventType: 'class'; // Only classes are displayed
 }
 
-const GOOGLE_CALENDAR_API_KEY = import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY as string;
+const GOOGLE_CALENDAR_API_KEY = import.meta.env
+  .VITE_GOOGLE_CALENDAR_API_KEY as string;
 
 // Utility function to extract calendar ID from shareable URL
 export const extractCalendarId = (urlOrId: string): string => {
   // If it's already a calendar ID (contains @), return as is
-  if (urlOrId.includes("@")) {
+  if (urlOrId.includes('@')) {
     return urlOrId;
   }
 
   // If it's a shareable URL, extract the calendar ID
   try {
     const url = new URL(urlOrId);
-    const cidParam = url.searchParams.get("cid");
+    const cidParam = url.searchParams.get('cid');
     if (cidParam) {
       // Decode the base64-encoded calendar ID
       return decodeURIComponent(cidParam);
     }
   } catch (error) {
-    console.warn("Failed to parse calendar URL, using as-is:", error);
+    console.warn('Failed to parse calendar URL, using as-is:', error);
   }
 
   // Fallback: return the input as-is
@@ -60,7 +61,7 @@ export class GoogleCalendarService {
 
   constructor(
     calendarIdOrUrl: string,
-    classKeywords: string[] = ["class", "lecture", "course"]
+    classKeywords: string[] = ['class', 'lecture', 'course']
   ) {
     this.calendarId = extractCalendarId(calendarIdOrUrl);
     this.classKeywords = classKeywords;
@@ -68,18 +69,18 @@ export class GoogleCalendarService {
 
   // Method to get public calendar URL for iframe embedding
   getPublicCalendarUrl(): string {
-    const baseUrl = "https://calendar.google.com/calendar/embed";
+    const baseUrl = 'https://calendar.google.com/calendar/embed';
     const params = new URLSearchParams({
       src: this.calendarId,
-      ctz: "America/Los_Angeles",
-      mode: "WEEK",
-      showTitle: "0",
-      showNav: "1",
-      showDate: "1",
-      showPrint: "0",
-      showTabs: "0",
-      showCalendars: "0",
-      showTz: "0",
+      ctz: 'America/Los_Angeles',
+      mode: 'WEEK',
+      showTitle: '0',
+      showNav: '1',
+      showDate: '1',
+      showPrint: '0',
+      showTabs: '0',
+      showCalendars: '0',
+      showTz: '0',
     });
     return `${baseUrl}?${params.toString()}`;
   }
@@ -93,11 +94,11 @@ export class GoogleCalendarService {
     return events
       .map((event) => {
         const startTime = new Date(
-          event.start.dateTime || event.start.date || ""
+          event.start.dateTime || event.start.date || ''
         );
-        const endTime = new Date(event.end.dateTime || event.end.date || "");
+        const endTime = new Date(event.end.dateTime || event.end.date || '');
 
-        const title = event.summary || "";
+        const title = event.summary || '';
 
         return {
           id: event.id,
@@ -106,15 +107,15 @@ export class GoogleCalendarService {
           startTime,
           endTime,
           location: event.location || undefined,
-          dayOfWeek: startTime.toLocaleDateString("en-US", {
-            weekday: "short",
+          dayOfWeek: startTime.toLocaleDateString('en-US', {
+            weekday: 'short',
           }),
-          formattedDate: startTime.toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
+          formattedDate: startTime.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
           }),
-          eventType: "class" as const, // All displayed events are classes
+          eventType: 'class' as const, // All displayed events are classes
         };
       })
       .filter((event) => {
@@ -147,7 +148,7 @@ export class GoogleCalendarService {
     // This method returns ALL events for display
     if (!GOOGLE_CALENDAR_API_KEY) {
       console.warn(
-        "Google Calendar API key not found. Calendar will show via iframe only."
+        'Google Calendar API key not found. Calendar will show via iframe only.'
       );
       return [];
     }
@@ -161,9 +162,9 @@ export class GoogleCalendarService {
         key: GOOGLE_CALENDAR_API_KEY,
         timeMin: weekStart.toISOString(),
         timeMax: weekEnd.toISOString(),
-        singleEvents: "true",
-        orderBy: "startTime",
-        maxResults: "50",
+        singleEvents: 'true',
+        orderBy: 'startTime',
+        maxResults: '50',
       });
 
       const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(
@@ -178,7 +179,7 @@ export class GoogleCalendarService {
       const data = (await response.json()) as CalendarResponse;
       return this.parseEvents(data.items);
     } catch (error) {
-      console.error("Error fetching calendar events:", error);
+      console.error('Error fetching calendar events:', error);
       return [];
     }
   }

@@ -7,7 +7,9 @@ const NotFound: React.FC = () => {
       <h1 className={styles.title}>404</h1>
       <div className={styles.content}>
         <p className={styles.message}>This page doesn't exist.</p>
-        <Link to="/" className={styles.homeLink}>Back to home</Link>
+        <Link to="/" className={styles.homeLink}>
+          Back to home
+        </Link>
       </div>
     </main>
   );

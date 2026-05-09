@@ -30,7 +30,9 @@ const WeekDetailCard: React.FC<WeekDetailCardProps> = ({ week }) => {
             <h3 className={styles.sectionTitle}>Deliverables</h3>
             <div className={styles.deliverablesList}>
               {week.Deliverables.map((deliverable, index) => (
-                <span key={index} className={styles.deliverableTag}>{deliverable}</span>
+                <span key={index} className={styles.deliverableTag}>
+                  {deliverable}
+                </span>
               ))}
             </div>
           </div>
@@ -40,7 +42,9 @@ const WeekDetailCard: React.FC<WeekDetailCardProps> = ({ week }) => {
           <h3 className={styles.sectionTitle}>Topics Covered</h3>
           <ul className={styles.topicsList}>
             {week.Overview.map((topic, index) => (
-              <li key={index} className={styles.topicItem}>{topic}</li>
+              <li key={index} className={styles.topicItem}>
+                {topic}
+              </li>
             ))}
           </ul>
         </div>

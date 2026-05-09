@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import styles from './App.module.css';
 import { Fall2024 } from './archive/pages/Fall2024/Fall2024';
 import {
@@ -10,14 +10,14 @@ import { Spring2024 } from './archive/pages/Spring2024/Spring2024';
 import { Spring2025 } from './archive/pages/Spring2025/Spring2025';
 import { NeuralNetworkBackground } from './components/Background/NeuralNetworkBackground';
 import { Navigation } from './components/Navigation/Navigation';
+import { Alumni } from './pages/alumni/Alumni';
 import { Archive } from './pages/archive/Archive';
 import { Content } from './pages/content/Content';
-import { Alumni } from './pages/alumni/Alumni';
 import { Credits } from './pages/credits/Credits';
 import { Home } from './pages/home/Home';
+import { Instructors } from './pages/instructors/Instructors';
 import { NotFound } from './pages/not-found/NotFound';
 import { Projects } from './pages/projects/Projects';
-import { Instructors } from './pages/instructors/Instructors';
 import { Schedule } from './pages/schedule/Schedule';
 import { Syllabus } from './pages/syllabus/Syllabus';
 
@@ -32,7 +32,9 @@ const SKIP_BACKGROUND_PATHS = [
 
 const App: React.FC = () => {
   const location = useLocation();
-  const shouldSkipBackground = SKIP_BACKGROUND_PATHS.includes(location.pathname);
+  const shouldSkipBackground = SKIP_BACKGROUND_PATHS.includes(
+    location.pathname
+  );
 
   return (
     <div className={styles.appContainer}>
@@ -58,10 +60,23 @@ const App: React.FC = () => {
         <Route path="/archive/spring-2025" element={<Spring2025 />} />
         <Route path="/archive/fall-2024" element={<Fall2024 />} />
         <Route path="/archive/spring-2024" element={<Spring2024 />} />
-        <Route path="/archive/projects/fall-2024" element={<Fall2024Projects />} />
-        <Route path="/archive/projects/spring-2025" element={<Spring2025Projects />} />
-        <Route path="/archive/projects/spring-2024" element={<Spring2024Projects />} />
+        <Route
+          path="/archive/projects/fall-2024"
+          element={<Fall2024Projects />}
+        />
+        <Route
+          path="/archive/projects/spring-2025"
+          element={<Spring2025Projects />}
+        />
+        <Route
+          path="/archive/projects/spring-2024"
+          element={<Spring2024Projects />}
+        />
 
+        <Route
+          path="/USC_ITP_459_GEN_AI_NLP_Homepage.html"
+          element={<Navigate to="/" replace />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

@@ -13,7 +13,14 @@ type Props = {
   onClick: () => void;
 };
 
-const NavigationItem: React.FC<Props> = ({ num, item, isExpanded, onHover, onLeave, onClick }: Props) => {
+const NavigationItem: React.FC<Props> = ({
+  num,
+  item,
+  isExpanded,
+  onHover,
+  onLeave,
+  onClick,
+}: Props) => {
   const childrenRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const hasChildren = Boolean(item.children && item.children.length > 0);
@@ -26,7 +33,11 @@ const NavigationItem: React.FC<Props> = ({ num, item, isExpanded, onHover, onLea
     } else {
       void navigate('/');
       // Wait for navigation before scrolling
-      setTimeout(() => document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' }), 200);
+      setTimeout(
+        () =>
+          document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' }),
+        200
+      );
     }
   };
 
@@ -44,7 +55,11 @@ const NavigationItem: React.FC<Props> = ({ num, item, isExpanded, onHover, onLea
   }, [isExpanded]);
 
   return (
-    <div className={styles.navItemContainer} onMouseEnter={onHover} onMouseLeave={onLeave}>
+    <div
+      className={styles.navItemContainer}
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
+    >
       <Link
         to={item.href.startsWith('/#') ? '/' : item.href}
         onClick={handleClick}
@@ -57,12 +72,20 @@ const NavigationItem: React.FC<Props> = ({ num, item, isExpanded, onHover, onLea
 
         {hasChildren && (
           <svg
-            className={cn(styles.navItemArrow, isExpanded ? styles.expanded : styles.collapsed)}
+            className={cn(
+              styles.navItemArrow,
+              isExpanded ? styles.expanded : styles.collapsed
+            )}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         )}
       </Link>
@@ -70,7 +93,10 @@ const NavigationItem: React.FC<Props> = ({ num, item, isExpanded, onHover, onLea
       {hasChildren && (
         <div
           ref={childrenRef}
-          className={cn(styles.navItemChildren, isExpanded ? styles.expanded : styles.collapsed)}
+          className={cn(
+            styles.navItemChildren,
+            isExpanded ? styles.expanded : styles.collapsed
+          )}
         >
           <div className={styles.navItemChildrenInner}>
             {item.children?.map((child, index) => (
@@ -78,7 +104,8 @@ const NavigationItem: React.FC<Props> = ({ num, item, isExpanded, onHover, onLea
                 key={index}
                 to={child.href.startsWith('/#') ? '/' : child.href}
                 onClick={(e) => {
-                  if (child.href.startsWith('/#')) navigateToHash(child.href, e);
+                  if (child.href.startsWith('/#'))
+                    navigateToHash(child.href, e);
                   onClick();
                 }}
                 className={styles.navItemChild}

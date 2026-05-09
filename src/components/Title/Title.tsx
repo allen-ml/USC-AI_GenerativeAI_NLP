@@ -10,7 +10,9 @@ function Title({ text }: TitleProps) {
   return (
     <>
       {lines.map((line, index) => (
-        <h1 key={index} className={styles.titleText}>{line}</h1>
+        <h1 key={index} className={styles.titleText}>
+          {line}
+        </h1>
       ))}
     </>
   );
@@ -21,7 +23,9 @@ function VerticalTitle({ text }: TitleProps) {
   return (
     <div className={styles.verticalTitleContainer}>
       {lines.map((line, index) => (
-        <h1 key={index} className={styles.verticalTitleText}>{line}</h1>
+        <h1 key={index} className={styles.verticalTitleText}>
+          {line}
+        </h1>
       ))}
     </div>
   );

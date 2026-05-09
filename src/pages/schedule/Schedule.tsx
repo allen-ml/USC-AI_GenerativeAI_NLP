@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import info from "../../content/info.json";
-import { CalendarView } from "./CalendarView";
-import styles from "./Schedule.module.css";
-import { WeekOverview } from "./WeekOverview";
+import { useEffect, useState } from 'react';
+import info from '../../content/info.json';
+import { CalendarView } from './CalendarView';
+import styles from './Schedule.module.css';
+import { WeekOverview } from './WeekOverview';
 
 const Schedule = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -14,8 +14,8 @@ const Schedule = () => {
     };
 
     checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const handleScroll = (e: React.WheelEvent) => {
@@ -52,13 +52,13 @@ const Schedule = () => {
         <div className={styles.mobileIndicator}>
           <div
             className={`${styles.dot} ${
-              currentPage === 0 ? styles.active : ""
+              currentPage === 0 ? styles.active : ''
             }`}
             onClick={() => setCurrentPage(0)}
           />
           <div
             className={`${styles.dot} ${
-              currentPage === 1 ? styles.active : ""
+              currentPage === 1 ? styles.active : ''
             }`}
             onClick={() => setCurrentPage(1)}
           />

@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import info from "../../content/info.json";
+import { useEffect, useState } from 'react';
+import info from '../../content/info.json';
 import {
   GoogleCalendarService,
   type ParsedEvent,
-} from "../../utils/googleCalendar";
-import styles from "./WeekOverview.module.css";
+} from '../../utils/googleCalendar';
+import styles from './WeekOverview.module.css';
 
 interface WeekOverviewProps {
   calendarId: string;
@@ -13,7 +13,7 @@ interface WeekOverviewProps {
 
 const WeekOverview: React.FC<WeekOverviewProps> = ({
   calendarId,
-  className = "",
+  className = '',
 }) => {
   const [events, setEvents] = useState<ParsedEvent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -31,8 +31,8 @@ const WeekOverview: React.FC<WeekOverviewProps> = ({
         const weekEvents = await calendarService.getWeekEvents();
         setEvents(weekEvents);
       } catch (err) {
-        setError("Failed to load calendar events");
-        console.error("Error fetching events:", err);
+        setError('Failed to load calendar events');
+        console.error('Error fetching events:', err);
       } finally {
         setLoading(false);
       }
@@ -42,9 +42,9 @@ const WeekOverview: React.FC<WeekOverviewProps> = ({
   }, [calendarId]);
 
   const formatTime = (date: Date): string => {
-    return date.toLocaleTimeString("en-US", {
-      hour: "numeric",
-      minute: "2-digit",
+    return date.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
       hour12: true,
     });
   };
@@ -57,14 +57,14 @@ const WeekOverview: React.FC<WeekOverviewProps> = ({
     const weekEnd = new Date(weekStart);
     weekEnd.setDate(weekStart.getDate() + 6);
 
-    const startStr = weekStart.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
+    const startStr = weekStart.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
     });
-    const endStr = weekEnd.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
+    const endStr = weekEnd.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
     });
 
     return weekStart.getMonth() === weekEnd.getMonth()

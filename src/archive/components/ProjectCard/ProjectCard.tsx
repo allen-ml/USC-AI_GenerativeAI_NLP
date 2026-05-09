@@ -1,6 +1,6 @@
-import React from "react";
-import type { Project } from "../../types/ProjectTypes";
-import { publicUrl } from "../../../utils/config";
+import React from 'react';
+import type { Project } from '../../types/ProjectTypes';
+import { publicUrl } from '../../../utils/config';
 
 interface ProjectCardProps {
   project: Project;
@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                   <div
                     key={imgIndex}
                     className={`carousel-item ${
-                      imgIndex === 0 ? "active" : ""
+                      imgIndex === 0 ? 'active' : ''
                     }`}
                   >
                     <img
@@ -43,7 +43,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                       alt={`${project.title || `Project ${index + 1}`} Image ${
                         imgIndex + 1
                       }`}
-                      onError={(e) => { const img = e.target as HTMLImageElement; img.onerror = null; img.src = publicUrl("/archive/tbp.png"); }}
+                      onError={(e) => {
+                        const img = e.target as HTMLImageElement;
+                        img.onerror = null;
+                        img.src = publicUrl('/archive/tbp.png');
+                      }}
                     />
                   </div>
                 ))}
@@ -80,7 +84,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           )
         ) : (
           <img
-            src={publicUrl("/archive/tbp.png")}
+            src={publicUrl('/archive/tbp.png')}
             className="project-image d-block w-100"
             alt="To be published"
           />
@@ -99,7 +103,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           )}
           {project.teamMembers && project.teamMembers.length > 0 && (
             <p>
-              <strong>Team Members:</strong> {project.teamMembers.join(", ")}
+              <strong>Team Members:</strong> {project.teamMembers.join(', ')}
             </p>
           )}
         </div>
