@@ -1,0 +1,231 @@
+{
+  "bannerImage": "./GenAI_Image_small.png",
+  "title": "TAC-459 Generative AI and Applied Machine Learning for Natural Language Processing (NLP)",
+  "subtitle": "University of Southern California (USC), Viterbi School of Engineering",
+  "descriptors": {
+    "units": 4,
+    "term": "Spring 2024",
+    "prerequisites": "TAC 359",
+    "time": "Mon 6-9:20PM",
+    "location": "KAP 144"
+  },
+  "instructor": {
+    "title": "Adjunct Professor of Generative AI and NLP at USC",
+    "name": "Allen Bolourchi",
+    "linkedin": "https://www.linkedin.com/in/allenbolourchi/",
+    "profilePicture": "/people/allen_bolourchi.png",
+    "blurb": "Founder of Crystalytic.AI",
+    "companyUrl": "https://www.crystalytic.ai/"
+  },
+  "courseAssistants": [
+    {
+      "title": "Course Assistant",
+      "name": "Rajeev Singh",
+      "linkedin": "https://www.linkedin.com/in/rajeevsinghusc/",
+      "profilePicture": "/people/rajeev_singh.jpg"
+    },
+    {
+      "title": "Course Assistant",
+      "name": "Gaurav Tadkapally",
+      "linkedin": "https://www.linkedin.com/in/gauravreddy08/",
+      "profilePicture": "/people/gaurav_tadkapally.jpeg"
+    }
+  ],
+  "courseDescription": "Learn the state-of-the-art technology in Artificial Intelligence, including the latest AI tools and algorithms in Natural Language Processing (NLP), Generative AI, and models such as GPT/BERT, along with Tensorflow, Keras and Hugging Face. \nYou will explore the fundamentals of NLP and discover which technologies and products have been developed using NLP and Generative AI for text. The course covers how to utilize pre-trained Large Language Models (LLMs) and their APIs, fine-tune LLMs, and retrain LLMs.",
+  "courseSchedule": [
+    {
+      "week": 1,
+      "title": "Introduction to NLP and AI",
+      "topics": [
+        "Course Overview",
+        "Historical Evolution of AI and NLP",
+        "Key Concepts in Machine Learning and NLP",
+        "Overview of NLP Applications in Various Domains",
+        "Basic Text Processing and Language Understanding",
+        "Challenges and Limitations in NLP"
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Text Cleaning and Preprocessing",
+      "topics": [
+        "Techniques for Noise Reduction",
+        "Text Normalization and Tokenization",
+        "Lemmatization and Stemming",
+        "Co-occurrence Matrix in Text Analysis",
+        "Feature Extraction from Text",
+        "Regular Expressions in Text Processing",
+        "Basic Overview of Word Embeddings",
+        "Overview of python libraries such as NLTK, Spacy, regex etc."
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Fundamentals of Machine Learning for NLP",
+      "topics": [
+        "Supervised Learning and Unsupervised Learning - Key Algorithms for NLP",
+        "Evaluation Metrics for NLP Models",
+        "Training, Validation, and Test Sets in Model Development",
+        "Overfitting and Underfitting in NLP",
+        "Cross-Validation Techniques",
+        "Introduction to Python ML Libraries"
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Neural Networks and Deep Learning in NLP",
+      "topics": [
+        "Activation Functions and Network Topologies",
+        "Backpropagation and Gradient Descent",
+        "CNNs and RNNs for NLP",
+        "Advanced RNNs: LSTM and GRU",
+        "Sequence Modeling in NLP",
+        "Challenges in Deep Learning for NLP",
+        "Case Studies in Deep Learning for NLP"
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Transformer Models and Attention Mechanisms",
+      "topics": [
+        "Understanding the Transformer Architecture",
+        "Concepts of Self-Attention and Positional Encoding",
+        "Overview of BERT, GPT, and Transformer Variants",
+        "Applications of Transformer Models in NLP",
+        "Training Transformer Models for NLP Tasks",
+        "Challenges and Solutions with Transformer Models"
+      ]
+    },
+    {
+      "week": 6,
+      "title": "Syntax, Parsing, Word Embeddings, and POS Tagging",
+      "topics": [
+        "Syntax in Natural Language Processing",
+        "Dependency and Constituency Parsing",
+        "Deep Dive into Word Embeddings",
+        "Word2Vec, GloVe, and FastText Embeddings",
+        "Using Embeddings in NLP Tasks",
+        "Part-of-Speech (POS) Tagging: Importance, Methods, and Tools",
+        "Practical Parsing, Embedding, and POS Tagging Techniques",
+        "Vector Database"
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Semantic Analysis, Language Models, and Question Answering",
+      "topics": [
+        "Semantic Role Labeling (SRL)",
+        "Knowledge Graphs in Semantic Analysis",
+        "Advances in Contextual Embeddings",
+        "Overview of Language Models in NLP",
+        "Introduction to Question Answering System and Utilizing Language Models",
+        "Challenges in QA and Semantic Analysis",
+        "Word Sense Disambiguation Techniques"
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Text Classification and Machine Translation + Midterm Exam",
+      "topics": [
+        "Fundamentals of Text Classification",
+        "Techniques and Algorithms for Classification",
+        "Introduction to Machine Translation",
+        "Neural Machine Translation (NMT) models",
+        "Challenges and Evaluation Metrics for MT",
+        "Practical Implementation of MT Systems"
+      ]
+    },
+    {
+      "week": 9,
+      "title": "Advanced Topics in Machine Learning and NLP",
+      "topics": [
+        "Deep Transfer Learning in NLP",
+        "Strategies for Addressing Data Imbalance",
+        "Model Interpretability and Explainability in NLP",
+        "Advanced Optimization Techniques in NLP",
+        "Utilizing Pre-Trained NLP Models",
+        "Case Studies of Advanced ML in NLP"
+      ]
+    },
+    {
+      "week": 10,
+      "title": "Named Entity Recognition, Information Retrieval and Search",
+      "topics": [
+        "Advanced Techniques in NER",
+        "Contextual NER and Its Applications",
+        "Fundamentals of Information Retrieval",
+        "Deep Dive into TF-IDF and Co-occurrence Matrix",
+        "Search Engines and Indexing Techniques",
+        "Evaluation Metrics in Information Retrieval",
+        "Case Studies and Real-World Applications"
+      ]
+    },
+    {
+      "week": 11,
+      "title": "Advanced Machine Translation and Summarization",
+      "topics": [
+        "Advanced Techniques in Machine Translation",
+        "Handling Low-Resource Languages in (Machine Tranlsation) MT",
+        "Text Summarization",
+        "Extractive vs. Abstractive Summarization",
+        "Challenges in Summarization",
+        "Evaluation of Summarization Techniques",
+        "Current Trends in MT and Summarization"
+      ]
+    },
+    {
+      "week": 12,
+      "title": "Speech Processing and Conversational AI",
+      "topics": [
+        "Basics of Speech Recognition",
+        "Challenges in Automatic Speech Recognition (ASR)",
+        "Design and Development of Conversational Agents",
+        "Evaluating Dialogue Systems in Conversational AI",
+        "Multimodal Interaction in Conversational AI",
+        "Natural Language Understanding in Conversational AI",
+        "Case Studies in Speech Processing and Conversational AI"
+      ]
+    },
+    {
+      "week": 13,
+      "title": "Generative AI, Products, Techniques, APIs, and Ethical Considerations",
+      "topics": [
+        "Generative Models in NLP (ChatGPT, BARD, Gemini, Llama)",
+        "Advanced Prompt Engineering: Few-shot, Chain-of-thought, and Self-Consistency",
+        "Expanding LLM Capabilities: Knowledge Generation Prompting and Program-aided (PAL)",
+        "Developing an API with MongoDB and ngrok, and interfacing via Postman",
+        "LLM Safety: Prompt Injection, Prompt Leaking, Jailbreaking",
+        "Responsible AI, Data Privacy, Ethical Considerations, and Governance in AI",
+        "Business Intelligence, Marketing, Analytics, and Brand Analysis Use Cases",
+        "Introduction to Product Management and Business Considerations"
+      ]
+    },
+    {
+      "week": 14,
+      "title": "Training and Fine-Tuning LLMs, Hugging Face, LangChain, and RAG",
+      "topics": [
+        "RAG: Retrieval Augmented Generation",
+        "Training of Chat GPT with Reinforcement Learning, HITL, and Proximal Policy Optimization",
+        "Evaluation of LLMs: MMLU, HellaSwag Benchmark, ARC, WinoGrade, GSM-8k, Truthful QA, PIQA",
+        "LoRA and QLoRA for Efficient Model Adaptation",
+        "Fine Tuning LLMs, Best Practices and Challenges",
+        "Fine-Tuned LLMs Application",
+        "Overview and Practical Use of Hugging Face in NLP Based Products",
+        "Utilizing LangChain and Llama for Customized Language Models"
+      ]
+    },
+    {
+      "week": 15,
+      "title": "Course Review, Future Trends, and Project Presentations + Final Exam",
+      "topics": [
+        "Recap of Key NLP and Generative AI Concepts",
+        "Discussion on the Future Trends in NLP and Generative AI",
+        "Student Project Presentations",
+        "Feedback and Review of Projects",
+        "Resources for Advanced Learning",
+        "Closing Remarks and Course Evaluation"
+      ]
+    }
+  ],
+  "technologicalProficiency": "Familiarity with Google Colab and Python is necessary. If you haven’t used them, familiarize yourself with Google Colab and set it up. We will teach you the rest of the python packages in the classroom."
+}

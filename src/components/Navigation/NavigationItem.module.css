@@ -1,0 +1,200 @@
+.navItemContainer {
+  width: 100%;
+  position: relative;
+}
+
+/* Add visual indicator when item is expanded */
+.navItemContainer:hover .navItemLink,
+.navItemContainer.expanded .navItemLink {
+  background: linear-gradient(
+    135deg,
+    var(--color-hover-light) 0%,
+    rgba(255, 204, 0, 0.05) 100%
+  );
+  border-left: 2px solid var(--color-usc-gold);
+  padding-left: calc(var(--spacing-md) - 2px);
+}
+
+/* Smooth transition for the border effect */
+.navItemContainer .navItemLink {
+  border-left: 2px solid transparent;
+  transition: all var(--transition-normal), border-left-color 200ms ease-out;
+}
+
+.navItemLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px var(--spacing-md);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.navItemLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-hover-light),
+    transparent
+  );
+  transition: left 300ms ease-out;
+}
+
+.navItemLink:hover {
+  background-color: var(--color-hover-light);
+  color: var(--color-usc-gold);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 204, 0, 0.1);
+}
+
+.navItemLink:hover::before {
+  left: 100%;
+}
+
+.navItemContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.navItemNumber {
+  width: 24px;
+  color: var(--color-gray-500);
+  font-weight: 600;
+}
+
+.navItemLabel {
+  font-weight: 400;
+}
+
+.navItemArrow {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+  transition: transform 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: center;
+}
+
+.navItemArrow.expanded {
+  transform: rotate(90deg) scale(1.1);
+}
+
+.navItemArrow.collapsed {
+  transform: rotate(0deg) scale(1);
+}
+
+.navItemChildren {
+  margin-left: var(--spacing-xl);
+  margin-top: var(--spacing-xs);
+  overflow: hidden;
+  transition: height 400ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms ease-out,
+    margin-top 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 0;
+  opacity: 0;
+}
+
+.navItemChildren.collapsed {
+  height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.navItemChildren.expanded {
+  opacity: 1;
+  margin-top: var(--spacing-xs);
+}
+
+.navItemChildrenInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 2px solid var(--color-border-dark);
+  padding-left: var(--spacing-md);
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+}
+
+/* Staggered animation for child items */
+.navItemChildrenInner .navItemChild {
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: all var(--transition-normal),
+    transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 200ms ease-out;
+}
+
+.navItemChildren.expanded .navItemChild {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Staggered delay for multiple children */
+.navItemChildren.expanded .navItemChild:nth-child(1) {
+  transition-delay: 50ms;
+}
+
+.navItemChildren.expanded .navItemChild:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.navItemChildren.expanded .navItemChild:nth-child(3) {
+  transition-delay: 150ms;
+}
+
+.navItemChildren.expanded .navItemChild:nth-child(4) {
+  transition-delay: 200ms;
+}
+
+.navItemChildren.expanded .navItemChild:nth-child(5) {
+  transition-delay: 250ms;
+}
+
+.navItemChild {
+  display: block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 15px;
+  color: var(--color-gray-200);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.navItemChild::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 204, 0, 0.1),
+    transparent
+  );
+  transition: left 300ms ease-out;
+}
+
+.navItemChild:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-usc-gold);
+  transform: translateX(2px);
+}
+
+.navItemChild:hover::before {
+  left: 100%;
+}
