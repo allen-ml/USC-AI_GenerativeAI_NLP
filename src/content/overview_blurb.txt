@@ -1,0 +1,5 @@
+Welcome to TAC 459 - Generative AI and Natural Language Processing (NLP) at the University of Southern California. This course is designed to immerse students in the rapidly evolving fields of Generative AI and NLP, providing hands-on experience with cutting-edge Machine Learning Techniques & LLMs.
+
+Throughout the semester, you'll explore how generative models are transforming industries, from text generation to conversational agents. Students will gain hands-on experience with tools such as Hugging Face, TensorFlow, and PyTorch, while learning about applications in conversational agents, text summarization, and machine translation.
+
+By the end, students will be prepared to tackle real-world challenges in AI-driven fields.

@@ -1,0 +1,88 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+  gap: 40px;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-right: 70px;
+}
+
+.timelineDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 3px solid var(--color-white);
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 24px;
+  z-index: 4;
+  flex-shrink: 0;
+}
+
+.timelineConnector {
+  position: absolute;
+  right: 30.5px;
+  width: 3px;
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.timelineLabel {
+  text-decoration: none;
+  cursor: pointer;
+  flex: 1;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.labelContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.labelText {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-weight: 600;
+  color: var(--color-white);
+  font-family: var(--font-family-primary);
+  transition: color var(--transition-slow);
+  line-height: 1.2;
+}
+
+.labelDescription {
+  font-size: 0.9rem;
+  color: var(--color-gray-300);
+  font-family: var(--font-family-primary);
+  line-height: 1.4;
+  transition: color var(--transition-slow);
+}
+
+.timelineLabel:hover .labelText {
+  color: var(--color-usc-gold);
+  text-decoration: none;
+}
+
+.timelineLabel:hover .labelDescription {
+  color: var(--color-gray-200);
+}
+
+.timelineItem:hover .timelineDot {
+  background: var(--color-usc-gold);
+  border-color: var(--color-usc-gold);
+  transform: scale(1.2);
+}

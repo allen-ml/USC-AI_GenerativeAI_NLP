@@ -1,0 +1,51 @@
+{
+  "id": "spring-2024",
+  "term": "Spring 2024",
+  "classPhoto": "/archive/Spring2024/class_photo.jpg",
+  "projects": [
+    {
+      "title": "Health & Wellness Chatbot",
+      "images": [
+        "/archive/Spring2024/projects/Team 1/team 1 - 1.png",
+        "/archive/Spring2024/projects/Team 1/team 1 - 2.png",
+        "/archive/Spring2024/projects/Team 1/team 1 - 3.png"
+      ],
+      "description": "Health and Wellness Chatbot delivers personalized recommendations for health, mental wellness, nutrition, and fitness through real-time interaction, sentiment analysis, and integration with wearable technologies.",
+      "executionPlan": "Build and fine-tune sentiment analysis and recommendation models, integrate multimodal (text, voice) interfaces, synchronize with wearable health trackers, and maintain user privacy through secure data management.",
+      "teamMembers": ["Sana Peshwani", "Christ Ohanesians", "Peter Wu", "Deepali Yedulapuram"]
+    },
+    {
+      "title": "Amazon Careers Job Description Generator",
+      "images": [
+        "/archive/Spring2024/projects/Team 2/team 2 - 1.png",
+        "/archive/Spring2024/projects/Team 2/team 2 - 2.png",
+        "/archive/Spring2024/projects/Team 2/team 2 - 3.png"
+      ],
+      "description": "Amazon Job Description Generator automates the creation of tailored, compliance-friendly job postings using advanced AI algorithms, improving recruitment efficiency and candidate relevance.",
+      "executionPlan": "Develop user-friendly web interface for job criteria inputs, implement AI-powered text generation, offer tiered monetization, and integrate regulatory compliance validation.",
+      "teamMembers": ["Rimi Bhardwaj", "Taiyo Hayes", "Tyler Kuang", "Preston Doll"]
+    },
+    {
+      "title": "Product Recommendation Chatbot",
+      "images": [
+        "/archive/Spring2024/projects/Team 3/team 3 - 1.png",
+        "/archive/Spring2024/projects/Team 3/team 3 - 2.png",
+        "/archive/Spring2024/projects/Team 3/team 3 - 3.png"
+      ],
+      "description": "Product Recommendation Chatbot simplifies consumer tech purchases by delivering personalized product recommendations, explanations, and comparisons across multiple electronic categories.",
+      "executionPlan": "Collect product data via APIs, deploy cosine similarity algorithms for product matching, integrate GPT-generated recommendation explanations, and monetize through subscriptions and affiliate partnerships.",
+      "teamMembers": ["Thea Grauer", "Pedro Galindo", "Theo Bermudez", "Grace Hughes"]
+    },
+    {
+      "title": "Stock Prediction AI",
+      "images": [
+        "/archive/Spring2024/projects/Team 4/team 4 - 1.png",
+        "/archive/Spring2024/projects/Team 4/team 4 - 2.png",
+        "/archive/Spring2024/projects/Team 4/team 4 - 3.png"
+      ],
+      "description": "Stock Prediction AI utilizes NLP and advanced sentiment analysis on financial news and market headlines to predict short-term stock movements and help investors make data-driven decisions.",
+      "executionPlan": "Gather financial data, preprocess news content, fine-tune NLP models (Mistral-7B), deploy visual dashboards for insights, and enforce stringent data privacy measures.",
+      "teamMembers": ["Alex Yuan", "Miaosen Chai", "Haofeng Xu", "Zuoning Zhang"]
+    }
+  ]
+}

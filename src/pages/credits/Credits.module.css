@@ -1,0 +1,141 @@
+/* Credits Page Styles */
+.creditsContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+.contentSection {
+  position: absolute;
+  bottom: var(--spacing-xl);
+  left: var(--spacing-xl);
+  z-index: 2;
+}
+
+.githubSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.githubLogo {
+  width: 500%;
+  max-width: 800px;
+  height: auto;
+  cursor: pointer;
+  transition: all var(--transition-slow);
+  filter: opacity(0.1);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* Desktop glistening effect */
+@media (min-width: 769px) {
+  .githubLogo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+    transition: left 0.5s ease;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .githubLogo:hover {
+    filter: opacity(0.8);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+  }
+
+  .githubLogo:hover::before {
+    left: 100%;
+  }
+
+  /* Mouse tracking effect */
+  .githubLogo:hover {
+    background: radial-gradient(
+      circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.1) 40%,
+      transparent 70%
+    );
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .githubSection {
+    padding: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contentSection {
+    bottom: var(--spacing-md);
+    left: var(--spacing-md);
+    text-align: left;
+  }
+
+  .githubLogo {
+    width: 200%;
+    max-width: 400px;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .githubLogo:hover,
+  .githubLogo:active {
+    filter: opacity(0.8);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+  }
+
+  .githubLogo:active {
+    transform: translateX(-50%) scale(0.95);
+  }
+}
+
+/* Name styling - matching hero section */
+.nameSection {
+  margin-bottom: 50px;
+}
+
+.nameTitle {
+  font-size: clamp(3rem, 12vw, 8rem);
+  font-weight: 300;
+  font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 0.95;
+  margin: 0;
+  text-align: left;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  max-width: calc(100vw - 100px);
+  overflow-wrap: break-word;
+}
+
+.roleDescription {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-weight: 300;
+  font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  color: #ffffff;
+  margin-top: 0.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  opacity: 0.9;
+}

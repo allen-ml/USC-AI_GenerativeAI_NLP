@@ -1,0 +1,194 @@
+/* CSS Reset and Global Styles for Spring 2025 Layout */
+
+/* CSS Reset */
+.wrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  /* Global Styling */
+  height: 100vh;
+  margin: 0;
+}
+
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Project Card Styling from original */
+.wrapper .projectCard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.wrapper .projectCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper .projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.wrapper .projectCard h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #a50000;
+  margin-bottom: 10px;
+}
+
+.wrapper .projectCard p {
+  font-size: 1rem;
+  text-align: left;
+  color: #555;
+  line-height: 1.5;
+}
+
+.wrapper .projectCard p strong {
+  color: #000;
+}
+
+.wrapper .container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.wrapper .project {
+  position: relative;
+}
+
+.wrapper .projectContent {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  white-space: nowrap;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 10px;
+}
+
+.wrapper .project.open .projectContent {
+  display: flex;
+  width: 100%;
+}
+
+.wrapper .projectContent a {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.wrapper .projectContent a:hover {
+  background-color: #444;
+}
+
+.wrapper .classPhoto {
+  width: 100%; /* Default for small screens */
+  max-width: 70%; /* Limit size on large screens */
+  height: auto;
+  border-radius: 25px !important;
+}
+
+@media (max-width: 992px) {
+  /* Tablets */
+  .wrapper .classPhoto {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .wrapper .classPhoto {
+    max-width: 100%;
+  }
+}
+
+/* Bootstrap utility classes support */
+.wrapper .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper .mt4 {
+  margin-top: 1.5rem;
+}
+
+.wrapper .textCenter {
+  text-align: center;
+}
+
+.wrapper .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.wrapper .colLg4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.wrapper .colMd6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.wrapper .colSm12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (max-width: 992px) {
+  .wrapper .colLg4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper .colLg4,
+  .wrapper .colMd6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

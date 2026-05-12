@@ -1,0 +1,49 @@
+{
+  "logoImage": "/archive/usc_logo_white.png",
+  "mainNavigation": [
+    {
+      "text": "Overview",
+      "href": "/archive/spring-2025#overview"
+    },
+    {
+      "text": "Instructors",
+      "href": "/archive/spring-2025#contacts"
+    },
+    {
+      "text": "Schedule",
+      "href": "/archive/spring-2025#schedule"
+    }
+  ],
+  "dropdownNavigation": [
+    {
+      "text": "Previous Semesters",
+      "links": [
+        {
+          "text": "Fall 2024",
+          "href": "/archive/fall-2024"
+        },
+        {
+          "text": "Spring 2024",
+          "href": "/archive/spring-2024"
+        }
+      ]
+    },
+    {
+      "text": "GenAI Final Projects",
+      "links": [
+        {
+          "text": "Spring 2024",
+          "href": "/archive/projects/spring-2024"
+        },
+        {
+          "text": "Fall 2024",
+          "href": "/archive/projects/fall-2024"
+        },
+        {
+          "text": "Spring 2025",
+          "href": "/archive/projects/spring-2025"
+        }
+      ]
+    }
+  ]
+}

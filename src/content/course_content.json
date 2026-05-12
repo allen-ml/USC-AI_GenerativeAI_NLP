@@ -1,0 +1,240 @@
+[
+  {
+    "Week": 1,
+    "Module": 1,
+    "Title": "Introduction to NLP, Generative AI, and Text Processing",
+    "TitleShort": "Introduction to NLP & AI",
+    "Deliverables": [],
+    "Overview": [
+      "Course Overview",
+      "Historical Evolution of AI and NLP",
+      "Key Concepts in Machine Learning and NLP",
+      "Overview of NLP Applications in Various Domains",
+      "Basic Text Processing and Language Understanding",
+      "Challenges and Limitations in NLP"
+    ]
+  },
+  {
+    "Week": 2,
+    "Module": 1,
+    "Title": "Text Processing Techniques and Basic NLP Operations",
+    "TitleShort": "Text Processing & NLP Basics",
+    "Deliverables": ["Assignment 1"],
+    "Overview": [
+      "Text Preprocessing Techniques",
+      "Tokenization, Stemming, and Lemmatization",
+      "Co-occurrence Matrix in Text Analysis",
+      "Feature Extraction from Text",
+      "Regular Expressions in Text Processing",
+      "Basic Overview of Word Embeddings",
+      "Overview of Python libraries such as NLTK, SpaCy, regex etc."
+    ]
+  },
+  {
+    "Week": 3,
+    "Module": 2,
+    "Title": "Fundamentals of Machine Learning for NLP",
+    "TitleShort": "ML Fundamentals for NLP",
+    "Deliverables": ["Assignment 2"],
+    "Overview": [
+      "Supervised Learning and Unsupervised Learning - Key Algorithms for NLP",
+      "Evaluation Metrics for NLP Models",
+      "Training, Validation, and Test Sets in Model Development",
+      "Overfitting and Underfitting in NLP",
+      "Cross-Validation Techniques",
+      "Introduction to Python ML Libraries"
+    ]
+  },
+  {
+    "Week": 4,
+    "Module": 2,
+    "Title": "Neural Networks and Deep Learning in NLP",
+    "TitleShort": "Neural Networks & Deep Learning",
+    "Deliverables": ["Assignment 3"],
+    "Overview": [
+      "Neural Networks and Deep Learning in NLP",
+      "Activation Functions and Network Topologies",
+      "Backpropagation and Gradient Descent",
+      "CNNs and RNNs for NLP",
+      "Advanced RNNs: LSTM and GRU",
+      "Sequence Modeling in NLP",
+      "Challenges in Deep Learning for NLP",
+      "Case Studies in Deep Learning for NLP"
+    ]
+  },
+  {
+    "Week": 5,
+    "Module": 2,
+    "Title": "Transformer Models and Attention Mechanisms",
+    "TitleShort": "Transformers & Attention",
+    "Deliverables": ["Assignment 4"],
+    "Overview": [
+      "Transformer Models and Attention Mechanisms",
+      "Understanding the Transformer Architecture",
+      "Concepts of Self-Attention and Positional Encoding",
+      "Overview of BERT, GPT, and Transformer Variants",
+      "Applications of Transformer Models in NLP",
+      "Training Transformer Models for NLP Tasks",
+      "Challenges and Solutions with Transformer Models"
+    ]
+  },
+  {
+    "Week": 6,
+    "Module": 3,
+    "Title": "Syntax, Parsing, Word Embeddings, and POS Tagging",
+    "TitleShort": "Syntax & Word Embeddings",
+    "Deliverables": ["Assignment 5"],
+    "Overview": [
+      "Syntax in Natural Language Processing",
+      "Dependency and Constituency Parsing",
+      "Deep Dive into Word Embeddings",
+      "Word2Vec, GloVe, and FastText Embeddings",
+      "Using Embeddings in NLP Tasks",
+      "Part-of-Speech (POS) Tagging: Importance, Methods, and Tools",
+      "Practical Parsing, Embedding, and POS Tagging Techniques",
+      "Vector Database"
+    ]
+  },
+  {
+    "Week": 7,
+    "Module": 3,
+    "Title": "Semantic Analysis, Language Models, and Question Answering",
+    "TitleShort": "Semantic Analysis & QA",
+    "Deliverables": ["Assignment 6"],
+    "Overview": [
+      "Semantic Analysis and Language Models",
+      "Semantic Role Labeling (SRL)",
+      "Word Sense Disambiguation",
+      "Contextual Language Models",
+      "Question Answering Systems",
+      "Reading Comprehension Models",
+      "Knowledge-based QA vs Machine Reading"
+    ]
+  },
+  {
+    "Week": 8,
+    "Module": 3,
+    "Title": "Text Classification and Machine Translation",
+    "TitleShort": "Text Classification & MT",
+    "Deliverables": ["Midterm Exam"],
+    "Overview": [
+      "Text Classification Techniques",
+      "Sentiment Analysis and Opinion Mining",
+      "Document Classification",
+      "Machine Translation Fundamentals",
+      "Neural Machine Translation",
+      "Evaluation of MT Systems",
+      "Cross-lingual NLP Applications"
+    ]
+  },
+  {
+    "Week": 9,
+    "Module": 4,
+    "Title": "Advanced Topics in Machine Learning and NLP",
+    "TitleShort": "Advanced ML & NLP",
+    "Deliverables": ["Assignment 7"],
+    "Overview": [
+      "Advanced Machine Learning Techniques for NLP",
+      "Ensemble Methods in NLP",
+      "Transfer Learning in NLP",
+      "Few-shot and Zero-shot Learning",
+      "Domain Adaptation",
+      "Multi-task Learning",
+      "Regularization Techniques"
+    ]
+  },
+  {
+    "Week": 10,
+    "Module": 4,
+    "Title": "Named Entity Recognition and Information Retrieval",
+    "TitleShort": "NER & Information Retrieval",
+    "Deliverables": ["Assignment 8"],
+    "Overview": [
+      "Named Entity Recognition (NER)",
+      "Information Extraction",
+      "Relation Extraction",
+      "Information Retrieval Systems",
+      "Search and Ranking Algorithms",
+      "Vector Space Models",
+      "Evaluation of IR Systems"
+    ]
+  },
+  {
+    "Week": 11,
+    "Module": 4,
+    "Title": "Advanced Machine Translation and Summarization",
+    "TitleShort": "Advanced MT & Summarization",
+    "Deliverables": ["Assignment 9"],
+    "Overview": [
+      "Advanced Machine Translation Techniques",
+      "Attention Mechanisms in Translation",
+      "Text Summarization Methods",
+      "Extractive vs Abstractive Summarization",
+      "Neural Summarization Models",
+      "Evaluation of Summarization Systems",
+      "Multi-document Summarization"
+    ]
+  },
+  {
+    "Week": 12,
+    "Module": 4,
+    "Title": "Speech Processing and Conversational AI",
+    "TitleShort": "Speech & Conversational AI",
+    "Deliverables": ["Assignment 10"],
+    "Overview": [
+      "Speech Recognition and Processing",
+      "Text-to-Speech Systems",
+      "Conversational AI Systems",
+      "Dialog Management",
+      "Natural Language Understanding in Conversational AI",
+      "Case Studies in Speech Processing and Conversational AI"
+    ]
+  },
+  {
+    "Week": 13,
+    "Module": 5,
+    "Title": "Generative AI, Products, Techniques, APIs, and Ethical Considerations",
+    "TitleShort": "Generative AI & Ethics",
+    "Deliverables": ["Assignment 11"],
+    "Overview": [
+      "Generative AI Products and Techniques",
+      "Generative Models in NLP (ChatGPT, BARD, Gemini, Llama)",
+      "Advanced Prompt Engineering: Few-shot, Chain-of-thought, and Self-Consistency",
+      "Expanding LLM Capabilities: Knowledge Generation Prompting and Program-aided (PAL)",
+      "API Integration and Usage",
+      "Ethical Considerations in AI and NLP",
+      "Bias and Fairness in NLP Models"
+    ]
+  },
+  {
+    "Week": 14,
+    "Module": 5,
+    "Title": "Fine-Tuning LLMs, Hugging Face, and LangChain",
+    "TitleShort": "Fine-Tuning & LangChain",
+    "Deliverables": ["Assignment 12"],
+    "Overview": [
+      "Fine-Tuning Large Language Models",
+      "Hugging Face Transformers Library",
+      "Model Hub and Pre-trained Models",
+      "LangChain Framework",
+      "Building LLM Applications",
+      "Retrieval Augmented Generation (RAG)",
+      "Custom Model Development"
+    ]
+  },
+  {
+    "Week": 15,
+    "Module": 5,
+    "Title": "Course Review and Future Trends",
+    "TitleShort": "Review & Future Trends",
+    "Deliverables": ["Final Exam", "Final Project"],
+    "Overview": [
+      "Course Review and Key Concepts",
+      "Future Trends in NLP and AI",
+      "Emerging Technologies and Research Directions",
+      "Industry Applications and Career Paths",
+      "Final Project Presentations",
+      "Course Wrap-up and Next Steps"
+    ]
+  }
+]

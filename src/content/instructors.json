@@ -1,0 +1,37 @@
+[
+  {
+    "Type": "Instructor",
+    "Name": "Allen Bolourchi",
+    "Position": "Adjunct Professor of Generative AI and NLP",
+    "Bio": "Allen is an Adjunct Professor of Generative AI and NLP at USC and the Founder of Crystalytic.AI. He brings extensive industry experience in artificial intelligence and natural language processing, with a focus on practical applications of generative AI technologies. Professor Bolourchi is dedicated to bridging the gap between cutting-edge AI research and real-world implementation.",
+    "Email": "bolourch@usc.edu",
+    "Image": "allen_bolourchi.png",
+    "Profiles": {
+      "LinkedIn": "https://www.linkedin.com/in/allenbolourchi/",
+      "Company": "https://www.crystalytic.ai/"
+    }
+  },
+  {
+    "Type": "Instructor",
+    "Name": "Reza Jafarkhani",
+    "Position": "Senior Lecturer of Technology and Applied Computing",
+    "Bio": "Reza Jafarkhani is a Senior Lecturer at the University of Southern California's Viterbi School of Engineering, specializing in machine learning, artificial intelligence, and data analytics. He brings over five years of teaching experience in advanced technical subjects including AI and programming. Professor Jafarkhani is dedicated to bridging theoretical knowledge with real-world applications, preparing the next generation of engineers for emerging technological challenges.",
+    "Email": "jafarkha@usc.edu",
+    "Image": "reza_jafarkhani.png",
+    "Profiles": {
+      "LinkedIn": "https://www.linkedin.com/in/reza-jafarkani-8b3a0013/"
+    }
+  },
+  {
+    "Type": "Course Assistant",
+    "Name": "Arvin Duh",
+    "Position": "Lead Course Assistant",
+    "Bio": "Have Fun, Do Better\nEx: Google",
+    "Email": "aaduh@usc.edu",
+    "Image": "arvin_duh.png",
+    "Profiles": {
+      "LinkedIn": "https://www.linkedin.com/in/arvin-duh/",
+      "GitHub": "https://github.com/arvinduh"
+    }
+  }
+]

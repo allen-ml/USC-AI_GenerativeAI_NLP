@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.leftPane {
+  z-index: 10;
+}
+
+.rightPane {
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+  /* Fade in from transparent at top to avoid abrupt content edge on mobile */
+  mask-image: linear-gradient(to bottom, transparent 0%, black 2rem);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 2rem);
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .leftPane {
+    overflow-y: auto;
+  }
+
+  .rightPane {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}

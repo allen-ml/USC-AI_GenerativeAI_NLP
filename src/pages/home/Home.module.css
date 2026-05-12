@@ -1,0 +1,23 @@
+.scrollableContent {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.scrollableContent::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+.scrollSection {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh; /* Ensure each section takes full viewport height */
+}
+
+/* Scroll snapping fallback is handled by JavaScript for better speed control */

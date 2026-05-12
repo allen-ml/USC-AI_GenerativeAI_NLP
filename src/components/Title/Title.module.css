@@ -1,0 +1,26 @@
+.titleText,
+.verticalTitleText {
+  font-size: var(--page-title-size);
+  font-weight: var(--page-title-weight);
+  letter-spacing: var(--page-title-tracking);
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.verticalTitleContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .verticalTitleContainer {
+    flex-direction: row-reverse;
+  }
+
+  .verticalTitleText {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
