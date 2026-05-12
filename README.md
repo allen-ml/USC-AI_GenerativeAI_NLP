@@ -1,77 +1,11 @@
-# TAC 459 — Generative AI and NLP
+Steps to create new semester's website
 
-Course website for **TAC 459: Generative AI and Natural Language Processing** at
-the University of Southern California.
-
----
-
-## Quick Start
-
-```bash
-npm install
-npm run dev      # http://localhost:5173
-```
-
-See [docs/dev-setup.md](docs/dev-setup.md) for the full environment guide.
-
----
-
-## Tech Stack
-
-| Layer     | Tool                          |
-| --------- | ----------------------------- |
-| Framework | React 19 + TypeScript         |
-| Build     | Vite (rolldown-vite)          |
-| Routing   | React Router DOM v7           |
-| Styling   | Tailwind CSS v4 + CSS Modules |
-| Linting   | ESLint + typescript-eslint    |
-
----
-
-## Contributing
-
-**Never push directly to `main`.** Every change — however small — goes through a
-branch and a pull request.
-
-```bash
-git checkout -b yourname/short-description
-# make changes
-git push -u origin yourname/short-description
-# open a PR → get CI green → merge
-```
-
-`main` is live. Anything merged there deploys to the public site automatically.
-Only merge when CI passes and the change is in a working state.
-
-See [docs/ci-cd.md](docs/ci-cd.md) for branch protection setup and workflow
-details.
-
----
-
-## CI/CD
-
-| Mechanism       | Trigger              | Behavior                                              |
-| --------------- | -------------------- | ----------------------------------------------------- |
-| Pre-commit hook | `git commit` (local) | Warns on typecheck/lint/build failures — never blocks |
-| CI workflow     | PR → `main`          | **Blocks merge** if typecheck, lint, or build fails   |
-| Deploy workflow | Push to `main`       | Builds and deploys to GitHub Pages automatically      |
-
-Hooks are installed automatically by `npm install` (via the `prepare` script).
-See [docs/ci-cd.md](docs/ci-cd.md) for setup details, including how to enable
-the branch protection rule and configure the `GCAL_API_KEY` secret.
-
----
-
-## Documentation
-
-| Doc                                                          | What's in it                                         |
-| ------------------------------------------------------------ | ---------------------------------------------------- |
-| [docs/dev-setup.md](docs/dev-setup.md)                       | Environment setup, commands, project structure       |
-| [docs/content-guide.md](docs/content-guide.md)               | Schema reference for every content file              |
-| [docs/semester-rollover.md](docs/semester-rollover.md)       | Running the rollover script + manual steps           |
-| [docs/assets.md](docs/assets.md)                             | Images, PDFs, slide/PDF rendering scripts            |
-| [docs/deploy.md](docs/deploy.md)                             | Production build and static hosting config           |
-| [docs/ci-cd.md](docs/ci-cd.md)                               | CI/CD workflows, pre-commit hooks, branch protection |
-| [docs/scripts/new_semester.md](docs/scripts/new_semester.md) | Semester rollover script reference                   |
-| [docs/scripts/render_slide.md](docs/scripts/render_slide.md) | Slide-to-image script reference                      |
-| [docs/scripts/render_pdf.md](docs/scripts/render_pdf.md)     | PDF-to-images script reference                       |
+1. Copy the current website data i.e. assets and USC_ITP_459_GEN_AI_NLP_Homepage.html file/folder and create a new folder in the Pastcourses folder with the semester name and paste the files in that. Follow the other semester's structure.
+2. You will now have to update the header.html file. Add new semester in the dropdown like this <li class="dropdown-list"><a class="dropdown-item" href="/PastCourses/Spring2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Spring 2024</a></li>
+3. Make sure to replace the Spring2024 in link and between the tags with the semester name. This will add new semster to all the "updated" pages.
+4. Now update all the links in the past semester files, mostly image. Add absolute path and not relative path to images to load them properly.
+5. For project creation copy the tempalte from any past semester, update the content and images accordingly and it's ready.
+6. For new semester website, use the existing USC_ITP_459_GEN_AI_NLP_Homepage.html file. Add images to the assets folder only. Don't delete the staff images for old semester in any case as this may not load images in past semester.
+7. Change the year in footer.html
+8. If location or timing of the class change or semester change the header.html content accordingly.
+9. while testing change the base to local host for rendering the images and rechange to original page link.
