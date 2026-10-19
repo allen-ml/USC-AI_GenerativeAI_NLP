@@ -258,11 +258,20 @@ h2.profile-name::before { display: none; }
 .capstone-week-work p { font-size: 14px; margin-bottom: 0; }
 .capstone-submission { margin-top: 14px; padding: 15px 18px; border: 1px solid #efcc58; border-radius: 10px; background: #fff7d7; }
 .capstone-submission h3 { color: var(--cardinal); font-size: 18px; margin: 0 0 8px; }
-.office-scheduling { margin-top: 12px; font-size: 14px; }
+#schedules { width: 62.5%; padding: 12px 0; }
+#schedules .table-scroll { padding: 0; border-radius: 8px; }
+#schedules .hours-table { min-width: 0; table-layout: fixed; font-size: 14px; }
+#schedules .hours-table th, #schedules .hours-table td { padding: 7px 9px; line-height: 1.4; overflow-wrap: anywhere; }
+#schedules .hours-table th { font-size: 14px; }
+#schedules .hours-table th:nth-child(1) { width: 34%; }
+#schedules .hours-table th:nth-child(2) { width: 34%; }
+#schedules .hours-table th:nth-child(3) { width: 18%; }
+#schedules .hours-table th:nth-child(4) { width: 14%; }
 @media (max-width: 700px) {
   .capstone-roadmap-heading { grid-template-columns: 1fr; font-size: 17px; }
   .capstone-roadmap-heading .capstone-column-label { display: none; }
   .capstone-week-row { grid-template-columns: 1fr; }
+  #schedules { width: 100%; }
   .capstone-deliverables { border-left: 0; border-top: 1px solid var(--line); }
   .module-heading-deliverables { gap: 12px; }
   .module-deliverables-label { font-size: 14px; }
