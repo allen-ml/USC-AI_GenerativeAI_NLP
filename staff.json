@@ -1,53 +1,152 @@
 [
-    {
-      "id": "rajeev_singh",
-      "name": "Rajeev Singh",
-      "position": "Course Assistant",
-      "email": "rajeevdh@usc.edu",
-      "linkedin":"https://www.linkedin.com/in/rajeevsinghusc/",
-      "image":"assets/Rajeev_Dharmendra_Singh.jpg",
-      "active":["Spring 2024", "Fall 2024","Spring 2025"],
-      "bio": "Rajeev Singh is a passionate software engineer with a robust background in full-stack development, cloud computing, and machine learning. Currently pursuing his Master’s in Computer Science at the University of Southern California, Rajeev has honed his skills through practical experiences that include designing CI/CD pipelines and building real-time applications. His tenure at companies such as ASML, where he enhanced system uptime and error resolution efficiency, highlights his ability to develop scalable systems and optimize infrastructure. Rajeev will be joining Meta as a Software Engineer from June 2025"
-    },
-    {
-      "id": "allen_bolourchi",
-      "name": "Prof. Allen Bolourchi",
-      "position": "Instructor",
-      "email": "bolourch@usc.edu",
-      "image":"assets/allen.jpg",
-      "linkedin":"https://www.linkedin.com/in/allenbolourchi/",
-      "active":["Spring 2024", "Fall 2024","Spring 2025"],
-      "bio": "Professor Allen Bolourchi is a visionary leader in generative AI and natural language processing with an extensive career spanning academia, research, and industry. As an adjunct professor at the University of Southern California, he educates future AI professionals on cutting-edge generative AI techniques. Simultaneously, Allen plays a pivotal role in AI research and product management at Meta AI, FAIR. His prior experience includes strategic positions at Apple, where he managed machine learning initiatives for the App Store, and leadership roles in product development. Recognized for his contributions with numerous fellowships and awards, Allen’s blend of academic rigor and industry expertise drives innovation and transformational growth in technology. "
-    },
-    {
-        "id": "reza_jafarkhani",
-        "name": "Prof. Reza Jafarkhani",
-        "position": "Instructor",
-        "email": "jafarkha@usc.edu",
-        "linkedin":"https://www.linkedin.com/in/reza-jafarkhani-a6065828/",
-        "image":"assets/rezaJ.png",
-        "active":["Fall 2024","Spring 2025"],
-        "bio": "Reza Jafarkhani is an accomplished academic and industry professional specializing in machine learning, artificial intelligence, and data analytics. Currently a Senior Lecturer at the University of Southern California’s Viterbi School of Engineering, he brings over five years of teaching experience in advanced technical subjects including AI and programming. He is dedicated to bridging theoretical knowledge with real-world applications, preparing the next generation of engineers for emerging technological challenges. "
-      },
-      {
-        "id": "nitin_sai_bommi",
-        "name": "Nitin Sai Bommi",
-        "position": "Course Assistant",
-        "email": "nbommi@usc.edu",
-        "linkedin":"https://www.linkedin.com/in/nitin-sai-bommi/",
-        "image":"assets/nitin.jpeg",
-        "active":["Fall 2024","Spring 2025"],
-        "bio": "Nitin Sai Bommi is an emerging expert in deep learning and machine learning with a solid research and academic foundation. Having earned his Master’s degree from the University of Hyderabad—with a thesis focused on Explainable AI for Software Engineering—he is now advancing his studies at the University of Southern California. Nitin has built a diverse portfolio through internships at NVIDIA, where he is involved in deep learning performance analysis, as well as research roles at the University of Calgary, University College Dublin, and the University of Hyderabad. His proficiency in Python and machine learning, coupled with his hands-on experience in AI profiling and performance optimization, marks him as a promising innovator in the field. Nitin will be joining NVIDIA in May 2025 after his graduation.​"
-      },
-      {
-        "id": "varuna_krishna_kolla",
-        "name": "Varuna Krishna Kolla",
-        "position": "Course Assistant",
-        "email": "vkolla@usc.edu",
-        "linkedin":"https://www.linkedin.com/in/varuna-krishna-a25521194/",
-        "image":"assets/varuna.JPG",
-        "active":["Spring 2025"],
-        "bio": "Varuna Krishna is a driven computer science professional with extensive experience in machine learning and artificial intelligence. Currently pursuing his Master’s in Computer Science at the University of Southern California, he also serves as a Teaching Assistant for the Applied Machine Learning for Natural Language Processing course. His professional journey includes impactful roles such as a Generative AI Engineer Intern at Vimaan, Machine Learning Intern at AutomationEdge, and a research internship at the University of South Carolina’s Artificial Intelligence Institute. Varuna’s work on projects like Image2Tweet and innovative joint embedding learning techniques underlines his commitment to advancing AI. With robust programming skills in C, HTML, and Python, he is well-equipped to tackle complex technical challenges and contribute to the tech industry. Varuna will be joining Amazon as a Software Developer from June 2025."
-      }
-  ]
-  
+  {
+    "id": "allen_bolourchi",
+    "name": "Prof. Allen Bolourchi",
+    "position": "Professor",
+    "email": "allen.bolourchi@usc.edu",
+    "image": "assets/allen.jpg",
+    "linkedin": "https://www.linkedin.com/in/allenbolourchi/",
+    "active": [
+      "Spring 2024",
+      "Fall 2024",
+      "Spring 2025",
+      "Fall 2025",
+      "Spring 2026",
+      "Fall 2026",
+      "Spring 2027"
+    ],
+    "bio": "Allen Bolourchi leads AI research and product at Meta Superintelligence Labs (MSL), Fundamental AI Research (FAIR), and is an Adjunct Professor of Generative AI and NLP at the USC Viterbi School of Engineering, where he directs the capstone of the USC AI Minor (TAC 459), which he designed from the ground up. At Meta, his work spans frontier models, agentic AI, world models, computer-use agents, and multimodal intelligence. He also co-leads the development of Meta's open-weight model Muse Glimmer and has co-authored research with Yann LeCun and other FAIR researchers. Previously, he led AI/ML personalization for the App Store and Apple Arcade at Apple.",
+    "short_bio": "Allen Bolourchi leads AI research and product at Meta Superintelligence Labs (MSL), Fundamental AI Research (FAIR), and is an Adjunct Professor of Generative AI and NLP at the USC Viterbi School of Engineering, where he directs the capstone of the USC AI Minor (TAC 459), which he designed from the ground up. At Meta, his work spans frontier models, agentic AI, world models, computer-use agents, and multimodal intelligence. He also co-leads the development of Meta's open-weight model Muse Glimmer and has co-authored research with Yann LeCun and other FAIR researchers. Previously, he led AI/ML personalization for the App Store and Apple Arcade at Apple.",
+    "headline": "AI Research, Product and Program Management at Meta Superintelligence Labs, FAIR",
+    "teaching_title": "Adjunct Professor of Generative AI and NLP",
+    "faculty_profile": "https://viterbi.usc.edu/directory/faculty/Bolourchi/Allen",
+    "bio_paragraphs": [
+      "His teaching combines the technical foundations of generative AI and NLP with AI product strategy and hands-on development. The capstone brings together foundational concepts, analysis of AI businesses, and the design and demonstration of working AI products.",
+      "His research background includes predictive modeling, evolutionary optimization, and the analysis of complex systems. He has also worked as a machine learning research scientist at Caltech."
+    ],
+    "education": [
+      "Ph.D. in Engineering, focused on AI and evolutionary algorithms — University of Southern California",
+      "M.S. in Electrical Engineering — University of Southern California",
+      "Master of Business Administration (MBA) — Technology/AI and Finance — UCLA Anderson School of Management"
+    ],
+    "semester_label": "Semesters instructed the course"
+  },
+  {
+    "id": "reza_jafarkhani",
+    "name": "Prof. Reza Jafarkhani",
+    "position": "Professor",
+    "email": "jafarkha@usc.edu",
+    "linkedin": "https://www.linkedin.com/in/reza-jafarkhani-a6065828/",
+    "image": "assets/rezaJ.png",
+    "active": [
+      "Fall 2024",
+      "Spring 2025",
+      "Fall 2025",
+      "Spring 2026",
+      "Fall 2026"
+    ],
+    "bio": "Reza Jafarkhani is a Senior Lecturer of Technology and Applied Computing at the USC Viterbi School of Engineering, specializing in machine learning, artificial intelligence, and data analytics. He teaches all courses in the USC AI Minor, helping students build AI capabilities from foundational concepts to advanced applications. With extensive experience teaching students across the program, he connects technical theory with practical implementation and guides learners as they develop their AI skills. He co-instructs TAC 459 with Professor Allen Bolourchi, bringing this broad teaching experience to the course's technical foundations and hands-on AI product development.",
+    "short_bio": "Reza Jafarkhani is a Senior Lecturer of Technology and Applied Computing at the USC Viterbi School of Engineering, specializing in machine learning, artificial intelligence, and data analytics. He teaches all courses in the USC AI Minor, helping students build AI capabilities from foundational concepts to advanced applications. With extensive experience teaching students across the program, he connects technical theory with practical implementation and guides learners as they develop their AI skills. He co-instructs TAC 459 with Professor Allen Bolourchi, bringing this broad teaching experience to the course's technical foundations and hands-on AI product development.",
+    "headline": "Senior Lecturer of Technology and Applied Computing",
+    "faculty_profile": "https://viterbi.usc.edu/directory/faculty/Jafarkhani/Reza",
+    "bio_paragraphs": [
+      "His academic and industry background informs a practical approach to teaching AI, machine learning, and programming. He emphasizes connecting technical concepts with real-world applications and preparing students to apply their skills to engineering and industry problems."
+    ],
+    "education": [
+      "Ph.D. in Engineering — University of Southern California",
+      "M.S. in Electrical Engineering — University of Southern California"
+    ],
+    "semester_label": "Semesters instructed the course"
+  },
+  {
+    "id": "dylan_chen",
+    "name": "Dylan Chen",
+    "position": "Learning Assistant",
+    "image": "assets/images/course-team/dylan-chen.jpeg",
+    "education": [
+      "B.S. in Business Administration — University of Southern California",
+      "Minor in AI Applications — University of Southern California",
+      "M.S. in Applied Data Science — University of Southern California",
+      "Expected graduation: Spring 2027"
+    ],
+    "experience_heading": "2026 Internship at Meta",
+    "bio": "Dylan Chen is a USC learning assistant whose studies span Business Administration, AI Applications, and Applied Data Science. He is graduating in Spring 2027. During his 2026 internship at Meta, he worked on Meta FinTech's feature infrastructure, MLOps tooling, and semantic layer.",
+    "short_bio": "Dylan Chen is a USC student graduating in Spring 2027 with a B.S. in Business Administration, a Minor in AI Applications, and an M.S. in Applied Data Science. During his 2026 internship at Meta, he built Meta FinTech's offline feature platform behind personalized shopping and ad badges, serving all Meta users across a variety of domains, plus MLOps tooling and a semantic layer for the org.",
+    "headline": "Learning Assistant · Major: Business Administration, Applied Data Science",
+    "experience_bullets": [
+      "Built Meta FinTech's offline feature platform behind personalized shopping and ad badges, serving all Meta users across a variety of domains.",
+      "Built MLOps tooling for the organization.",
+      "Built a semantic layer for the organization."
+    ],
+    "active": [
+      "Fall 2025",
+      "Spring 2026",
+      "Fall 2026"
+    ],
+    "semester_label": "Semesters served as Learning Assistant"
+  },
+  {
+    "id": "arvin_duh",
+    "name": "Arvin Duh",
+    "position": "Learning Assistant",
+    "image": "assets/images/course-team/arvin-duh-current.jpg",
+    "education": [
+      "B.S. in AI for Business — University of Southern California",
+      "Expected graduation: Spring 2027"
+    ],
+    "experience_heading": "2026 Internship at Google",
+    "bio": "Arvin Duh is a USC learning assistant studying AI for Business and graduating in Spring 2027. During his 2026 internship at Google, his work included agent evaluation, a multi-agent system, document parsing, and internal tools and dashboards.",
+    "short_bio": "Arvin Duh is a USC student graduating in Spring 2027 with a B.S. in AI for Business. During his 2026 internship at Google, he built an agent-eval framework that cut evaluation time from 6 hours to 20 minutes, a 30-agent swarm mapping 3,000+ CFO Org profiles, a document parser, a rebuilt LoC tool, and a CL auto-review dashboard.",
+    "headline": "Learning Assistant · Major: AI for Business",
+    "experience_bullets": [
+      "Built an agent-eval framework that cut evaluation time from 6 hours to 20 minutes.",
+      "Built a 30-agent swarm mapping 3,000+ CFO Org profiles.",
+      "Built a document parser, rebuilt a LoC tool, and developed a CL auto-review dashboard."
+    ],
+    "active": [
+      "Fall 2025",
+      "Spring 2026",
+      "Fall 2026"
+    ],
+    "semester_label": "Semesters served as Learning Assistant"
+  },
+  {
+    "id": "rajeev_singh",
+    "name": "Rajeev Singh",
+    "position": "Course Assistant",
+    "email": "rajeevdh@usc.edu",
+    "linkedin": "https://www.linkedin.com/in/rajeevsinghusc/",
+    "image": "assets/Rajeev_Dharmendra_Singh.jpg",
+    "active": [
+      "Spring 2024",
+      "Fall 2024",
+      "Spring 2025"
+    ],
+    "bio": "Rajeev Singh is a passionate software engineer with a robust background in full-stack development, cloud computing, and machine learning. Currently pursuing his Master’s in Computer Science at the University of Southern California, Rajeev has honed his skills through practical experiences that include designing CI/CD pipelines and building real-time applications. His tenure at companies such as ASML, where he enhanced system uptime and error resolution efficiency, highlights his ability to develop scalable systems and optimize infrastructure. Rajeev will be joining Meta as a Software Engineer from June 2025"
+  },
+  {
+    "id": "nitin_sai_bommi",
+    "name": "Nitin Sai Bommi",
+    "position": "Course Assistant",
+    "email": "nbommi@usc.edu",
+    "linkedin": "https://www.linkedin.com/in/nitin-sai-bommi/",
+    "image": "assets/nitin.jpeg",
+    "active": [
+      "Fall 2024",
+      "Spring 2025"
+    ],
+    "bio": "Nitin Sai Bommi is an emerging expert in deep learning and machine learning with a solid research and academic foundation. Having earned his Master’s degree from the University of Hyderabad—with a thesis focused on Explainable AI for Software Engineering—he is now advancing his studies at the University of Southern California. Nitin has built a diverse portfolio through internships at NVIDIA, where he is involved in deep learning performance analysis, as well as research roles at the University of Calgary, University College Dublin, and the University of Hyderabad. His proficiency in Python and machine learning, coupled with his hands-on experience in AI profiling and performance optimization, marks him as a promising innovator in the field. Nitin will be joining NVIDIA in May 2025 after his graduation.​"
+  },
+  {
+    "id": "varuna_krishna_kolla",
+    "name": "Varuna Krishna Kolla",
+    "position": "Course Assistant",
+    "email": "vkolla@usc.edu",
+    "linkedin": "https://www.linkedin.com/in/varuna-krishna-a25521194/",
+    "image": "assets/varuna.JPG",
+    "active": [
+      "Spring 2025"
+    ],
+    "bio": "Varuna Krishna is a driven computer science professional with extensive experience in machine learning and artificial intelligence. Currently pursuing his Master’s in Computer Science at the University of Southern California, he also serves as a Teaching Assistant for the Applied Machine Learning for Natural Language Processing course. His professional journey includes impactful roles such as a Generative AI Engineer Intern at Vimaan, Machine Learning Intern at AutomationEdge, and a research internship at the University of South Carolina’s Artificial Intelligence Institute. Varuna’s work on projects like Image2Tweet and innovative joint embedding learning techniques underlines his commitment to advancing AI. With robust programming skills in C, HTML, and Python, he is well-equipped to tackle complex technical challenges and contribute to the tech industry. Varuna will be joining Amazon as a Software Developer from June 2025."
+  }
+]

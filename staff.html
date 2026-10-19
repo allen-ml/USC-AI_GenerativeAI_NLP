@@ -1,168 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TAC-459: Generative AI & NLP</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-  <style>
-    /* Global layout and styling */
-    html, body {
-      height: 100%;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course Team Directory | TAC-459: Generative AI &amp; NLP</title>
+<meta name="description" content="Professors Allen Bolourchi and Reza Jafarkhani, learning assistants Dylan Chen and Arvin Duh, and past course staff.">
+<link rel="canonical" href="https://allen-ml.github.io/USC-AI_GenerativeAI_NLP/staff.html">
+<link rel="icon" type="image/png" href="assets/usc-logo.png">
+<link rel="stylesheet" href="assets/course-site.css">
 
-    /* The container that holds the staff details */
-    .staff-portfolio {
-      flex: 1;
-      padding: 2rem 0;
-    }
-    .staff-portfolio .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 0 20px;
-      text-align: center; /* center all text in this container */
-    }
-
-    /* The main wrapper for the staff info */
-    .staff-content {
-      max-width: 800px; /* optional max width for centering */
-      margin: 2rem auto;
-    }
-
-    /* The staff image (with default size for large devices) */
-    .staff-image img {
-      border: 3px solid #333;
-      object-fit: cover;
-      width: 300px;   /* default for large devices */
-      height: auto;
-      border-radius: 15% !important;
-    }
-
-    /* Medium devices: smaller image width */
-    @media (max-width: 992px) {
-      .staff-image img {
-        width: 250px;
-      }
-    }
-
-    /* Small devices: even smaller image width */
-    @media (max-width: 768px) {
-      .staff-image img {
-        width: 200px;
-      }
-    }
-
-    /* Styling for the staff name, position, etc. */
-    .staff-name {
-      font-size: 2rem;
-      font-weight: 700; /* bold */
-      color: #a50000;   /* USC red color */
-      margin-bottom: 1rem;
-    }
-    .staff-position,
-    .staff-email,
-    .staff-linkedin,
-    .staff-bio {
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-    .staff-email a,
-    .staff-linkedin a {
-      color: #a50000;
-      text-decoration: none;
-    }
-    .staff-email a:hover,
-    .staff-linkedin a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <!-- Header placeholder (loaded via JS) -->
-  <div id="header-placeholder"></div>
-  
-  <!-- Main Content: Staff Portfolio Section -->
-  <section class="staff-portfolio">
-    <div class="container">
-      <div id="staff-details"><!-- Staff details injected here --></div>
-    </div>
-  </section>
-  
-  <!-- Footer placeholder (loaded via JS) -->
-  <div id="footer-placeholder"></div>
-  
-  <!-- JavaScript to load header/footer and staff data -->
-  <script>
-    // Load external HTML for header/footer
-    function loadHTML(selector, url) {
-      fetch(url)
-        .then(response => response.text())
-        .then(data => {
-          document.querySelector(selector).innerHTML = data;
-        })
-        .catch(err => console.error('Error loading HTML:', err));
-    }
-
-    loadHTML('#header-placeholder', 'header.html');
-    loadHTML('#footer-placeholder', 'footer.html');
-
-    // Parse query parameters
-    function getQueryParams() {
-      const params = {};
-      window.location.search.slice(1).split('&').forEach(param => {
-        const [key, value] = param.split('=');
-        params[key] = decodeURIComponent(value || '');
-      });
-      return params;
-    }
-
-    // Load staff data and render the staff member's info
-    fetch('staff.json')
-      .then(response => response.json())
-      .then(data => {
-        const params = getQueryParams();
-        const staffId = params.id; // e.g., ?id=allen
-        const staffMember = data.find(member => member.id === staffId);
-        const container = document.getElementById('staff-details');
-  
-        if (staffMember) {
-          container.innerHTML = `
-            <div class="staff-content">
-              <div class="staff-image mb-4">
-                <img src="${staffMember.image}" alt="${staffMember.name}">
-              </div>
-              <h2 class="staff-name">${staffMember.name}</h2>
-              <p class="staff-position"><strong>Position:</strong> ${staffMember.position}</p>
-              <p class="staff-email"><strong>Email:</strong> <a href="mailto:${staffMember.email}">${staffMember.email}</a></p>
-              <p class="staff-linkedin"><strong>LinkedIn:</strong> <a href="${staffMember.linkedin}" target="_blank">Profile</a></p>
-              ${ staffMember.active && staffMember.active.length ? `
-                <div class="active-years">
-                  <p><strong>Active Years:</strong><br> ${staffMember.active.map(year => `<span class="badge me-1" style="background-color:#990000">${year}</span>`).join('')}</p>
-                </div>
-              ` : '' }
-              <p class="staff-bio">${staffMember.bio}</p>
-            </div>
-          `;
-        } else {
-          container.innerHTML = `<p>Staff member not found.</p>`;
-        }
-      })
-      .catch(error => {
-        console.error('Error loading staff data:', error);
-        document.getElementById('staff-details').innerHTML = `<p>Error loading staff details.</p>`;
-      });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container masthead">
+  <div class="masthead-top"><img class="usc-shield" src="assets/Shield_RegUse_Wh_RGB.png" width="78" height="96" alt="USC shield">
+  <div><p class="eyebrow">University of Southern California · Fall 2026</p>
+    <h1>TAC 459 · Generative AI and Natural Language Processing</h1>
+    <p class="course-label"><span class="subtitle-opening">Capstone Course of the AI Minor @USC:</span> <span class="subtitle-detail">Generative AI, NLP and GenAI Products</span></p></div></div>
+  <div class="semester-badges" aria-label="Semester and class meeting details"><span>Fall 2026</span><span>Mon &amp; Wed 12:00 PM – 1:50 PM</span><span>Location: KAP 160</span></div>
+</div></header>
+<nav class="site-nav" aria-label="Course navigation"><div class="container nav-inner"><a href="USC_ITP_459_GEN_AI_NLP_Homepage.html#overview">Overview</a><a href="team.html">Instructors / Team</a><a href="USC_ITP_459_GEN_AI_NLP_Homepage.html#schedule">Class Content</a><a href="USC_ITP_459_GEN_AI_NLP_Homepage.html#ai-company-overview">AI Company Overview</a><a href="USC_ITP_459_GEN_AI_NLP_Homepage.html#ai-capstone-product">AI Capstone Product</a><details class="nav-dropdown" name="course-navigation"><summary>Previous Semesters</summary><div class="dropdown-links"><a href="PastCourses/Spring2025/USC_ITP_459_GEN_AI_NLP_Homepage.html">Spring 2025</a><a href="PastCourses/Fall2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Fall 2024</a><a href="PastCourses/Spring2024/USC_ITP_459_GEN_AI_NLP_Homepage.html">Spring 2024</a><a href="archive.html">All semesters</a></div></details><details class="nav-dropdown" name="course-navigation"><summary>Past AI Capstone Products</summary><div class="dropdown-links"><a href="PastCourses/Spring2025/project.html">Spring 2025</a><a href="PastCourses/Fall2024/project.html">Fall 2024</a><a href="PastCourses/Spring2024/project.html">Spring 2024</a><a href="projects.html">All past products</a></div></details></div></nav>
+<main id="main" class="container"><section class="course-section"><h2>Course Team</h2><article class="profile-layout directory-member" id="allen_bolourchi">
+<div class="profile-top"><img class="profile-photo" src="assets/allen.jpg" alt="Prof. Allen Bolourchi" width="150" height="150" loading="lazy">
+<div><h2 class="profile-name">Prof. Allen Bolourchi</h2><p class="person-role">AI Research, Product and Program Management at <strong>Meta Superintelligence Labs</strong>, FAIR</p><p class="person-role">Adjunct Professor of Generative AI and NLP</p>
+<div class="profile-meta"><a href="mailto:allen.bolourchi@usc.edu">allen.bolourchi@usc.edu</a><a href="https://www.linkedin.com/in/allenbolourchi/">LinkedIn</a><a href="https://viterbi.usc.edu/directory/faculty/Bolourchi/Allen">USC Viterbi profile</a></div></div></div>
+<div class="profile-body"><p class="long-bio">Allen Bolourchi leads AI research and product at <strong>Meta Superintelligence Labs</strong> (MSL), Fundamental AI Research (FAIR), and is an Adjunct Professor of Generative AI and NLP at the USC Viterbi School of Engineering, where he directs the capstone of the USC AI Minor (TAC 459), which he designed from the ground up. At Meta, his work spans frontier models, agentic AI, world models, computer-use agents, and multimodal intelligence. He also co-leads the development of Meta&#x27;s open-weight model Muse Glimmer and has co-authored research with Yann LeCun and other FAIR researchers. Previously, he led AI/ML personalization for the App Store and Apple Arcade at Apple.</p><p class="bio-paragraph">His teaching combines the technical foundations of generative AI and NLP with AI product strategy and hands-on development. The capstone brings together foundational concepts, analysis of AI businesses, and the design and demonstration of working AI products.</p><p class="bio-paragraph">His research background includes predictive modeling, evolutionary optimization, and the analysis of complex systems. He has also worked as a machine learning research scientist at Caltech.</p><h3>Education</h3><ul><li>Ph.D. in Engineering, focused on AI and evolutionary algorithms — University of Southern California</li><li>M.S. in Electrical Engineering — University of Southern California</li><li>Master of Business Administration (MBA) — Technology/AI and Finance — UCLA Anderson School of Management</li></ul><p class="section-note">Semesters instructed the course: Spring 2024, Fall 2024, Spring 2025, Fall 2025, Spring 2026, Fall 2026, Spring 2027</p></div></article><article class="profile-layout directory-member" id="reza_jafarkhani">
+<div class="profile-top"><img class="profile-photo" src="assets/rezaJ.png" alt="Prof. Reza Jafarkhani" width="150" height="150" loading="lazy">
+<div><h2 class="profile-name">Prof. Reza Jafarkhani</h2><p class="person-role">Senior Lecturer of Technology and Applied Computing</p>
+<div class="profile-meta"><a href="mailto:jafarkha@usc.edu">jafarkha@usc.edu</a><a href="https://www.linkedin.com/in/reza-jafarkhani-a6065828/">LinkedIn</a><a href="https://viterbi.usc.edu/directory/faculty/Jafarkhani/Reza">USC Viterbi profile</a></div></div></div>
+<div class="profile-body"><p class="long-bio">Reza Jafarkhani is a Senior Lecturer of Technology and Applied Computing at the USC Viterbi School of Engineering, specializing in machine learning, artificial intelligence, and data analytics. He teaches all courses in the USC AI Minor, helping students build AI capabilities from foundational concepts to advanced applications. With extensive experience teaching students across the program, he connects technical theory with practical implementation and guides learners as they develop their AI skills. He co-instructs TAC 459 with Professor Allen Bolourchi, bringing this broad teaching experience to the course&#x27;s technical foundations and hands-on AI product development.</p><p class="bio-paragraph">His academic and industry background informs a practical approach to teaching AI, machine learning, and programming. He emphasizes connecting technical concepts with real-world applications and preparing students to apply their skills to engineering and industry problems.</p><h3>Education</h3><ul><li>Ph.D. in Engineering — University of Southern California</li><li>M.S. in Electrical Engineering — University of Southern California</li></ul><p class="section-note">Semesters instructed the course: Fall 2024, Spring 2025, Fall 2025, Spring 2026, Fall 2026</p></div></article><article class="profile-layout directory-member" id="dylan_chen">
+<div class="profile-top"><img class="profile-photo" src="assets/images/course-team/dylan-chen.jpeg" alt="Dylan Chen" width="150" height="150" loading="lazy">
+<div><h2 class="profile-name">Dylan Chen</h2><p class="person-role">Learning Assistant · Major: Business Administration, Applied Data Science</p>
+<div class="profile-meta"></div></div></div>
+<div class="profile-body"><p class="long-bio">Dylan Chen is a USC learning assistant whose studies span Business Administration, AI Applications, and Applied Data Science. He is graduating in Spring 2027. During his 2026 internship at <strong>Meta</strong>, he worked on Meta FinTech&#x27;s feature infrastructure, MLOps tooling, and semantic layer.</p><h3>2026 Internship at <strong>Meta</strong></h3><ul class="experience-list"><li>Built <strong>Meta</strong> FinTech&#x27;s offline feature platform behind personalized shopping and ad badges, serving all Meta users across a variety of domains.</li><li>Built MLOps tooling for the organization.</li><li>Built a semantic layer for the organization.</li></ul><h3>Education</h3><ul><li>B.S. in Business Administration — University of Southern California</li><li>Minor in AI Applications — University of Southern California</li><li>M.S. in Applied Data Science — University of Southern California</li><li>Expected graduation: Spring 2027</li></ul><p class="section-note">Semesters served as Learning Assistant: Fall 2025, Spring 2026, Fall 2026</p></div></article><article class="profile-layout directory-member" id="arvin_duh">
+<div class="profile-top"><img class="profile-photo" src="assets/images/course-team/arvin-duh-current.jpg" alt="Arvin Duh" width="150" height="150" loading="lazy">
+<div><h2 class="profile-name">Arvin Duh</h2><p class="person-role">Learning Assistant · Major: AI for Business</p>
+<div class="profile-meta"></div></div></div>
+<div class="profile-body"><p class="long-bio">Arvin Duh is a USC learning assistant studying AI for Business and graduating in Spring 2027. During his 2026 internship at <strong>Google</strong>, his work included agent evaluation, a multi-agent system, document parsing, and internal tools and dashboards.</p><h3>2026 Internship at <strong>Google</strong></h3><ul class="experience-list"><li>Built an agent-eval framework that cut evaluation time from 6 hours to 20 minutes.</li><li>Built a 30-agent swarm mapping 3,000+ CFO Org profiles.</li><li>Built a document parser, rebuilt a LoC tool, and developed a CL auto-review dashboard.</li></ul><h3>Education</h3><ul><li>B.S. in AI for Business — University of Southern California</li><li>Expected graduation: Spring 2027</li></ul><p class="section-note">Semesters served as Learning Assistant: Fall 2025, Spring 2026, Fall 2026</p></div></article><h2 class="subsection-heading" id="past-staff">Past Course Assistants</h2><article class="profile-layout directory-member" id="rajeev_singh">
+<div class="profile-top"><img class="profile-photo" src="assets/Rajeev_Dharmendra_Singh.jpg" alt="Rajeev Singh" width="150" height="150" loading="lazy">
+<div><h2 class="profile-name">Rajeev Singh</h2><p class="person-role">Course Assistant</p>
+<div class="profile-meta"><a href="mailto:rajeevdh@usc.edu">rajeevdh@usc.edu</a><a href="https://www.linkedin.com/in/rajeevsinghusc/">LinkedIn</a></div></div></div>
+<div class="profile-body"><p class="long-bio">Rajeev Singh is a passionate software engineer with a robust background in full-stack development, cloud computing, and machine learning. Currently pursuing his Master’s in Computer Science at the University of Southern California, Rajeev has honed his skills through practical experiences that include designing CI/CD pipelines and building real-time applications. His tenure at companies such as ASML, where he enhanced system uptime and error resolution efficiency, highlights his ability to develop scalable systems and optimize infrastructure. Rajeev will be joining <strong>Meta</strong> as a Software Engineer from June 2025</p><p class="section-note">Semesters listed in the original site: Spring 2024, Fall 2024, Spring 2025</p></div></article><article class="profile-layout directory-member" id="nitin_sai_bommi">
+<div class="profile-top"><img class="profile-photo" src="assets/nitin.jpeg" alt="Nitin Sai Bommi" width="150" height="150" loading="lazy">
+<div><h2 class="profile-name">Nitin Sai Bommi</h2><p class="person-role">Course Assistant</p>
+<div class="profile-meta"><a href="mailto:nbommi@usc.edu">nbommi@usc.edu</a><a href="https://www.linkedin.com/in/nitin-sai-bommi/">LinkedIn</a></div></div></div>
+<div class="profile-body"><p class="long-bio">Nitin Sai Bommi is an emerging expert in deep learning and machine learning with a solid research and academic foundation. Having earned his Master’s degree from the University of Hyderabad—with a thesis focused on Explainable AI for Software Engineering—he is now advancing his studies at the University of Southern California. Nitin has built a diverse portfolio through internships at NVIDIA, where he is involved in deep learning performance analysis, as well as research roles at the University of Calgary, University College Dublin, and the University of Hyderabad. His proficiency in Python and machine learning, coupled with his hands-on experience in AI profiling and performance optimization, marks him as a promising innovator in the field. Nitin will be joining NVIDIA in May 2025 after his graduation.​</p><p class="section-note">Semesters listed in the original site: Fall 2024, Spring 2025</p></div></article><article class="profile-layout directory-member" id="varuna_krishna_kolla">
+<div class="profile-top"><img class="profile-photo" src="assets/varuna.JPG" alt="Varuna Krishna Kolla" width="150" height="150" loading="lazy">
+<div><h2 class="profile-name">Varuna Krishna Kolla</h2><p class="person-role">Course Assistant</p>
+<div class="profile-meta"><a href="mailto:vkolla@usc.edu">vkolla@usc.edu</a><a href="https://www.linkedin.com/in/varuna-krishna-a25521194/">LinkedIn</a></div></div></div>
+<div class="profile-body"><p class="long-bio">Varuna Krishna is a driven computer science professional with extensive experience in machine learning and artificial intelligence. Currently pursuing his Master’s in Computer Science at the University of Southern California, he also serves as a Teaching Assistant for the Applied Machine Learning for Natural Language Processing course. His professional journey includes impactful roles such as a Generative AI Engineer Intern at Vimaan, Machine Learning Intern at AutomationEdge, and a research internship at the University of South Carolina’s Artificial Intelligence Institute. Varuna’s work on projects like Image2Tweet and innovative joint embedding learning techniques underlines his commitment to advancing AI. With robust programming skills in C, HTML, and Python, he is well-equipped to tackle complex technical challenges and contribute to the tech industry. Varuna will be joining Amazon as a Software Developer from June 2025.</p><p class="section-note">Semesters listed in the original site: Spring 2025</p></div></article></section></main>
+<footer class="site-footer"><div class="container footer-inner">
+<span>© 2026 TAC-459 · University of Southern California</span>
+<span><a href="USC_ITP_459_GEN_AI_NLP_Homepage.html">Current course</a> &nbsp; / &nbsp; <a href="archive.html">Course archive</a></span>
+</div></footer>
+<script>
+const memberId = new URLSearchParams(window.location.search).get('id');
+const member = memberId && document.getElementById(memberId);
+if (member) member.scrollIntoView();
+</script></body></html>
